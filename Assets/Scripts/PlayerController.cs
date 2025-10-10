@@ -8,15 +8,14 @@ using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 public class PlayerController : MonoBehaviour
 {
 
-    private enum Side
-    {
-        left, right, none
-    }
-
     [Header("Player Speed")]
     [SerializeField] private float speed;
 
+    [Header("Offset For Boundary")]
+    [SerializeField] private float offsetX;
+
     private BoxCollider2D boundary;
+    
 
     private Vector2 touchBegin;
     private Vector2 capturedDeltaTouch;
@@ -100,8 +99,8 @@ public class PlayerController : MonoBehaviour
 
     private void ClampPlayerPosition()
     {
-        float minX = cam.ScreenToWorldPoint(new Vector2(0, 0)).x + boundarySize.x / 2;
-        float maxX = cam.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - boundarySize.x / 2;
+        float minX = cam.ScreenToWorldPoint(new Vector2(0, 0)).x + boundarySize.x / 2 + offsetX;
+        float maxX = cam.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - boundarySize.x / 2 - offsetX;
 
         transform.position = new Vector2(Mathf.Clamp(transform.position.x,minX, maxX), transform.position.y);
 
