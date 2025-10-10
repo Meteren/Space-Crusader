@@ -1,4 +1,5 @@
 
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
 
@@ -18,6 +19,11 @@ public class PlayerController : MonoBehaviour
     [Header("Offset For Boundary")]
     [SerializeField] private float offsetX;
 
+    [Header("Particle")]
+    [SerializeField] private ParticleSystem rocketParticle;
+    [SerializeField,HideInInspector] private float particleDuration;
+    [SerializeField] private float particleStart;
+
     private BoxCollider2D boundary;
     
 
@@ -34,6 +40,8 @@ public class PlayerController : MonoBehaviour
     {
         boundary = GetComponent<BoxCollider2D>();
         cam = Camera.main;
+        rocketParticle.Play();
+        particleDuration = rocketParticle.main.duration;
     }
 
     private void OnEnable()
@@ -53,22 +61,48 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
-        
+        //handle particles to stop generating every frame for performance
+        particleDuration -= Time.deltaTime;
+        if(particleDuration <= 0)
+        {
+            rocketParticle.Stop();
+            if(particleDuration <= particleStart)
+            {
+                rocketParticle.Play();
+                particleDuration = rocketParticle.main.duration;
+            }
+        }
+
+        //transform.Rotate(0, 0, 0.2f);
         if (TryGetDeltaTouch(out Vector2 deltaTouch))
             capturedDeltaTouch = deltaTouch;
         else
             capturedDeltaTouch = Vector2.zero;
 
-        transform.position = Vector2.MoveTowards(transform.position, transform.position +
+        Vector2 currentPosition = transform.position;
+
+        currentPosition = Vector2.MoveTowards(currentPosition, transform.position +
         new Vector3(capturedDeltaTouch.x, 0, 0), moveSpeed * Time.deltaTime);
+
+        bool isClamped = ClampPosition(ref currentPosition);
+
+        transform.position = currentPosition;
 
         float angle = Mathf.Atan2(1, capturedDeltaTouch.x * rotationExtension) * Mathf.Rad2Deg - 90.0f;
 
-        rotateTo = Quaternion.Euler(0, 0, angle);
+        if (!isClamped)
+        {           
+            rotateTo = Quaternion.Euler(0, 0, angle);
 
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, rotateTo, Time.deltaTime * rotationSpeed);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotateTo, Time.deltaTime * rotationSpeed);
+        }
+        else
+        {
+            rotateTo = Quaternion.Euler(0, 0, 0);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation,rotateTo, Time.deltaTime * rotationSpeed);
+        }
 
-        ClampPlayerPosition();
+
     }
 
     private void FixedUpdate()
@@ -110,13 +144,16 @@ public class PlayerController : MonoBehaviour
         return false;
     }
 
-    private void ClampPlayerPosition()
+    private bool ClampPosition(ref Vector2 positionToClamp)
     {
         float minX = cam.ScreenToWorldPoint(new Vector2(0, 0)).x + boundarySize.x / 2 + offsetX;
         float maxX = cam.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - boundarySize.x / 2 - offsetX;
 
-        transform.position = new Vector2(Mathf.Clamp(transform.position.x,minX, maxX), transform.position.y);
+        bool isClamped = positionToClamp.x < minX || positionToClamp.x >= maxX; 
 
+        positionToClamp = new Vector2(Mathf.Clamp(positionToClamp.x,minX, maxX), positionToClamp.y);
+
+        return isClamped;
     }
 
 }
