@@ -1,4 +1,4 @@
-using System;
+
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
 
@@ -9,7 +9,11 @@ public class PlayerController : MonoBehaviour
 {
 
     [Header("Player Speed")]
-    [SerializeField] private float speed;
+    [SerializeField] private float moveSpeed;
+
+    [Header("Rotation Segment")]
+    [SerializeField] private float rotationSpeed;
+    [SerializeField] private float rotationExtension;
 
     [Header("Offset For Boundary")]
     [SerializeField] private float offsetX;
@@ -22,12 +26,14 @@ public class PlayerController : MonoBehaviour
 
     private Camera cam;
 
+    Quaternion rotateTo;
+
     Vector2 boundarySize => boundary.bounds.size;
 
     private void Start()
     {
         boundary = GetComponent<BoxCollider2D>();
-        cam = Camera.main;         
+        cam = Camera.main;
     }
 
     private void OnEnable()
@@ -47,27 +53,34 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
-
+        
         if (TryGetDeltaTouch(out Vector2 deltaTouch))
-            capturedDeltaTouch = deltaTouch; //incrementation for frame independency
+            capturedDeltaTouch = deltaTouch;
         else
             capturedDeltaTouch = Vector2.zero;
 
         transform.position = Vector2.MoveTowards(transform.position, transform.position +
-        new Vector3(capturedDeltaTouch.x, 0, 0), speed * Time.deltaTime);
+        new Vector3(capturedDeltaTouch.x, 0, 0), moveSpeed * Time.deltaTime);
+
+        float angle = Mathf.Atan2(1, capturedDeltaTouch.x * rotationExtension) * Mathf.Rad2Deg - 90.0f;
+
+        rotateTo = Quaternion.Euler(0, 0, angle);
+
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, rotateTo, Time.deltaTime * rotationSpeed);
 
         ClampPlayerPosition();
     }
 
     private void FixedUpdate()
     {
-       /* if (!inCollisionWithBoundaries)
-            rb.linearVelocity = new Vector2(capturedDeltaTouch.x * speed, rb.linearVelocityY);
-        else
-            rb.linearVelocity = new Vector2(0, rb.linearVelocityY);
+        /* if (!inCollisionWithBoundaries)
+             rb.linearVelocity = new Vector2(capturedDeltaTouch.x * speed, rb.linearVelocityY);
+         else
+             rb.linearVelocity = new Vector2(0, rb.linearVelocityY);
 
-        capturedDeltaTouch = Vector2.zero;*/
+         capturedDeltaTouch = Vector2.zero;*/
 
+        //capturedDeltaTouch = Vector2.zero;
 
     }
 
