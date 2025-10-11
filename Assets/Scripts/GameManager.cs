@@ -1,6 +1,9 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
-public class GameManager :SingleTon<GameManager>
+public class GameManager : SingleTon<GameManager>
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -9,6 +12,24 @@ public class GameManager :SingleTon<GameManager>
     int frameCount = 0;
     float fps;
 
+    [SerializeField] private PlayerSpawner playerSpawner;
+
+    private void Start()
+    {
+        //for later
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
+        //for bow use this
+        playerSpawner.Spawn();
+    }
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode sceneMode)
+    {
+        if (scene.buildIndex != 0)
+        {
+            playerSpawner.Spawn();
+        }
+    }
 
     private void Update()
     {

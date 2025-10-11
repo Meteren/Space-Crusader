@@ -1,9 +1,9 @@
 
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
 
-using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 
 public class PlayerController : MonoBehaviour
@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour
 
     private BoxCollider2D boundary;
     
-
     private Vector2 touchBegin;
     private Vector2 capturedDeltaTouch;
 
@@ -34,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
     Quaternion rotateTo;
 
-    Vector2 boundarySize => boundary.bounds.size;
+    public Vector2 boundarySize => boundary.bounds.size;
 
     private void Start()
     {
@@ -42,22 +41,6 @@ public class PlayerController : MonoBehaviour
         cam = Camera.main;
         rocketParticle.Play();
         particleDuration = rocketParticle.main.duration;
-    }
-
-    private void OnEnable()
-    {
-        EnhancedTouchSupport.Enable();
-#if UNITY_EDITOR
-        TouchSimulation.Enable();
-#endif
-    }
-
-    private void OnDisable()
-    {
-        EnhancedTouchSupport.Disable();
-#if UNITY_EDITOR
-        TouchSimulation.Disable();
-#endif
     }
     private void Update()
     {
@@ -73,7 +56,6 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        //transform.Rotate(0, 0, 0.2f);
         if (TryGetDeltaTouch(out Vector2 deltaTouch))
             capturedDeltaTouch = deltaTouch;
         else
@@ -120,19 +102,16 @@ public class PlayerController : MonoBehaviour
 
     private bool TryGetDeltaTouch(out Vector2 deltaTouch)
     {
-        var activeTouches = Touch.activeTouches;
-        if (activeTouches.Count > 0)
+        if (TouchManager.instance.activeTouchesCount > 0)
         {
-            Debug.Log("Touch detected.");
-            var touch = activeTouches[0];
-            if (touch.phase == TouchPhase.Began)
+            if (TouchManager.instance.touch.phase == TouchPhase.Began)
             {     
-                touchBegin = cam.ScreenToWorldPoint(touch.screenPosition);
+                touchBegin = cam.ScreenToWorldPoint(TouchManager.instance.touch.screenPosition);
                 Debug.Log($"Touch begin point:{touchBegin}");
             }
-            if(touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
+            if(TouchManager.instance.touch.phase == TouchPhase.Moved || TouchManager.instance.touch.phase == TouchPhase.Stationary)
             {
-                Vector2 touchMovePos = cam.ScreenToWorldPoint(touch.screenPosition);
+                Vector2 touchMovePos = cam.ScreenToWorldPoint(TouchManager.instance.touch.screenPosition);
                 deltaTouch = touchMovePos - touchBegin;
                 touchBegin = touchMovePos;
                 Debug.Log($"Touch delta:{deltaTouch}");
@@ -156,4 +135,8 @@ public class PlayerController : MonoBehaviour
         return isClamped;
     }
 
+    public void Init(Vector2 position)
+    {
+        transform.position = position;
+    }
 }
