@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Normal Bullet
   m_EditorClassIdentifier: 
   prefab: {fileID: 4407766090956389390, guid: 3049ffeb7ff1321439946d31195f46e4, type: 3}
-  generationTime: 2
+  generationTime: 0.3
   speed: {x: 0, y: 5}
+  bulletReadyToUse: 1
+  countDown: 0.14387791

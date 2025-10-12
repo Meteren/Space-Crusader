@@ -11,8 +11,14 @@ public class Bullet : MonoBehaviour
     public IObjectPool<Bullet> BulletPoolBelonged { get => bulletPoolBelonged; }
     public BulletData Data { get => data; }
 
+    private void Start()
+    {
+        transform.localScale /= CameraScaler.scaleFactor;
+    }
+
     public void Init(BulletData data, IObjectPool<Bullet> bulletPoolBelonged,PlayerController pc,Vector2 position)
     {
+
         this.data = data;
         this.bulletPoolBelonged = bulletPoolBelonged;
         transform.position = position + new Vector2(0, pc.boundarySize.y / 2);
