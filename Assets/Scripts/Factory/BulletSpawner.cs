@@ -1,9 +1,11 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 public class BulletSpawner : MonoBehaviour
 {
-                                                                         
+    public List<IEffect<Bullet>> bulletEffects = new();
+  
     [SerializeField] private List<BulletData> bulletData; //later add a selection for specified bullet according to effect list in player
                                                           //can be referenced to player from here for the selection logic
     BulletFactory bulletFactory;
@@ -36,6 +38,18 @@ public class BulletSpawner : MonoBehaviour
       
     }
 
-}
+    public void AddEffect(IEffect<Bullet> effect)
+    {
+        bulletEffects.Add(effect);
+        bulletFactory.SetEffects(bulletEffects);
+    }
+    
+    public void RemoveEffect(IEffect<Bullet> effect)
+    {
+        bulletEffects.Remove(effect);
+        bulletFactory.SetEffects(bulletEffects);
+    }
 
+
+}
 

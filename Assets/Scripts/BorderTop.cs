@@ -8,7 +8,7 @@ public class BorderTop : MonoBehaviour
         {
             if (bullet.gameObject.activeSelf)
             {
-                bullet.BulletPoolBelonged.Release(bullet);
+                bullet.Release();
             }
         }
     }

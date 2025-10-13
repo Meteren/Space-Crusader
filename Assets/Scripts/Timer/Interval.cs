@@ -9,7 +9,7 @@ public class Interval : Timer
 
     public event Action onInterval;
 
-    public Interval(float intervalTick, float startPoint) : base(startPoint)
+    public Interval(float intervalTick, float startPoint,string source) : base(startPoint, source)
     {
         this.intervalTick = intervalTick;
         valueAfterInterval = startPoint;

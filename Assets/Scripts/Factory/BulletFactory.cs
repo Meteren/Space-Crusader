@@ -2,11 +2,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class BulletFactory : IFactory<Bullet,BulletData>
+
+public class BulletFactory : IFactory<Bullet,BulletData>, IFactoryEffectResolver<Bullet>
 {
     Transform parent;
     private Dictionary<BulletData, IObjectPool<Bullet>> bulletPool = new();
     PlayerController playerController;
+
+    public List<IEffect<Bullet>> Effects { get; set; }
 
     public BulletFactory(PlayerController playerController, Transform parent = null)
     {
@@ -30,8 +33,13 @@ public class BulletFactory : IFactory<Bullet,BulletData>
         bulletPool[data] = pool;
 
         Bullet bullet = pool.Get();
-        bullet.Init(data, pool,playerController,position);
+        bullet.Init(data,pool,playerController,position, Effects);
         return bullet;
+    }
+
+    public void SetEffects(List<IEffect<Bullet>> effects)
+    {
+        Effects = effects;
     }
 }
 

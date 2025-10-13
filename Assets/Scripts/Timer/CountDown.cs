@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CountDown : Timer
 {
-    public CountDown(float startPoint) : base(startPoint)
+    public CountDown(float startPoint,string source) : base(startPoint,source)
     {
     }
 

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,8 +9,6 @@ public class GameManager : SingleTon<GameManager>
     float fps;
 
     [SerializeField] private PlayerSpawner playerSpawner;
-
-    Interval i = new Interval(1f, 5f);// for testing 
 
     private void Start()
     {

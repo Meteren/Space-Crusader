@@ -1,35 +1,57 @@
 
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
+
 public class Bullet : MonoBehaviour
 {
-    protected BulletData data;
+    public BulletData.DataFields updatedData;
+
+    public BulletData.DataFields baseData;
+
     protected IObjectPool<Bullet> bulletPoolBelonged;
 
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
+
+    protected bool initFirstTimeValues = false;
+
     public IObjectPool<Bullet> BulletPoolBelonged { get => bulletPoolBelonged; }
-    public BulletData Data { get => data; }
 
     private void Start()
     {
         transform.localScale /= CameraScaler.scaleFactor;
+
     }
 
-    public void Init(BulletData data, IObjectPool<Bullet> bulletPoolBelonged,PlayerController pc,Vector2 position)
+    public void Init(BulletData data, IObjectPool<Bullet> bulletPoolBelonged,PlayerController pc,Vector2 position,List<IEffect<Bullet>> effects)
     {
-
-        this.data = data;
+        if (!initFirstTimeValues)
+        {
+            baseData = data.CopyClassInstance();
+            updatedData = baseData;
+            initFirstTimeValues = true;
+        }
+        foreach(var effect in effects)
+        {
+            effect.Apply(this);
+        }
         this.bulletPoolBelonged = bulletPoolBelonged;
         transform.position = position + new Vector2(0, pc.boundarySize.y / 2);
-        SetSpeed(pc);
+        SetSpeed();
     }
-
-    private void SetSpeed(PlayerController pc)
+    
+    private void SetSpeed()
     {
         if(!rb)
             rb = GetComponent<Rigidbody2D>();
-        rb.linearVelocity = data.speed;
+        rb.linearVelocity = updatedData.speed;
+    }
+
+    public void Release()
+    {
+        updatedData = baseData;
+        bulletPoolBelonged.Release(this);
     }
 
 }

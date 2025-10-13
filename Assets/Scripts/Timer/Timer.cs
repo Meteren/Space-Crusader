@@ -1,5 +1,7 @@
 using System;
 
+using UnityEngine;
+
 public abstract class Timer 
 {
     public event Action onStart;
@@ -8,9 +10,12 @@ public abstract class Timer
     protected float current;
 
     protected float startPoint;
-    protected Timer(float startPoint) 
+
+    string source;
+    protected Timer(float startPoint,string source) 
     { 
         this.startPoint = startPoint;
+        this.source = source;
         current = startPoint;
         
     }
@@ -22,6 +27,7 @@ public abstract class Timer
 
     public void StartTimer() 
     {
+        Debug.Log($"{source} timer started.");
         TimeManager.instance.AddTimer(this);
         onStart?.Invoke();
     } 
@@ -32,6 +38,7 @@ public abstract class Timer
 
     public void CleanAfterCompletion()
     {
+        Debug.Log($"{source} timer ended.");
         onEnd?.Invoke();
         isFinished = true;
         TimeManager.instance.RemoveTimer(this);
