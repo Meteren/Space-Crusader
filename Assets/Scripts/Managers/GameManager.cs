@@ -4,8 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : SingleTon<GameManager>
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
     float elapsedTime = 0;
     float interval = 1f;
     int frameCount = 0;
@@ -13,8 +11,11 @@ public class GameManager : SingleTon<GameManager>
 
     [SerializeField] private PlayerSpawner playerSpawner;
 
+    Interval i = new Interval(1f, 5f);// for testing 
+
     private void Start()
     {
+      
         //for later
         SceneManager.sceneLoaded += OnSceneLoaded;
 
@@ -50,7 +51,5 @@ public class GameManager : SingleTon<GameManager>
         }
        
     }
-
-
 
 }
