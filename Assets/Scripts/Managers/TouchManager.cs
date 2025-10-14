@@ -9,6 +9,7 @@ public class TouchManager : SingleTon<TouchManager>
     public Touch touch {  get; private set; }
 
     public int activeTouchesCount { get; private set; }
+
     private void OnEnable()
     {
         EnhancedTouchSupport.Enable();

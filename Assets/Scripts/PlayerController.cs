@@ -107,14 +107,12 @@ public class PlayerController : MonoBehaviour
             if (TouchManager.instance.touch.phase == TouchPhase.Began)
             {     
                 touchBegin = cam.ScreenToWorldPoint(TouchManager.instance.touch.screenPosition);
-                Debug.Log($"Touch begin point:{touchBegin}");
             }
             if(TouchManager.instance.touch.phase == TouchPhase.Moved || TouchManager.instance.touch.phase == TouchPhase.Stationary)
             {
                 Vector2 touchMovePos = cam.ScreenToWorldPoint(TouchManager.instance.touch.screenPosition);
                 deltaTouch = touchMovePos - touchBegin;
                 touchBegin = touchMovePos;
-                Debug.Log($"Touch delta:{deltaTouch}");
                 return true;
             }
 

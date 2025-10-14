@@ -11,7 +11,6 @@ public class CameraScaler : MonoBehaviour
     public static float scaleFactor;
     private void Awake()
     {
-        Debug.Log($"Screen width:{Screen.width}");
         canvas = GameObject.Find("Canvas");
         cam = GetComponent<Camera>();
         float reference = referenceWidth;

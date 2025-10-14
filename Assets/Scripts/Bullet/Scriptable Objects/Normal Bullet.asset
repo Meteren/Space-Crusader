@@ -16,4 +16,5 @@ MonoBehaviour:
   generationTime: 0.3
   speed: {x: 0, y: 5}
   bulletReadyToUse: 1
-  countDown: 0.14387791
+  pierceCount: 1
+  countDown: 0.28683653

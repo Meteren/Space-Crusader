@@ -30,7 +30,12 @@ public abstract class Timer
         Debug.Log($"{source} timer started.");
         TimeManager.instance.AddTimer(this);
         onStart?.Invoke();
-    } 
+    }
+    
+    public void SetTimer(float current)
+    {
+        this.current = Mathf.Min(current,startPoint);
+    }
     public void CancelTimer()
     {
         TimeManager.instance.RemoveTimer(this);

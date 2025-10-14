@@ -8,6 +8,7 @@ public interface IEffect<TTarget>
     void Cancel();
 
     event Action<IEffect<TTarget>> onComplete;
-    Type Type { get; }
+
+    IEffect<TTarget> CreateInstance();
 
 }

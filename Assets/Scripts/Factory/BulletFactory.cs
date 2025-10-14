@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
-
 public class BulletFactory : IFactory<Bullet,BulletData>, IFactoryEffectResolver<Bullet>
 {
     Transform parent;
@@ -28,18 +27,22 @@ public class BulletFactory : IFactory<Bullet,BulletData>, IFactoryEffectResolver
                 true,
                 10,
                 50
-                );  // change with object pooling
+                ); 
 
         bulletPool[data] = pool;
 
         Bullet bullet = pool.Get();
+        if(Effects != null)
+            Debug.Log($"Effects: {Effects.Count}");
         bullet.Init(data,pool,playerController,position, Effects);
         return bullet;
     }
 
     public void SetEffects(List<IEffect<Bullet>> effects)
     {
+        
         Effects = effects;
+        Debug.Log($"Setted effects:{Effects.Count}");
     }
 }
 

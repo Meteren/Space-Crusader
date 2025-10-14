@@ -5,10 +5,12 @@ public class UIManager : SingleTon<UIManager>
 {
 
     [SerializeField] private TextMeshProUGUI fpsText;
+    public GameObject effectSelectionScreen;
 
     public void SetFpsBar(float fps)
     {
         fpsText.text = $"FPS:{fps}";
     }
+
 
 }
