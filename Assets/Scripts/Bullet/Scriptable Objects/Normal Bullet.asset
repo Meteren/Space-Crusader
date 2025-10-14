@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb5e71fb29802be4980cc7accc97f4c9, type: 3}
   m_Name: Normal Bullet
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4407766090956389390, guid: 3049ffeb7ff1321439946d31195f46e4, type: 3}
-  generationTime: 0.3
+  prefab: {fileID: 5567295651358079545, guid: 3049ffeb7ff1321439946d31195f46e4, type: 3}
+  generationTime: 1
   speed: {x: 0, y: 5}
   bulletReadyToUse: 1
   pierceCount: 1
-  countDown: 0.28683653
+  countDown: 0.44455904
+  bulletDataIndex: 0

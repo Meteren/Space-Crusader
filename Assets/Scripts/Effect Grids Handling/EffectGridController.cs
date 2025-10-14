@@ -36,19 +36,27 @@ public class EffectGridController : MonoBehaviour
         .SelectMany(x => x.effects)
         .ToList();
 
+        Debug.Log($"All bullet effects:{allBulletEffects.Count}");
+
         List<EffectResolver> effectsMaxedOut = allBulletEffects.Select((x) => 
         {
             int currentLevel = x.EffectLevel;
 
-            if(x is EffectResolver effectResolver 
-               && effectResolver is IResolveAsAbility<BulletSpawner>
-               && currentLevel >= effectResolver.MaxLevel )
-                return effectResolver;
+            if(x is EffectResolver effectResolver)
+            {
+                if ((currentLevel >= effectResolver.MaxLevel) || effectResolver is IResolveAsAbility<BulletSpawner>)
+                    return effectResolver;
+                return null;
+            }                
             else
                 return null;
 
         }).ToList();
 
+        if(effectsMaxedOut != null)
+            if(effectsMaxedOut.Count > 0)
+                if(effectsMaxedOut[0] != null)
+                    Debug.Log($"Effects maxed out: {effectsMaxedOut[0].GetType()}");
 
         if (effectsMaxedOut.Count > 0)
         {
