@@ -6,35 +6,43 @@ public class IncreaseFireRateEffect : EffectResolver, IEffect<Bullet>
 
     public int EffectLevel { get; set; }
 
-    public IncreaseFireRateEffect() { }
-    public IncreaseFireRateEffect(float time, float fireRateIncreaseAmount = 0) : base(time)
+    private Bullet targetReference;
+
+    public IncreaseFireRateEffect(Type target) : base(target) { }
+    public IncreaseFireRateEffect(float time, float fireRateIncreaseAmount = 0.2f, Type targetType = null) : base(time,targetType:targetType)
     {
         this.fireRateIncreaseAmount = fireRateIncreaseAmount;
-        countDown.StartTimer();
         countDown.onEnd += Cancel;
+        countDown.StartTimer();
+
     }
       
     public event Action<IEffect<Bullet>> onComplete;
 
     public void Apply(Bullet target)
     {
-        target.updatedData.generationTime = target.baseData.generationTime - (fireRateIncreaseAmount + EffectLevel);
+        targetReference = target;
+        target.dataReference.generationTime = target.baseData.generationTime - (fireRateIncreaseAmount * EffectLevel);
     }
 
     public void Cancel(Bullet target)
     {
-        //NO-OP
+        if(targetReference != null)
+            target.dataReference.generationTime = target.baseData.generationTime;
     }
 
     public void Cancel()
     {
         onComplete?.Invoke(this);
+        Cancel(targetReference);
         onComplete = null;
+        targetReference = null;
+        EffectLevel = 0;
     }
 
     public IEffect<Bullet> CreateInstance()
     {
-        return new IncreaseFireRateEffect(5);
+        return new IncreaseFireRateEffect(30);
     }
 
     public override string ToString()

@@ -10,10 +10,11 @@ public class EffectGridController : MonoBehaviour
     private BulletSpawner bSpawner;
     private void Start()
     {
-        effects.Add(new IncreaseFireRateEffect());
-        effects.Add(new IncreasePiercingEffect());
-        effects.Add(new SpeedUpEffect());
+        effects.Add(new IncreaseFireRateEffect(typeof(Bullet)));
+        effects.Add(new IncreasePiercingEffect(typeof(Bullet)));
+        effects.Add(new SpeedUpEffect(typeof(Bullet)));
         gameObject.SetActive(false);
+        
     }
 
     private void OnEnable()
@@ -26,42 +27,42 @@ public class EffectGridController : MonoBehaviour
 
     private void ScatterEffects()
     {
-        Debug.Log("Scatter called");
-        List<IEffect<Bullet>> collectedEffects = new List<IEffect<Bullet>>(bSpawner.bulletEffects);
-        List<EffectResolver> effectsMaxedOut = new List<EffectResolver>();
 
+        List<EffectResolver> discriminatedEffects = effects
+            .Where(x => bSpawner.bulletDataInstances
+            .Any(y => (x.TargetType == y.prefab.GetType()) || x is IResolveAsAbility<BulletSpawner>)).ToList();
 
-        effectsMaxedOut = collectedEffects.Select((x) => 
+        List<IEffect<Bullet>> allBulletEffects = bSpawner.bulletDataInstances
+        .SelectMany(x => x.effects)
+        .ToList();
+
+        List<EffectResolver> effectsMaxedOut = allBulletEffects.Select((x) => 
         {
             int currentLevel = x.EffectLevel;
 
-            if(x is EffectResolver resolver && currentLevel >= resolver.MaxLevel)
-                return resolver;
+            if(x is EffectResolver effectResolver 
+               && effectResolver is IResolveAsAbility<BulletSpawner>
+               && currentLevel >= effectResolver.MaxLevel )
+                return effectResolver;
             else
                 return null;
 
         }).ToList();
 
-        Debug.Log($"Effects not maxed out count: {effectsMaxedOut}");
-
-        List<EffectResolver> effectsCopy = new List<EffectResolver>(effects);
 
         if (effectsMaxedOut.Count > 0)
         {
-            effectsCopy = effectsCopy
-                .Where(x => !effectsMaxedOut.Any(y => y != null && x.Type == y.Type))
+            discriminatedEffects = discriminatedEffects
+                .Where(x => !effectsMaxedOut.Any(y => y != null && x.EffectType == y.EffectType))
                 .ToList();
         }
 
-        Debug.Log($"Effects copy count:{effectsCopy.Count}");
-
-        effectsCopy.Sort((a, b) => a.CompareTo(b));
+        discriminatedEffects.Sort((a, b) => a.CompareTo(b));
        
-
         for(int i = 0; i < grids.Count; i++)
         {
-            if(i < effectsCopy.Count)
-                grids[i].InitGrid(effectsCopy[i],bSpawner);
+            if(i < discriminatedEffects.Count)
+                grids[i].InitGrid(discriminatedEffects[i],bSpawner);
             else
                 grids[i].InitGrid();
         }

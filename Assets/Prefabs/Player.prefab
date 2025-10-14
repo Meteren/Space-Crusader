@@ -5029,9 +5029,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 440c74e6815384649ac671c446547fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilites: []
-  bulletData:
+  bulletDataReferences:
   - {fileID: 11400000, guid: 2dbe3557da966774d94e1260771a745b, type: 2}
-  references:
-    version: 2
-    RefIds: []

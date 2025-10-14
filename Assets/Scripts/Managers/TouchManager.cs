@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
 
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
-using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 public class TouchManager : SingleTon<TouchManager>
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created

@@ -1,17 +1,18 @@
 using System;
-using System.Diagnostics;
 
 public class IncreasePiercingEffect : EffectResolver, IEffect<Bullet>
 {
     int increasePiercingAmount;
     public int EffectLevel { get; set; }
-
-    public IncreasePiercingEffect() { }
-    public IncreasePiercingEffect(float time, int increasePiercingAmount = 1) : base(time)
+    public IncreasePiercingEffect(Type target) : base(target)
+    {
+    }
+    public IncreasePiercingEffect(float time, int increasePiercingAmount = 1,Type targetType = null) : base(time,targetType:targetType)
     {
         this.increasePiercingAmount = increasePiercingAmount;
-        countDown.StartTimer();
         countDown.onEnd += Cancel;
+        countDown.StartTimer();
+
     }
 
     public event Action<IEffect<Bullet>> onComplete;
@@ -31,6 +32,7 @@ public class IncreasePiercingEffect : EffectResolver, IEffect<Bullet>
         onComplete?.Invoke(this);
         UnityEngine.Debug.Log("Canceled");
         onComplete = null;
+        EffectLevel = 0;
     }
 
     public IEffect<Bullet> CreateInstance()

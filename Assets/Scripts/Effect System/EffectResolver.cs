@@ -7,18 +7,25 @@ public abstract class EffectResolver : IComparable<EffectResolver>
     protected CountDown countDown;
     public CountDown CountDown { get { return countDown; } }
 
-    public Type Type => GetType();
+    public Type EffectType => GetType();
+
+    public Type TargetType { get; set; }
 
     protected int maxLevel;
 
     public int MaxLevel {  get { return maxLevel; } }
 
-    public EffectResolver() { }
-    public EffectResolver(float time, int maxLevel = 3)
+    public EffectResolver(Type target) 
     {
-        countDown = new CountDown(time, ToString());
+        TargetType = target;
+    }
+    public EffectResolver(float time,int maxLevel = 3, Type targetType = null) : this(targetType)
+    {
+        countDown = new CountDown(time, GetType().Name);
         this.maxLevel = maxLevel;
     }
+
+    public void SetTargetType(Type targetType) => TargetType = targetType;
 
     public virtual int CalcProbability()
     {

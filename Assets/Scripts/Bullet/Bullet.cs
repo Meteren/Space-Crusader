@@ -9,6 +9,8 @@ public class Bullet : MonoBehaviour
 
     public BulletData.DataFields baseData;
 
+    public BulletData dataReference; 
+
     protected IObjectPool<Bullet> bulletPoolBelonged;
 
     protected Rigidbody2D rb;
@@ -23,15 +25,22 @@ public class Bullet : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        Debug.Log($"Speed value:{rb.linearVelocity.y}");
+    }
+
     public void Init(BulletData data, IObjectPool<Bullet> bulletPoolBelonged,PlayerController pc,Vector2 position,List<IEffect<Bullet>> effects = null)
     {
         if (!initFirstTimeValues)
         {
+            dataReference = data;
             baseData = data.CopyClassInstance();
             updatedData = baseData;
             initFirstTimeValues = true;
         }
-        if(effects != null)
+
+        if (effects != null)
         {
             foreach (var effect in effects)
             {
@@ -39,7 +48,6 @@ public class Bullet : MonoBehaviour
                 effect.Apply(this);
             }
         }
-
         this.bulletPoolBelonged = bulletPoolBelonged;
         transform.position = position + new Vector2(0, pc.boundarySize.y / 2);
         SetSpeed();
@@ -65,7 +73,8 @@ public class Bullet : MonoBehaviour
 
         if (updatedData.pierceCount <= 0 )
         {
-            Release();
+            if(gameObject.activeSelf)
+                Release();
         }
     }
 

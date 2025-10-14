@@ -31,16 +31,23 @@ public class Grid : MonoBehaviour
         this.effectInHold = effectInHold;
         this.bSpawner = bSpawner;
 
-        if (bSpawner.TryGetEffect(effectInHold.Type, out IEffect<Bullet> effect))
+        if (bSpawner.TryGetEffect(effectInHold.EffectType,effectInHold.TargetType, out IEffect<Bullet> effect))
         {
-            levelCount.text = (effect.EffectLevel + 1).ToString();
+            levelCount.text = "LV " + (effect.EffectLevel + 1).ToString();
             effectName.text = effectInHold.ToString();
             effectInProgress = effect;
 
         }
         else
         {
-            levelCount.text = (convertedEffectInHold.EffectLevel + 1).ToString();
+            if(effectInHold is IResolveAsAbility<BulletSpawner>)
+            {
+                levelCount.text = effectInHold.ToString();
+                effectName.text = "Ability";
+                effectInProgress = null;
+            }
+
+            levelCount.text = "LV " + (convertedEffectInHold.EffectLevel + 1).ToString();
             effectName.text = effectInHold.ToString();
             effectInProgress = null;
         }
@@ -58,13 +65,28 @@ public class Grid : MonoBehaviour
             if(convertedEffectInHold != null)
             {
                 IEffect<Bullet> instantiatedEffect = convertedEffectInHold.CreateInstance();
+                EffectResolver resolver = instantiatedEffect as EffectResolver;
+
+                if (resolver != null)
+                    resolver.SetTargetType(effectInHold.TargetType);
+
                 Debug.Log(instantiatedEffect.GetType().Name);
 
+                //Check if it has an ability resolver
                 if (instantiatedEffect != null)
                 {
+                    IResolveAsAbility<BulletSpawner> abilityResolver = null;
+                    if(instantiatedEffect is IResolveAsAbility<BulletSpawner> convertedResolver)
+                    {
+                        abilityResolver = convertedResolver;
+                        abilityResolver.SendData(bSpawner);
+                    }
+                        
                     instantiatedEffect.onComplete += bSpawner.RemoveEffect;
-                    instantiatedEffect.EffectLevel++;
+                    if(abilityResolver == null)
+                        instantiatedEffect.EffectLevel++;
                     bSpawner.AddEffect(instantiatedEffect);
+
                 }
             }
                         

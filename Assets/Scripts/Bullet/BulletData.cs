@@ -1,11 +1,15 @@
+using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 [CreateAssetMenu(menuName = "ScriptableObjects/BulletData")]
 public class BulletData : ScriptableObject
 {
     //can be extended
     [Header("Bullet Prefab")]
-    public GameObject prefab;
+    public Bullet prefab;
+
+    public Type bulletType => prefab.GetType();
 
     //----
     [Header("Bullet Attributes")]
@@ -14,8 +18,11 @@ public class BulletData : ScriptableObject
     public bool bulletReadyToUse;
     public int pierceCount;
     //---
+    [HideInInspector]public readonly List<IEffect<Bullet>> effects = new();
 
     [HideInInspector] public float countDown;
+
+    public int bulletDataIndex;
 
     public struct DataFields
     {
@@ -35,5 +42,6 @@ public class BulletData : ScriptableObject
 
         return dataFields;
     }
+
 
 }

@@ -5,60 +5,75 @@ using System.Linq;
 
 public class BulletSpawner : MonoBehaviour
 {
-    public readonly List<IEffect<Bullet>> bulletEffects = new();
   
-    [SerializeField] private List<BulletData> bulletData; //later add a selection for specified bullet according to effect list in player
-                                                          //can be referenced to player from here for the selection logic
+    [SerializeField] private List<BulletData> bulletDataReferences; //later add a selection for specified bullet according to effect list in player
+                                                                    //can be referenced to player from here for the selection logic
+    public List<BulletData> bulletDataInstances = new();
     BulletFactory bulletFactory;
 
     private PlayerController playerController;
+
     private void Awake()
     {
         playerController = GetComponent<PlayerController>();
         bulletFactory = new BulletFactory(playerController);
+        
+        BulletData instantiatedData = Instantiate(bulletDataReferences[0],transform);
+        bulletDataInstances.Add(instantiatedData);
+        
     }
 
     private void Update()
     {
         if (TouchManager.instance.activeTouchesCount > 0 && !UIManager.instance.effectSelectionScreen.activeSelf || Input.GetMouseButtonDown(0) )
         {
+            foreach (var data in bulletDataInstances)
             {
-                foreach (var data in bulletData)
+                if (data.bulletReadyToUse)
                 {
-                    if (data.bulletReadyToUse)
+                    data.countDown -= Time.deltaTime;
+                    if (data.countDown <= 0)
                     {
-                        data.countDown -= Time.deltaTime;
-                        if (data.countDown <= 0)
-                        {
-
-                            bulletFactory.Create(data, playerController.transform.position);
-                            data.countDown = data.generationTime;
-                        }
-
+                        bulletFactory.Create(data, playerController.transform.position);
+                        data.countDown = data.generationTime;
                     }
-                }
-            }
 
+                }
+             }
+ 
         }
     }
 
     public void AddEffect(IEffect<Bullet> effect)
     {
-        bulletEffects.Add(effect);
-        bulletFactory.SetEffects(bulletEffects);
-        Debug.Log($"Bullet effects count:{bulletEffects.Count}");
+        
+        BulletData dataToBeEffected = GetDataToBeEffected(effect);
+
+        //Check if its null later, leave it for now
+
+        dataToBeEffected.effects.Add(effect);
+        Debug.Log($"{dataToBeEffected.prefab.GetType().Name} effects count: {dataToBeEffected.effects.Count}");
+  
     }
 
-    public bool TryGetEffect(Type type, out IEffect<Bullet> effect)
+    public bool TryGetEffect(Type effectType,Type targetType, out IEffect<Bullet> effect)
     {
-        if(bulletEffects.Count > 0)
+
+        BulletData dataToBeEffected = GetDataToBeEffected(targetType);
+
+        if(dataToBeEffected != null)
         {
-            effect = bulletEffects.Select(x => x).Where(x => (x is EffectResolver manager ? manager.Type : x.GetType()) == type).FirstOrDefault();
-            
-            if(effect != null)
-                return true;
+            if (dataToBeEffected.effects.Count > 0)
+            {
+                effect = dataToBeEffected.effects.Select(x => x).Where(x => (x is EffectResolver manager ? manager.EffectType
+                             : x.GetType()) == effectType).FirstOrDefault();
+
+                if (effect != null)
+                    return true;
+            }
+
         }
-            
+
         effect = default;
         return false;
 
@@ -66,10 +81,67 @@ public class BulletSpawner : MonoBehaviour
     
     public void RemoveEffect(IEffect<Bullet> effect)
     {
-        bulletEffects.Remove(effect);
-        bulletFactory.SetEffects(bulletEffects);
+        BulletData dataToBeEffected = GetDataToBeEffected(effect);
+        if(dataToBeEffected != null)
+            dataToBeEffected.effects.Remove(effect);
     }
 
+
+    public void AddBulletToSpawner(Type bulletType)
+    {
+        
+        for (int i = 0; i < bulletDataReferences.Count; i++)
+        {
+            if (bulletDataReferences[i].prefab.GetType() == bulletType)
+            {
+                BulletData newBulletData = Instantiate(bulletDataReferences[i], transform);
+                bulletDataInstances.Add(newBulletData);
+                break;
+            }
+                
+        }
+
+    }
+
+    public void RemoveBulletFromSpawner(Type bulletType)
+    {
+        for (int i = 0; i < bulletDataReferences.Count; i++)
+        {
+            if (bulletDataInstances[i].prefab.GetType() == bulletType)
+            {
+                BulletData foundBulletData = bulletDataInstances[i];
+                bulletDataInstances.Remove(foundBulletData);
+                break;
+            }
+
+        }
+    }
+
+    public BulletData GetDataToBeEffected(IEffect<Bullet> effect)
+    {
+        EffectResolver resolver = effect as EffectResolver;
+        if(resolver != null)
+        {
+            BulletData data = bulletDataInstances.Select(x =>
+            {
+                if (resolver.TargetType == x.prefab.GetType())
+                    return x;
+                else
+                    return null;
+
+            }).FirstOrDefault();
+            return data;
+        }else
+            return null;
+
+    }
+
+    public BulletData GetDataToBeEffected(Type targetType)
+    {
+        BulletData dataFound = bulletDataInstances.Select(x => x.prefab.GetType() == targetType ? x : null).FirstOrDefault();
+
+        return dataFound;
+    }
 
 }
 
