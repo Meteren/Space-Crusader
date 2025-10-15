@@ -5,7 +5,7 @@ using System.Linq;
 
 public class EffectGridController : MonoBehaviour
 {
-    [SerializeField] private List<Grid> grids;
+    [SerializeField] private List<EffectGrid> grids;
     private List<EffectResolver> effects = new();
     private BulletSpawner bSpawner;
     private void Start()
@@ -13,6 +13,7 @@ public class EffectGridController : MonoBehaviour
         effects.Add(new IncreaseFireRateEffect(typeof(Bullet)));
         effects.Add(new IncreasePiercingEffect(typeof(Bullet)));
         effects.Add(new SpeedUpEffect(typeof(Bullet)));
+        effects.Add(new ExplosiveBulletActivationEffect(typeof(ExplosiveBullet)));
         gameObject.SetActive(false);
         
     }
@@ -30,7 +31,7 @@ public class EffectGridController : MonoBehaviour
 
         List<EffectResolver> discriminatedEffects = effects
             .Where(x => bSpawner.bulletDataInstances
-            .Any(y => (x.TargetType == y.prefab.GetType()) || x is IResolveAsAbility<BulletSpawner>)).ToList();
+            .Any(y => (x.TargetType == y.bulletType) || x is IResolveAsAbility<BulletSpawner>)).ToList();
 
         List<IEffect<Bullet>> allBulletEffects = bSpawner.bulletDataInstances
         .SelectMany(x => x.effects)

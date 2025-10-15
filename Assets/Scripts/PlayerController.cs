@@ -1,9 +1,5 @@
 
-using System;
-using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem.EnhancedTouch;
-
 using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 
 public class PlayerController : MonoBehaviour
@@ -32,6 +28,9 @@ public class PlayerController : MonoBehaviour
     private Camera cam;
 
     Quaternion rotateTo;
+
+    [HideInInspector] public float movePosXMin;
+    [HideInInspector] public float movePosXMax;
 
     public Vector2 boundarySize => boundary.bounds.size;
 
@@ -123,12 +122,12 @@ public class PlayerController : MonoBehaviour
 
     private bool ClampPosition(ref Vector2 positionToClamp)
     {
-        float minX = cam.ScreenToWorldPoint(new Vector2(0, 0)).x + boundarySize.x / 2 + offsetX;
-        float maxX = cam.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - boundarySize.x / 2 - offsetX;
+        movePosXMin = cam.ScreenToWorldPoint(new Vector2(0, 0)).x + boundarySize.x / 2 + offsetX;
+        movePosXMax = cam.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - boundarySize.x / 2 - offsetX;
 
-        bool isClamped = positionToClamp.x < minX || positionToClamp.x >= maxX; 
+        bool isClamped = positionToClamp.x < movePosXMin || positionToClamp.x >= movePosXMax; 
 
-        positionToClamp = new Vector2(Mathf.Clamp(positionToClamp.x,minX, maxX), positionToClamp.y);
+        positionToClamp = new Vector2(Mathf.Clamp(positionToClamp.x, movePosXMin, movePosXMax), positionToClamp.y);
 
         return isClamped;
     }

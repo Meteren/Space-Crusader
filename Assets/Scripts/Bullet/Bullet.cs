@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
 
     public BulletData.DataFields baseData;
 
-    public BulletData dataReference; 
+    [HideInInspector] public BulletData dataReference; 
 
     protected IObjectPool<Bullet> bulletPoolBelonged;
 
@@ -17,17 +17,22 @@ public class Bullet : MonoBehaviour
 
     protected bool initFirstTimeValues = false;
 
+    protected PlayerController playerReference;
+
+    protected Vector2 generationPoint;
+
+    protected List<IEffect<Bullet>> storedEffects;
+
     public IObjectPool<Bullet> BulletPoolBelonged { get => bulletPoolBelonged; }
 
-    private void Start()
+    protected void Start()
     {
         transform.localScale /= CameraScaler.scaleFactor;
-
     }
-
     private void Update()
     {
         Debug.Log($"Speed value:{rb.linearVelocity.y}");
+
     }
 
     public void Init(BulletData data, IObjectPool<Bullet> bulletPoolBelonged,PlayerController pc,Vector2 position,List<IEffect<Bullet>> effects = null)
@@ -40,6 +45,8 @@ public class Bullet : MonoBehaviour
             initFirstTimeValues = true;
         }
 
+        storedEffects = new List<IEffect<Bullet>>(effects);
+
         if (effects != null)
         {
             foreach (var effect in effects)
@@ -49,26 +56,37 @@ public class Bullet : MonoBehaviour
             }
         }
         this.bulletPoolBelonged = bulletPoolBelonged;
-        transform.position = position + new Vector2(0, pc.boundarySize.y / 2);
-        SetSpeed();
+        playerReference = pc;     
+        generationPoint = position;
     }
-    
-    public void SetSpeed()
+
+    public virtual void ApplyModeSpecification()
+    {
+        SetSpeed();
+        SetPosition();
+    }
+
+    public virtual void SetPosition()
+    {
+        transform.position = generationPoint + new Vector2(0, playerReference.boundarySize.y / 2);
+    }
+
+    public virtual void SetSpeed()
     {
         if(!rb)
             rb = GetComponent<Rigidbody2D>();
         rb.linearVelocity = updatedData.speed;
     }
 
-    public void Release()
+    public virtual void Release()
     {
         updatedData = baseData;
         bulletPoolBelonged.Release(this);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!collision.GetComponent<PlayerController>())
+        if(!collision.GetComponent<PlayerController>() && !collision.GetComponent<Bullet>())
             updatedData.pierceCount--;
 
         if (updatedData.pierceCount <= 0 )

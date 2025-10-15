@@ -1,5 +1,6 @@
 using System;
 
+
 public class ExplosiveBulletActivationEffect : EffectResolver, IEffect<Bullet>, IResolveAsAbility<BulletSpawner>
 {
     BulletSpawner bSpawnerReference;
@@ -7,7 +8,6 @@ public class ExplosiveBulletActivationEffect : EffectResolver, IEffect<Bullet>, 
     public ExplosiveBulletActivationEffect(Type target) : base(target)
     {
     }
-
     public ExplosiveBulletActivationEffect(float time, int maxLevel = 3, Type type = null) : base(time,targetType:type)
     {
         countDown.onEnd += Cancel;
@@ -20,13 +20,12 @@ public class ExplosiveBulletActivationEffect : EffectResolver, IEffect<Bullet>, 
 
     public void Apply(Bullet target)
     {
-        targetReference = target;//will be deleted prob
-        
+        targetReference = target;//will be deleted prob    
     }
 
     public void Cancel(Bullet target)
     {
-        //NO-OP
+        //NOOP
     }
 
     public void Cancel()
@@ -45,12 +44,13 @@ public class ExplosiveBulletActivationEffect : EffectResolver, IEffect<Bullet>, 
 
     public IEffect<Bullet> CreateInstance()
     {
-        return new ExplosiveBulletActivationEffect(200f);
+        return new ExplosiveBulletActivationEffect(30f);
     }
 
     public void SendData(BulletSpawner dataToSend)
     {
         bSpawnerReference = dataToSend;
+        UnityEngine.Debug.Log(TargetType);
         bSpawnerReference.AddBulletToSpawner(TargetType);
     }
 

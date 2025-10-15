@@ -11,7 +11,7 @@ public abstract class Timer
 
     protected float startPoint;
 
-    string source;
+    protected string source;
     protected Timer(float startPoint,string source) 
     { 
         this.startPoint = startPoint;
@@ -38,14 +38,16 @@ public abstract class Timer
     }
     public void CancelTimer()
     {
-        TimeManager.instance.RemoveTimer(this);
+        CleanAfterCompletion();
     }
 
-    public void CleanAfterCompletion()
+    public virtual void CleanAfterCompletion()
     {
         Debug.Log($"{source} timer ended.");
         onEnd?.Invoke();
         isFinished = true;
+        onStart = null;
+        onEnd = null;
         TimeManager.instance.RemoveTimer(this);
     }
 

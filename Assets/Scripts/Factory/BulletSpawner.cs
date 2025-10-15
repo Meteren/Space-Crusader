@@ -5,10 +5,11 @@ using System.Linq;
 
 public class BulletSpawner : MonoBehaviour
 {
-  
+
+    [Header("Generation Pool For Bullets")]
     [SerializeField] private List<BulletData> bulletDataReferences; //later add a selection for specified bullet according to effect list in player
                                                                     //can be referenced to player from here for the selection logic
-    public List<BulletData> bulletDataInstances = new();
+    [HideInInspector]public List<BulletData> bulletDataInstances = new();
     BulletFactory bulletFactory;
 
     private PlayerController playerController;
@@ -92,7 +93,7 @@ public class BulletSpawner : MonoBehaviour
         
         for (int i = 0; i < bulletDataReferences.Count; i++)
         {
-            if (bulletDataReferences[i].prefab.GetType() == bulletType)
+            if (bulletDataReferences[i].bulletType == bulletType)
             {
                 BulletData newBulletData = Instantiate(bulletDataReferences[i], transform);
                 bulletDataInstances.Add(newBulletData);
@@ -122,14 +123,7 @@ public class BulletSpawner : MonoBehaviour
         EffectResolver resolver = effect as EffectResolver;
         if(resolver != null)
         {
-            BulletData data = bulletDataInstances.Select(x =>
-            {
-                if (resolver.TargetType == x.prefab.GetType())
-                    return x;
-                else
-                    return null;
-
-            }).FirstOrDefault();
+            BulletData data = bulletDataInstances.FirstOrDefault(x => x.bulletType == resolver.TargetType);
             return data;
         }else
             return null;
@@ -138,7 +132,7 @@ public class BulletSpawner : MonoBehaviour
 
     public BulletData GetDataToBeEffected(Type targetType)
     {
-        BulletData dataFound = bulletDataInstances.Select(x => x.prefab.GetType() == targetType ? x : null).FirstOrDefault();
+        BulletData dataFound = bulletDataInstances.FirstOrDefault(x => x.bulletType == targetType);
 
         return dataFound;
     }

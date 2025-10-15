@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54018aecdaeb18140bf19cc62c79c132, type: 3}
+  m_Name: ExplosiveBullet
+  m_EditorClassIdentifier: 
+  prefab: {fileID: -4185930083178397746, guid: 2bef29794df49834d85d2ef831e93ff6, type: 3}
+  bulletReadyToUse: 1
+  generationTime: 0.8
+  speed: {x: 1, y: 1}
+  pierceCount: 1
+  canExplode: 1
+  burstCount: 0
+  timeBetweenBurstShots: 0.2
+  multipleShot: 0
+  bulletDataIndex: 1
+  countDown: 0

@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Grid : MonoBehaviour
+public class EffectGrid : MonoBehaviour
 {
     private EffectResolver effectInHold; //type can be checked if its a wanted type according to the
                                          //IEffect<TTarget> using etc. effectInHold is IEffect<Bullet>
@@ -45,6 +45,7 @@ public class Grid : MonoBehaviour
                 levelCount.text = effectInHold.ToString();
                 effectName.text = "Ability";
                 effectInProgress = null;
+                return;
             }
 
             levelCount.text = "LV " + (convertedEffectInHold.EffectLevel + 1).ToString();
@@ -70,7 +71,7 @@ public class Grid : MonoBehaviour
                 if (resolver != null)
                     resolver.SetTargetType(effectInHold.TargetType);
 
-                Debug.Log(instantiatedEffect.GetType().Name);
+                Debug.Log(instantiatedEffect.GetType().Name + " " + resolver.TargetType.Name);
 
                 //Check if it has an ability resolver
                 if (instantiatedEffect != null)
@@ -81,7 +82,21 @@ public class Grid : MonoBehaviour
                         abilityResolver = convertedResolver;
                         abilityResolver.SendData(bSpawner);
                     }
-                        
+                    //for debugging will be deleted later
+                    if(abilityResolver != null)
+                    {
+                        Debug.Log(instantiatedEffect.GetType().Name + " is a resolver");
+                        if (bSpawner.bulletDataInstances[1] != null)
+                        {
+                            Debug.Log(instantiatedEffect.GetType().Name + "  added to the bullet spawner and contains" + " " +
+                                bSpawner.bulletDataInstances[1].bulletType.Name);
+                        }
+                        else
+                        {
+                            Debug.Log(instantiatedEffect.GetType().Name + "  failed to be added to bullet spawner.");
+                        }
+                    }
+                    //---
                     instantiatedEffect.onComplete += bSpawner.RemoveEffect;
                     if(abilityResolver == null)
                         instantiatedEffect.EffectLevel++;

@@ -9,26 +9,40 @@ public class Interval : Timer
 
     public event Action onInterval;
 
+    bool startedAtZero;
+
     public Interval(float intervalTick, float startPoint,string source) : base(startPoint, source)
     {
         this.intervalTick = intervalTick;
-        valueAfterInterval = startPoint;
+        valueAfterInterval = startPoint - intervalTick;
+        startedAtZero = Mathf.Approximately(startPoint, 0);
     }
 
     public override void OnTick()
     {
-        current -= Time.deltaTime;  
-        if(current <= valueAfterInterval)
+        if (startedAtZero)
+            return;
+
+        current -= Time.deltaTime;
+        if (current <= valueAfterInterval)
         {
             valueAfterInterval -= intervalTick;
 
             onInterval?.Invoke();
-        }        
+            Debug.Log($"On Interval for {source}");
+        }
     }
 
     public override void Reset()
     {
         base.Reset();
         valueAfterInterval = startPoint;
+        startedAtZero = Mathf.Approximately(startPoint, 0);
+    }
+
+    public override void CleanAfterCompletion()
+    {
+        base.CleanAfterCompletion();
+        onInterval = null;
     }
 }

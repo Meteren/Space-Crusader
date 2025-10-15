@@ -35,6 +35,7 @@ public class BulletFactory : IFactory<Bullet,BulletData>
         if(effects != null)
             Debug.Log($"Effects: {effects.Count}");
         bullet.Init(data,pool,playerController,position, effects);
+        bullet.ApplyModeSpecification();
         return bullet;
     }
 
