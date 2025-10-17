@@ -29,12 +29,9 @@ public class BulletFactory : IFactory<Bullet,BulletData>
 
         bulletPool[data] = pool;
 
-        List<IEffect<Bullet>> effects = data.effects;
-
         Bullet bullet = pool.Get();
-        if(effects != null)
-            Debug.Log($"Effects: {effects.Count}");
-        bullet.Init(data,pool,playerController,position, effects);
+        
+        bullet.Init(data,pool,playerController,position);
         bullet.ApplyModeSpecification();
         return bullet;
     }

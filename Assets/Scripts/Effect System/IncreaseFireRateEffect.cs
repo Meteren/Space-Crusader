@@ -24,7 +24,7 @@ public class IncreaseFireRateEffect : EffectResolver, IEffect<Bullet>
     public void Apply(Bullet target)
     {
         targetReference = target;
-        target.dataReference.generationTime = target.baseData.defaultGenTime - (fireRateIncreaseAmount * EffectLevel);
+        target.dataReference.generationTime = target.baseData.defaultGenTime - (fireRateIncreaseAmount * EffectLevel * target.updatedData.fireRateMuliplyVal);
         target.dataReference.countDown = target.dataReference.generationTime;
     }
 

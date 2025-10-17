@@ -17,6 +17,13 @@ public class EffectGridController : MonoBehaviour
         effects.Add(new BurstCountBoostEffect(typeof(ExplosiveBullet)));
         effects.Add(new SpeedUpEffect(typeof(ExplosiveBullet)));
         effects.Add(new TimeBetweenBurstBoosterEffect(typeof(ExplosiveBullet), new List<Type>() { typeof(BurstCountBoostEffect) }));
+        effects.Add(new IncreaseFireRateEffect(typeof(ExplosiveBullet)));
+        effects.Add(new ScatteredBulletActivationEffect(typeof(ScatteredBullet)));
+        effects.Add(new IncreaseFireRateEffect(typeof(ScatteredBullet)));
+        effects.Add(new SpeedUpEffect(typeof(ScatteredBullet)));
+        effects.Add(new IncreasePiercingEffect(typeof(ScatteredBullet)));
+        effects.Add(new BulletCountToScatterBoosterEffect(typeof(ScatteredBullet)));
+
         gameObject.SetActive(false);
 
     }

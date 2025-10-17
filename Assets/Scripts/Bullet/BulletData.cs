@@ -22,8 +22,10 @@ public class BulletData : ScriptableObject
     [SerializeField] private int burstCount;
     [SerializeField] private float timeBetweenBurstShots;
 
-    [SerializeField] private int multipleShotCount;
+    [SerializeField] private int shotsToReflectCount;
     [SerializeField] private float angleBetweenMultipleShots;
+
+    [SerializeField] private float fireRateMuliplyVal;
 
     public int bulletDataIndex; 
     //---
@@ -40,14 +42,12 @@ public class BulletData : ScriptableObject
         public Vector2 speed;
         public bool bulletReadyToUse;
         public int pierceCount;
-        public bool canExplode;
-        public float timeBetweenBurstShots;
-        public bool multipleShot;
-        public bool burstMode;  
+        public float timeBetweenBurstShots;  
         public int burstCount;
         public float defaultGenTime;
-        public int multipleShotCount;
+        public int shotsToReflectCount;
         public float angleBetweenMultipleShots;
+        public float fireRateMuliplyVal;
         
     }
     //--
@@ -62,7 +62,8 @@ public class BulletData : ScriptableObject
         dataFields.burstCount = burstCount;
         dataFields.defaultGenTime = defaultGenTime;
         dataFields.angleBetweenMultipleShots = angleBetweenMultipleShots;
-        dataFields.multipleShotCount = multipleShotCount;
+        dataFields.shotsToReflectCount = shotsToReflectCount;
+        dataFields.fireRateMuliplyVal = fireRateMuliplyVal;
 
         return dataFields;
     }

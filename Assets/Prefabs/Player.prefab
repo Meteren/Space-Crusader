@@ -5033,5 +5033,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletDataReferences:
   - {fileID: 11400000, guid: 63a37fd331b343e43b2b1f20444bc368, type: 2}
+  - {fileID: 11400000, guid: 18671b30676f711409f45d3de0f22508, type: 2}
   - {fileID: 11400000, guid: 7a12a1d35e15ccd41943cd353f9493c2, type: 2}
   bulletDataInstances: []

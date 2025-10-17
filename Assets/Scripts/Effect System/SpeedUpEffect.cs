@@ -19,7 +19,8 @@ public class SpeedUpEffect : EffectResolver, IEffect<Bullet>
 
     public void Apply(Bullet target)
     {
-        target.updatedData.speed = target.baseData.speed + new Vector2(0, speedAddValue * EffectLevel);
+        target.updatedData.speed = target.baseData.speed + 
+            new Vector2(target.baseData.speed.x > 0 ? speedAddValue * EffectLevel : 0, target.baseData.speed.y > 0 ? speedAddValue * EffectLevel : 0);
         target.SetSpeed();
     }
 
@@ -45,4 +46,3 @@ public class SpeedUpEffect : EffectResolver, IEffect<Bullet>
         return $"{TargetType.Name} Speed Up";
     }
 }
-

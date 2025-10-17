@@ -21,8 +21,6 @@ public class Bullet : MonoBehaviour
 
     protected Vector2 generationPoint;
 
-    protected List<IEffect<Bullet>> storedEffects;
-
     public IObjectPool<Bullet> BulletPoolBelonged { get => bulletPoolBelonged; }
 
     protected void Start()
@@ -31,11 +29,11 @@ public class Bullet : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log($"Speed value:{rb.linearVelocity.y}");
+        //Debug.Log($"Speed value:{rb.linearVelocity.y}");
 
     }
 
-    public void Init(BulletData data, IObjectPool<Bullet> bulletPoolBelonged,PlayerController pc,Vector2 position,List<IEffect<Bullet>> effects = null)
+    public void Init(BulletData data, IObjectPool<Bullet> bulletPoolBelonged,PlayerController pc,Vector2 position)
     {
         if (!initFirstTimeValues)
         {
@@ -45,11 +43,9 @@ public class Bullet : MonoBehaviour
             initFirstTimeValues = true;
         }
 
-        storedEffects = new List<IEffect<Bullet>>(effects);
-
-        if (effects != null)
+        if (data.effects != null)
         {
-            foreach (var effect in effects)
+            foreach (var effect in data.effects)
             {
                 Debug.Log(effect.GetType().Name);
                 effect.Apply(this);
@@ -89,6 +85,7 @@ public class Bullet : MonoBehaviour
         if(!collision.GetComponent<PlayerController>() && !collision.GetComponent<Bullet>())
             updatedData.pierceCount--;
 
+
         if (updatedData.pierceCount <= 0 )
         {
             if(gameObject.activeSelf)
@@ -96,32 +93,4 @@ public class Bullet : MonoBehaviour
         }
     }
 
-}
-
-public class ScatteredBullet : Bullet
-{
-    public override void ApplyModeSpecification()
-    {
-        base.ApplyModeSpecification();
-    }
-
-    public override void Release()
-    {
-        base.Release();
-    }
-
-    public override void SetPosition()
-    {
-        base.SetPosition();
-    }
-
-    public override void SetSpeed()
-    {
-        base.SetSpeed();
-    }
-
-    protected override void OnTriggerEnter2D(Collider2D collision)
-    {
-        base.OnTriggerEnter2D(collision);
-    }
 }

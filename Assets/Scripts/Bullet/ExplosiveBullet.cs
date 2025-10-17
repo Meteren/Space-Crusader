@@ -72,7 +72,7 @@ public class ExplosiveBullet : Bullet
         Debug.Log("Burst action");
         ExplosiveBullet explosiveBullet = bulletPoolBelonged.Get() as ExplosiveBullet;
         if(explosiveBullet != null)
-            explosiveBullet.Init(dataReference,bulletPoolBelonged,playerReference,playerReference.transform.position,storedEffects);;
+            explosiveBullet.Init(dataReference,bulletPoolBelonged,playerReference,playerReference.transform.position);;
         explosiveBullet.SetIndividualValues();
     }
 

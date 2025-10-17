@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54018aecdaeb18140bf19cc62c79c132, type: 3}
   m_Name: ScatteredBullet
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 1457599325136747994, guid: 03e029e97e9d0924eaafe0922420a686, type: 3}
   bulletReadyToUse: 1
   generationTime: 0.8
   defaultGenTime: 0.8
   speed: {x: 3, y: 3}
-  pierceCount: 0
+  pierceCount: 1
   burstCount: 0
   timeBetweenBurstShots: 0
-  multipleShotCount: 2
+  shotsToReflectCount: 1
   angleBetweenMultipleShots: 15
+  fireRateMuliplyVal: 1
   bulletDataIndex: 2
   countDown: 0

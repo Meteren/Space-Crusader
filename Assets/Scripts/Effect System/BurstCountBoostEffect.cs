@@ -64,7 +64,7 @@ public class BurstCountBoostEffect : EffectResolver, IEffect<Bullet>, IDataProvi
 
     public IEffect<Bullet> CreateInstance()
     {
-        return new BurstCountBoostEffect(new CountDown(15f,EffectType.Name));
+        return new BurstCountBoostEffect(/*new CountDown(15f,EffectType.Name)*/);
     }
 
     public void Provide(BulletData providedData)

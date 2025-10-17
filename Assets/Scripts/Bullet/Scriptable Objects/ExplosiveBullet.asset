@@ -20,7 +20,8 @@ MonoBehaviour:
   pierceCount: 1
   burstCount: 0
   timeBetweenBurstShots: 0.2
-  multipleShotCount: 0
+  shotsToReflectCount: 0
   angleBetweenMultipleShots: 0
+  fireRateMuliplyVal: 0.7
   bulletDataIndex: 1
   countDown: 0
