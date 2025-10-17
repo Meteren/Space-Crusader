@@ -1,18 +1,20 @@
+using System.Collections.Generic;
 using System;
 
 public class IncreasePiercingEffect : EffectResolver, IEffect<Bullet>
 {
     int increasePiercingAmount;
     public int EffectLevel { get; set; }
-    public IncreasePiercingEffect(Type target) : base(target)
+    public IncreasePiercingEffect(Type target,List<Type> dependentEffects = null) : base(target, dependentEffects)
     {
     }
-    public IncreasePiercingEffect(float time, int increasePiercingAmount = 1,Type targetType = null) : base(time,targetType:targetType)
+    public IncreasePiercingEffect(List<Type> dependentEffects = null,Timer timer = null, int increasePiercingAmount = 1, int maxLevel = 3,Type targetType = null) : base(maxLevel,dependentEffects,timer:timer, targetType:targetType)
     {
-        this.increasePiercingAmount = increasePiercingAmount;
-        countDown.onEnd += Cancel;
-        countDown.StartTimer();
 
+        this.increasePiercingAmount = increasePiercingAmount;
+        if (this.timer != null)
+            this.timer.onEnd += Cancel;
+      
     }
 
     public event Action<IEffect<Bullet>> onComplete;
@@ -37,11 +39,11 @@ public class IncreasePiercingEffect : EffectResolver, IEffect<Bullet>
 
     public IEffect<Bullet> CreateInstance()
     {
-        return new IncreasePiercingEffect(10);
+        return new IncreasePiercingEffect();
     }
 
     public override string ToString()
     {
-        return "Piercing";
+        return $"{TargetType.Name} Piercing";
     }
 }

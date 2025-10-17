@@ -97,3 +97,31 @@ public class Bullet : MonoBehaviour
     }
 
 }
+
+public class ScatteredBullet : Bullet
+{
+    public override void ApplyModeSpecification()
+    {
+        base.ApplyModeSpecification();
+    }
+
+    public override void Release()
+    {
+        base.Release();
+    }
+
+    public override void SetPosition()
+    {
+        base.SetPosition();
+    }
+
+    public override void SetSpeed()
+    {
+        base.SetSpeed();
+    }
+
+    protected override void OnTriggerEnter2D(Collider2D collision)
+    {
+        base.OnTriggerEnter2D(collision);
+    }
+}

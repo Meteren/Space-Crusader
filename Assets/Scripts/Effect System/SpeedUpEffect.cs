@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System;
 using UnityEngine;
 
@@ -8,12 +9,12 @@ public class SpeedUpEffect : EffectResolver, IEffect<Bullet>
     public int speedAddValue;
 
     public event Action<IEffect<Bullet>> onComplete;
-    public SpeedUpEffect(Type type) : base(type) { }
-    public SpeedUpEffect(float time, int speedAddValue = 1,Type targetType = null) : base(time,targetType:targetType)
+    public SpeedUpEffect(Type type,List<Type> dependentEffects = null) : base(type, dependentEffects) { }
+    public SpeedUpEffect(List<Type> dependentEffects = null,Timer timer = null, int speedAddValue = 1,int maxLevel = 3,Type targetType = null) : base(maxLevel,dependentEffects, timer,targetType:targetType)
     {
         this.speedAddValue = speedAddValue;
-        countDown.StartTimer();
-        countDown.onEnd += Cancel;
+        if(timer != null)
+            this.timer.onEnd += Cancel;
     }
 
     public void Apply(Bullet target)
@@ -36,11 +37,12 @@ public class SpeedUpEffect : EffectResolver, IEffect<Bullet>
 
     public IEffect<Bullet> CreateInstance()
     {
-        return new SpeedUpEffect(60,3);   
+        return new SpeedUpEffect();   
     }
 
     public override string ToString()
     {
-        return "Speed Up";
+        return $"{TargetType.Name} Speed Up";
     }
 }
+

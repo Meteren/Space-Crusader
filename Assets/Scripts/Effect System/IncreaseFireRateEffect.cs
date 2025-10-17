@@ -1,4 +1,6 @@
+
 using System;
+using System.Collections.Generic;
 
 public class IncreaseFireRateEffect : EffectResolver, IEffect<Bullet>
 {
@@ -8,12 +10,12 @@ public class IncreaseFireRateEffect : EffectResolver, IEffect<Bullet>
 
     private Bullet targetReference;
 
-    public IncreaseFireRateEffect(Type target) : base(target) { }
-    public IncreaseFireRateEffect(float time, float fireRateIncreaseAmount = 0.2f, Type targetType = null) : base(time,targetType:targetType)
+    public IncreaseFireRateEffect(Type target,List<Type> dependentEffects = null) : base(target,dependentEffects) { }
+    public IncreaseFireRateEffect(List<Type> dependentEffects = null,Timer timer = null, float fireRateIncreaseAmount = 0.2f,int maxLevel = 3, Type targetType = null) : base(maxLevel, dependentEffects, timer:timer, targetType:targetType)
     {
         this.fireRateIncreaseAmount = fireRateIncreaseAmount;
-        countDown.onEnd += Cancel;
-        countDown.StartTimer();
+        if(this.timer != null)
+            this.timer.onEnd += Cancel;
 
     }
       
@@ -22,7 +24,8 @@ public class IncreaseFireRateEffect : EffectResolver, IEffect<Bullet>
     public void Apply(Bullet target)
     {
         targetReference = target;
-        target.dataReference.generationTime = target.baseData.generationTime - (fireRateIncreaseAmount * EffectLevel);
+        target.dataReference.generationTime = target.baseData.defaultGenTime - (fireRateIncreaseAmount * EffectLevel);
+        target.dataReference.countDown = target.dataReference.generationTime;
     }
 
     public void Cancel(Bullet target)
@@ -42,11 +45,11 @@ public class IncreaseFireRateEffect : EffectResolver, IEffect<Bullet>
 
     public IEffect<Bullet> CreateInstance()
     {
-        return new IncreaseFireRateEffect(30);
+        return new IncreaseFireRateEffect();
     }
 
     public override string ToString()
     {
-        return "Fire Rate";
+        return $"{TargetType.Name} Fire Rate";
     }
 }

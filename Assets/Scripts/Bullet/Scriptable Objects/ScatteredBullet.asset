@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54018aecdaeb18140bf19cc62c79c132, type: 3}
-  m_Name: NormalBullet
+  m_Name: ScatteredBullet
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5567295651358079545, guid: 3049ffeb7ff1321439946d31195f46e4, type: 3}
+  prefab: {fileID: 0}
   bulletReadyToUse: 1
   generationTime: 0.8
   defaultGenTime: 0.8
-  speed: {x: 0, y: 5}
-  pierceCount: 1
+  speed: {x: 3, y: 3}
+  pierceCount: 0
   burstCount: 0
   timeBetweenBurstShots: 0
-  multipleShotCount: 0
-  angleBetweenMultipleShots: 0
-  bulletDataIndex: 0
+  multipleShotCount: 2
+  angleBetweenMultipleShots: 15
+  bulletDataIndex: 2
   countDown: 0

@@ -15,11 +15,12 @@ MonoBehaviour:
   prefab: {fileID: -4185930083178397746, guid: 2bef29794df49834d85d2ef831e93ff6, type: 3}
   bulletReadyToUse: 1
   generationTime: 0.8
-  speed: {x: 1, y: 1}
+  defaultGenTime: 0.8
+  speed: {x: 2, y: 6}
   pierceCount: 1
-  canExplode: 1
   burstCount: 0
   timeBetweenBurstShots: 0.2
-  multipleShot: 0
+  multipleShotCount: 0
+  angleBetweenMultipleShots: 0
   bulletDataIndex: 1
   countDown: 0

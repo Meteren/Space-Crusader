@@ -20,8 +20,8 @@ public class EffectGrid : MonoBehaviour
 
     public void InitGrid()
     {
-        levelCount.text = "Default";
-        effectName.text = "Default";
+        levelCount.text = "Blank";
+        effectName.text = "Blank";
         button.enabled = false;
     }
 
@@ -67,6 +67,7 @@ public class EffectGrid : MonoBehaviour
             {
                 IEffect<Bullet> instantiatedEffect = convertedEffectInHold.CreateInstance();
                 EffectResolver resolver = instantiatedEffect as EffectResolver;
+                resolver.SetDependents(effectInHold.dependentEffects);
 
                 if (resolver != null)
                     resolver.SetTargetType(effectInHold.TargetType);
@@ -77,30 +78,28 @@ public class EffectGrid : MonoBehaviour
                 if (instantiatedEffect != null)
                 {
                     IResolveAsAbility<BulletSpawner> abilityResolver = null;
+                    IDataProvider<BulletData> providedDependency = null;
                     if(instantiatedEffect is IResolveAsAbility<BulletSpawner> convertedResolver)
                     {
                         abilityResolver = convertedResolver;
                         abilityResolver.SendData(bSpawner);
                     }
-                    //for debugging will be deleted later
-                    if(abilityResolver != null)
-                    {
-                        Debug.Log(instantiatedEffect.GetType().Name + " is a resolver");
-                        if (bSpawner.bulletDataInstances[1] != null)
-                        {
-                            Debug.Log(instantiatedEffect.GetType().Name + "  added to the bullet spawner and contains" + " " +
-                                bSpawner.bulletDataInstances[1].bulletType.Name);
-                        }
-                        else
-                        {
-                            Debug.Log(instantiatedEffect.GetType().Name + "  failed to be added to bullet spawner.");
-                        }
-                    }
-                    //---
+                
                     instantiatedEffect.onComplete += bSpawner.RemoveEffect;
                     if(abilityResolver == null)
                         instantiatedEffect.EffectLevel++;
                     bSpawner.AddEffect(instantiatedEffect);
+
+                    if (instantiatedEffect is IDataProvider<BulletData> convertedDependencyProvider)
+                    {
+                             
+                        providedDependency = convertedDependencyProvider;
+
+                        BulletData belongsTo = bSpawner.GetDataToBeEffected(instantiatedEffect);
+
+                        providedDependency.Provide(belongsTo);
+                    }
+
 
                 }
             }

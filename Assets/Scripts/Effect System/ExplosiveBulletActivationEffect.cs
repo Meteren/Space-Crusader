@@ -1,57 +1,21 @@
+using System.Collections.Generic;
 using System;
 
-
-public class ExplosiveBulletActivationEffect : EffectResolver, IEffect<Bullet>, IResolveAsAbility<BulletSpawner>
+public class ExplosiveBulletActivationEffect : BulletActivationEffect
 {
-    BulletSpawner bSpawnerReference;
-    Bullet targetReference;
-    public ExplosiveBulletActivationEffect(Type target) : base(target)
+    public ExplosiveBulletActivationEffect(Type target,List<Type> dependentEffects = null) : base(target,dependentEffects)
     {
     }
-    public ExplosiveBulletActivationEffect(float time, int maxLevel = 3, Type type = null) : base(time,targetType:type)
+
+    public ExplosiveBulletActivationEffect(Timer timer = null,List <Type> dependentEffects = null, int maxLevel = 3, Type type = null) 
+        : base(type,dependentEffects,timer, maxLevel)
     {
-        countDown.onEnd += Cancel;
-        countDown.StartTimer();
+
     }
 
-    public int EffectLevel { get; set; }
-
-    public event Action<IEffect<Bullet>> onComplete;
-
-    public void Apply(Bullet target)
+    public override IEffect<Bullet> CreateInstance()
     {
-        targetReference = target;//will be deleted prob    
-    }
-
-    public void Cancel(Bullet target)
-    {
-        //NOOP
-    }
-
-    public void Cancel()
-    {
-        onComplete?.Invoke(this);
-        BulletData dataToBeCleaned = bSpawnerReference.GetDataToBeEffected(TargetType);
-
-        foreach(var effect in dataToBeCleaned.effects)
-            effect.Cancel();
-
-        dataToBeCleaned.effects.Clear();
-        bSpawnerReference.RemoveBulletFromSpawner(TargetType);
-        onComplete = null;
-        EffectLevel = 0;//no need but can stay     
-    }
-
-    public IEffect<Bullet> CreateInstance()
-    {
-        return new ExplosiveBulletActivationEffect(30f);
-    }
-
-    public void SendData(BulletSpawner dataToSend)
-    {
-        bSpawnerReference = dataToSend;
-        UnityEngine.Debug.Log(TargetType);
-        bSpawnerReference.AddBulletToSpawner(TargetType);
+        return new ExplosiveBulletActivationEffect();//can be changed to make it time based in the code
     }
 
     public override string ToString()
@@ -59,3 +23,5 @@ public class ExplosiveBulletActivationEffect : EffectResolver, IEffect<Bullet>, 
         return "Explosive Bullet";
     }
 }
+
+

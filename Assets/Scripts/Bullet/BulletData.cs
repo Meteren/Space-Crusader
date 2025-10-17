@@ -15,16 +15,17 @@ public class BulletData : ScriptableObject
     [Header("Bullet Attributes")]
     public bool bulletReadyToUse;
     public float generationTime;
+    public float defaultGenTime;
     [SerializeField] private Vector2 speed;
     [SerializeField] private int pierceCount;
 
-    [SerializeField] private bool canExplode;
     [SerializeField] private int burstCount;
     [SerializeField] private float timeBetweenBurstShots;
 
-    [SerializeField] private bool multipleShot;
+    [SerializeField] private int multipleShotCount;
+    [SerializeField] private float angleBetweenMultipleShots;
 
-    public int bulletDataIndex;
+    public int bulletDataIndex; 
     //---
 
     [HideInInspector] public readonly List<IEffect<Bullet>> effects = new();
@@ -44,6 +45,9 @@ public class BulletData : ScriptableObject
         public bool multipleShot;
         public bool burstMode;  
         public int burstCount;
+        public float defaultGenTime;
+        public int multipleShotCount;
+        public float angleBetweenMultipleShots;
         
     }
     //--
@@ -54,10 +58,11 @@ public class BulletData : ScriptableObject
         dataFields.speed = speed;
         dataFields.bulletReadyToUse = bulletReadyToUse;
         dataFields.pierceCount = pierceCount;
-        dataFields.canExplode = canExplode;
         dataFields.timeBetweenBurstShots = timeBetweenBurstShots;
-        dataFields.multipleShot = multipleShot;
         dataFields.burstCount = burstCount;
+        dataFields.defaultGenTime = defaultGenTime;
+        dataFields.angleBetweenMultipleShots = angleBetweenMultipleShots;
+        dataFields.multipleShotCount = multipleShotCount;
 
         return dataFields;
     }

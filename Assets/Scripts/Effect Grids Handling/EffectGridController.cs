@@ -14,24 +14,62 @@ public class EffectGridController : MonoBehaviour
         effects.Add(new IncreasePiercingEffect(typeof(Bullet)));
         effects.Add(new SpeedUpEffect(typeof(Bullet)));
         effects.Add(new ExplosiveBulletActivationEffect(typeof(ExplosiveBullet)));
+        effects.Add(new BurstCountBoostEffect(typeof(ExplosiveBullet)));
+        effects.Add(new SpeedUpEffect(typeof(ExplosiveBullet)));
+        effects.Add(new TimeBetweenBurstBoosterEffect(typeof(ExplosiveBullet), new List<Type>() { typeof(BurstCountBoostEffect) }));
         gameObject.SetActive(false);
-        
+
     }
 
     private void OnEnable()
     {
-        if(bSpawner == null)
+        if (bSpawner == null)
             bSpawner = GameObject.FindFirstObjectByType<BulletSpawner>();
-        if(bSpawner != null)
+        if (bSpawner != null)
             ScatterEffects();
     }
 
     private void ScatterEffects()
     {
 
+        /*List<EffectResolver> discriminatedEffects = effects
+          .Where(x => bSpawner.bulletDataInstances
+          .Any(y => (x.TargetType == y.bulletType) || x is IResolveAsAbility<BulletSpawner>)).ToList();*/
+
         List<EffectResolver> discriminatedEffects = effects
-            .Where(x => bSpawner.bulletDataInstances
-            .Any(y => (x.TargetType == y.bulletType) || x is IResolveAsAbility<BulletSpawner>)).ToList();
+        .Where(x => bSpawner.bulletDataInstances
+            .Any(y =>
+            {
+                bool hasDependent = false;
+
+                List<Type> foundTypes = new List<Type>();
+
+                if (x.dependentEffects != null)
+                {
+                    if (x.TargetType == y.bulletType || x is IResolveAsAbility<BulletSpawner>)
+                    {
+                        foreach (var effect in y.effects)
+                        {
+                            foreach (var type in x.dependentEffects)
+                            {
+                                if (effect.GetType() == type)
+                                    foundTypes.Add(type);
+                            }
+                        }
+                        if (foundTypes.Count == x.dependentEffects.Count)
+                            hasDependent = true;
+                    }
+
+                    return hasDependent;
+                }
+                else
+                    return x.TargetType == y.bulletType || x is IResolveAsAbility<BulletSpawner>;
+
+            }))
+        .ToList();
+
+        if (discriminatedEffects != null)
+            Debug.Log($"Discriminated effect count: {discriminatedEffects.Count}");
 
         List<IEffect<Bullet>> allBulletEffects = bSpawner.bulletDataInstances
         .SelectMany(x => x.effects)
@@ -52,18 +90,18 @@ public class EffectGridController : MonoBehaviour
             else
                 return null;
 
-        }).ToList();
+        }).Where(x => x != null).ToList();
 
         if(effectsMaxedOut != null)
-            if(effectsMaxedOut.Count > 0)
-                if(effectsMaxedOut[0] != null)
-                    Debug.Log($"Effects maxed out: {effectsMaxedOut[0].GetType()}");
+                    Debug.Log($"Effects maxed out count:{effectsMaxedOut.Count}");
 
         if (effectsMaxedOut.Count > 0)
         {
             discriminatedEffects = discriminatedEffects
-                .Where(x => !effectsMaxedOut.Any(y => y != null && x.EffectType == y.EffectType))
-                .ToList();
+            .Where(x => !effectsMaxedOut
+            .Any(y => x.EffectType == y.EffectType && x.TargetType == y.TargetType))
+            .ToList();
+
         }
 
         discriminatedEffects.Sort((a, b) => a.CompareTo(b));
