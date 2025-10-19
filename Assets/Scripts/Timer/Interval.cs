@@ -7,12 +7,15 @@ public class Interval : Timer
 
     private float intervalTick;
 
+    public float IntervalTick { get => intervalTick; }
+
     public event Action onInterval;
 
     bool startedAtZero;
 
     public Interval(float intervalTick, float startPoint,string source) : base(startPoint, source)
     {
+        this.startPoint = startPoint;
         this.intervalTick = intervalTick;
         valueAfterInterval = startPoint - intervalTick;
         startedAtZero = Mathf.Approximately(startPoint, 0);

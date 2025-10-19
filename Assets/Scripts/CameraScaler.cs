@@ -13,9 +13,8 @@ public class CameraScaler : MonoBehaviour
     {
         canvas = GameObject.Find("Canvas");
         cam = GetComponent<Camera>();
-        float reference = referenceWidth;
         float currentScreenWidth = Screen.width;
-        scaleFactor = currentScreenWidth / reference;
+        scaleFactor = currentScreenWidth / referenceWidth;
 
         cam.orthographicSize /= scaleFactor;
     }

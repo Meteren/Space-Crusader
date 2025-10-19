@@ -23,6 +23,8 @@ public abstract class Timer
 
     public float Current { get { return current; } set { current = value; } }
 
+    public float StartPoint { get => startPoint; }
+
     public abstract void OnTick();
 
     public void StartTimer() 
@@ -31,6 +33,10 @@ public abstract class Timer
         TimeManager.instance.AddTimer(this);
         onStart?.Invoke();
     }
+
+    public void StopTimer() =>
+        TimeManager.instance.RemoveTimer(this);
+
     
     public void SetTimer(float current)
     {

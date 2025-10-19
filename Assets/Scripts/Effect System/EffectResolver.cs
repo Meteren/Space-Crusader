@@ -18,6 +18,8 @@ public abstract class EffectResolver : IComparable<EffectResolver>
 
     public int MaxLevel {  get { return maxLevel; } }
 
+    public EffectResolver() { }
+
     public EffectResolver(Type target,List<Type> dependentEffects) 
     {
         TargetType = target;
