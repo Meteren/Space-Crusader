@@ -11,13 +11,13 @@ public class OrbitalMovementAsteroid : Asteroid
     [SerializeField] private float radius;
     [SerializeField] private OrbitMoveSide side;
     [SerializeField] private float orbitSpeed;
+    [SerializeField] private Transform centerPoint;
 
     float angle;
-    Vector2 centerPos;
+  
     protected override void Start()
     {
         base.Start();
-        centerPos = transform.position;
     }
 
     protected override void Update()
@@ -36,7 +36,7 @@ public class OrbitalMovementAsteroid : Asteroid
 
         float y = Mathf.Sin(angle * ConvertMoveSide()) * radius;    
 
-        transform.position = centerPos + new Vector2(x, y);
+        transform.position = centerPoint.position + new Vector3(x, y,0);
 
     }
 

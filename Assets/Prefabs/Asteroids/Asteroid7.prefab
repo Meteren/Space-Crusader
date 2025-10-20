@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2058461761300731371}
   - component: {fileID: 3716842135242601952}
   - component: {fileID: 2365184725553850950}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Asteroid7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 716771478306571259}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8291982, y: 1.1189438, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -173,6 +173,7 @@ MonoBehaviour:
   radius: 1
   side: 0
   orbitSpeed: 2
+  centerPoint: {fileID: 0}
 --- !u!1 &1643971191128166873
 GameObject:
   m_ObjectHideFlags: 0

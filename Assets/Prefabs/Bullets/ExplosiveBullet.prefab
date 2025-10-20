@@ -183,7 +183,7 @@ MonoBehaviour:
   startAngle: 0
   finishAngle: 150
   orbitalMoveDuration: 25
-  impactRadius: 3
+  impactRadius: 1
   impactTime: 4
   impactInterval: 1
   layersToBeEffected:
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0587118c474e42d438c5ed8bbb77c058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
+  radius: 1
 --- !u!1 &7058048194176834841
 GameObject:
   m_ObjectHideFlags: 0

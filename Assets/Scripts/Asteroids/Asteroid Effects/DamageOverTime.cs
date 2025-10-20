@@ -9,11 +9,12 @@ public class DamageOverTime<TSource> : EffectResolver, IEffect<IDamageable<TSour
     float intervalTick;
 
     public DamageOverTime() { }
-    public DamageOverTime(TSource sourceReference,float timerStart, float intervalTick)
+    public DamageOverTime(TSource sourceReference,float timerStart, float intervalTick,Type sourceType)
     {
         this.sourceReference = sourceReference;
         this.timerStart = timerStart;
         this.intervalTick = intervalTick;   
+        SourceType = SourceType;
     }
 
     public int EffectLevel { get; set; }
@@ -42,8 +43,14 @@ public class DamageOverTime<TSource> : EffectResolver, IEffect<IDamageable<TSour
     public void Cancel()
     {
         onComplete?.Invoke(this);
-        timer.StopTimer();
-        timer = null;
+
+        //suspicious, check later if something goes wrong
+        if(timer != null)
+        {
+            timer.StopTimer();
+            timer = null;
+        }
+        //---
         targetReference = null;
         sourceReference = default;
     }
@@ -56,7 +63,7 @@ public class DamageOverTime<TSource> : EffectResolver, IEffect<IDamageable<TSour
     private void OnInterval()
     {
         UnityEngine.Debug.Log("Inflict damage");
-        targetReference.OnDamage(sourceReference);
+        targetReference.OnDamage(sourceReference,this);
     }
 
 

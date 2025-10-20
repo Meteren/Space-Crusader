@@ -8,11 +8,14 @@ public class GameManager : SingleTon<GameManager>
     int frameCount = 0;
     float fps;
 
+    public int currentLevelIndex;
+
     [SerializeField] private PlayerSpawner playerSpawner;
 
     private void Start()
     {
-      
+        //get level index using PlayerPrefs in here
+        //----
         //for later
         SceneManager.sceneLoaded += OnSceneLoaded;
 

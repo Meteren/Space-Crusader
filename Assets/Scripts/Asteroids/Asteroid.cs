@@ -7,7 +7,7 @@ using UnityEngine;
 public class Asteroid : MonoBehaviour, IDamageable<Bullet>
 {
     [Header("Health Segment")]
-    [SerializeField] private float health;
+    public float health;
     [SerializeField] private TextMeshProUGUI healthIndicator;
     [SerializeField] private float damageIndicationTime;
 
@@ -16,8 +16,18 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>
 
     public bool isDestroyed;
 
-
     protected List<IEffect<IDamageable<Bullet>>> activeEffects = new();
+
+    public List<IEffect<IDamageable<Bullet>>> ActiveEffects { get { return activeEffects; } }
+
+    bool rotationRandomized;
+    int rotationDir;
+
+    Camera cam;
+
+    CircleCollider2D circleCollider;
+
+    Coroutine damageCoroutine;
 
     protected virtual void Start()
     {
@@ -26,13 +36,26 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>
         healthIndicator.text = health.ToString();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        cam = Camera.main;
+        circleCollider = GetComponent<CircleCollider2D>();
         //rb.linearVelocity = new Vector2(0, -2);
     }
 
 
     protected virtual void Update()
     {
-        transform.Rotate(0, 0, 10 * Time.deltaTime);
+
+        if (IsOutOfCamera())
+            Destroy(gameObject);
+
+
+        if (!rotationRandomized)
+        {
+            rotationDir = Random.Range(0, 2);
+            rotationDir = rotationDir == 0 ? rotationDir - 1 : rotationDir;
+            rotationRandomized = true;  
+        }
+        transform.Rotate(0, 0, 10 * rotationDir * Time.deltaTime);
     }
 
     public virtual void MoveLogic()
@@ -40,9 +63,25 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>
         return;
     }
 
-    public void OnDamage(Bullet bullet)
+    public void OnDamage(Bullet bullet,IEffect<IDamageable<Bullet>> effectReference)
     {
-        StartCoroutine(DamageIndicator());
+
+        if(effectReference != null && bullet is ExplosiveBullet exBullet)
+        {
+            float distance = Vector2.Distance(bullet.transform.position, transform.position);
+            if(distance >= exBullet.ImpactRadius)
+            {
+                effectReference.Cancel();
+                exBullet.enemiesToBeEffected.Remove(this);
+                return;
+            }
+                
+        }
+
+        if (damageCoroutine != null)
+            StopCoroutine(damageCoroutine);
+
+        damageCoroutine = StartCoroutine(DamageIndicator());
         health -= bullet.DamageAmount;
         healthIndicator.text = health.ToString();
         Debug.Log("On Damage");
@@ -73,17 +112,13 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>
         ClearEffects();
     }
 
-    private void OnDisable()
-    {
-        ClearEffects();
-    }
-
     private void ClearEffects()
     {
         foreach (var effect in activeEffects.ToList())
         {
             effect.Cancel();
         }
+        activeEffects.Clear();
     }
 
     private IEnumerator DamageIndicator()
@@ -94,7 +129,16 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>
 
         yield return new WaitForSeconds(damageIndicationTime);
 
-        sr.color = color;   
+        sr.color = color;  
+        damageCoroutine = null;
+    }
+    
+    protected bool IsOutOfCamera()
+    {
+        float bottomY = cam.ScreenToWorldPoint(new Vector2(0,0)).y;
+
+        return transform.position.y < bottomY - circleCollider.radius / 2;
+
     }
 
 }

@@ -11,6 +11,7 @@ public abstract class EffectResolver : IComparable<EffectResolver>
     public Type EffectType => GetType();
 
     public Type TargetType { get; set; }
+    public Type SourceType {  get; set; }   
 
     public List<Type> dependentEffects;
 

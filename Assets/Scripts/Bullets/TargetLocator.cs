@@ -32,8 +32,17 @@ public class TargetLocator : MonoBehaviour
             {
                 if (x is Asteroid asteroid)
                     if (!asteroid.isDestroyed)
-                        if (asteroid.gameObject.activeSelf)
+                    {
+                        EffectResolver effectResolver = asteroid.ActiveEffects
+                                    .OfType<EffectResolver>()
+                                    .FirstOrDefault(x => x.SourceType == typeof(ExplosiveBullet));
+
+                        if (effectResolver != null)
+                            return false;
+                        else
                             return true;
+                    }
+
                 return false;
 
             });

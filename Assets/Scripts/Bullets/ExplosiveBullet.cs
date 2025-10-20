@@ -1,5 +1,6 @@
 
-using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ExplosiveBullet : Bullet
@@ -49,6 +50,9 @@ public class ExplosiveBullet : Bullet
     float constantDistanceY;
     float distanceY;
 
+    public List<IDamageable<Bullet>> enemiesToBeEffected = new();
+    CountDown countDownToDestroy;
+
     //--
     private void Awake()
     {
@@ -66,6 +70,26 @@ public class ExplosiveBullet : Bullet
         else
             SetSpeed();
 
+        if (inImpact)
+        {
+            List<Collider2D> newEnemiesToBeEffected = Physics2D.OverlapCircleAll(transform.position, impactRadius, layersToBeEffected).ToList();
+            List<IDamageable<Bullet>> convertedDamageables  = newEnemiesToBeEffected
+                .Select(x => x.GetComponent<IDamageable<Bullet>>())
+                .Where(x => x != null).ToList();
+
+            convertedDamageables = convertedDamageables.Except(enemiesToBeEffected).ToList();
+
+         
+            for (int i = 0; i < convertedDamageables.Count; i++)
+            {
+                Asteroid asteroid = convertedDamageables[i] as Asteroid;
+                asteroid.AddEffect(new DamageOverTime<Bullet>(this, countDownToDestroy.Current, impactInterval,typeof(ExplosiveBullet)));
+
+            }
+
+            enemiesToBeEffected.AddRange(convertedDamageables);
+           
+        }
     }
 
     public override void ApplyModeSpecification()
@@ -109,8 +133,6 @@ public class ExplosiveBullet : Bullet
         }
         targetDirection = target.position - transform.position;
         Vector2 nDirection = targetDirection.normalized;
-
-        Debug.Log($"Normalized Dir: {nDirection}");
       
         /*distanceX -= interpolationSpeed * (Time.deltaTime / orbitalMoveDuration);
         distanceY -= interpolationSpeed * (Time.deltaTime / orbitalMoveDuration);
@@ -130,11 +152,9 @@ public class ExplosiveBullet : Bullet
         float speedY = Mathf.Lerp(rb.linearVelocityY, targetDirection.y, fixedInterpolationY);   */
 
         rb.linearVelocity = nDirection * updatedData.speed.magnitude * 0.5f;
-        Debug.Log($"Explosive bullet speed {rb.linearVelocity}");
     }
     public override void SetSpeed()
     {
-        Debug.Log("Speeding");
 
         if (inImpact)
             return;
@@ -206,18 +226,22 @@ public class ExplosiveBullet : Bullet
         //collision logic for explosion will be implemented in here
         if (collision.GetComponent<Asteroid>() != null && !collision.GetComponent<Bullet>() && !inImpact)
         {
+            if (!rb)
+                rb = GetComponent<Rigidbody2D>();
             inImpact = true;
-            Collider2D[] asteroidsToBeEffected = Physics2D.OverlapCircleAll(transform.position, impactRadius,layersToBeEffected);
+            List<Collider2D> asteroidsInRadius = Physics2D.OverlapCircleAll(transform.position, impactRadius,layersToBeEffected).ToList();
+            enemiesToBeEffected = asteroidsInRadius
+                .Select(x => x.GetComponent<IDamageable<Bullet>>())
+                .Where(x => x!= null).ToList();
 
-
-            for (int i = 0; i < asteroidsToBeEffected.Length; i++)
+            for (int i = 0; i < enemiesToBeEffected.Count; i++)
             {
-                Asteroid asteroid = asteroidsToBeEffected[i].transform.GetComponent<Asteroid>();
-                asteroid.AddEffect(new DamageOverTime<Bullet>(this,impactTime,impactInterval));
+                Asteroid asteroid = enemiesToBeEffected[i] as Asteroid;
+                asteroid.AddEffect(new DamageOverTime<Bullet>(this,impactTime,impactInterval,typeof(ExplosiveBullet)));
                 
             }
             rb.linearVelocity = Vector2.zero;
-            CountDown countDownToDestroy = new CountDown(impactTime, GetType().Name);
+            countDownToDestroy = new CountDown(impactTime, GetType().Name);
             countDownToDestroy.onEnd += Release;
             countDownToDestroy.StartTimer();
 
