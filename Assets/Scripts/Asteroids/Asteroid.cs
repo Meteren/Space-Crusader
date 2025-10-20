@@ -19,7 +19,7 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>
 
     protected List<IEffect<IDamageable<Bullet>>> activeEffects = new();
 
-    protected void Start()
+    protected virtual void Start()
     {
         transform.localScale /= CameraScaler.scaleFactor;
         healthIndicator = healthIndicator.GetComponentInChildren<TextMeshProUGUI>();
@@ -28,6 +28,13 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>
         sr = GetComponent<SpriteRenderer>();
         //rb.linearVelocity = new Vector2(0, -2);
     }
+
+
+    protected virtual void Update()
+    {
+        transform.Rotate(0, 0, 10 * Time.deltaTime);
+    }
+
     public virtual void MoveLogic()
     {
         return;

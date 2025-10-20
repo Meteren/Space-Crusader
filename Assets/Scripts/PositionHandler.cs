@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SpawnPos : MonoBehaviour
+public class PositionHandler : MonoBehaviour
 {
     [SerializeField] private float offsetY;
     void Start()
