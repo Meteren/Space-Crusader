@@ -41,11 +41,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Trail
-    uniqueID: 1602072989
+  - name: Enemy
+    uniqueID: 3767849119
+    locked: 0
+  - name: Bullet
+    uniqueID: 3749224721
     locked: 0
   - name: Player
-    uniqueID: 3749224721
+    uniqueID: 1602072989
     locked: 0
   m_RenderingLayers:
   - Default

@@ -91,6 +91,7 @@ public class Bullet : MonoBehaviour
 
     }
 
+
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.TryGetComponent<IDamageable<Bullet>>(out IDamageable<Bullet> damagaeable))

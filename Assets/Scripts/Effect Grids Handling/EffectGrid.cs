@@ -105,7 +105,7 @@ public class EffectGrid : MonoBehaviour
             }
                         
         }
-        GetComponentInParent<EffectGridController>().gameObject.SetActive(false);
+        UIManager.instance.HandleSkillWindow();
             
     }
 }

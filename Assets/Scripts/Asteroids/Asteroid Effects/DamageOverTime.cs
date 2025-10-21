@@ -14,7 +14,7 @@ public class DamageOverTime<TSource> : EffectResolver, IEffect<IDamageable<TSour
         this.sourceReference = sourceReference;
         this.timerStart = timerStart;
         this.intervalTick = intervalTick;   
-        SourceType = SourceType;
+        SourceType = sourceType;
     }
 
     public int EffectLevel { get; set; }
@@ -25,7 +25,7 @@ public class DamageOverTime<TSource> : EffectResolver, IEffect<IDamageable<TSour
     {
         UnityEngine.Debug.Log("Applying damage over time effect");
         targetReference = target;
-        timer = new Interval(intervalTick,timerStart ,GetType().Name);
+        timer = new Interval(intervalTick,timerStart,true,GetType().Name);
 
         Interval interval = (Interval)timer;
         interval.onEnd += Cancel;

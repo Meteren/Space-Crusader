@@ -78,8 +78,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -545742575
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.96981126, g: 0, b: 0, a: 1}
@@ -184,8 +184,8 @@ MonoBehaviour:
   finishAngle: 150
   orbitalMoveDuration: 25
   impactRadius: 1
-  impactTime: 4
-  impactInterval: 1
+  impactTime: 2
+  impactInterval: 0.5
   layersToBeEffected:
     serializedVersion: 2
     m_Bits: 128
@@ -267,7 +267,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

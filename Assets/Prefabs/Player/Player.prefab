@@ -4799,8 +4799,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1602072989
-  m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingLayer: 3
+  m_SortingOrder: -1
   m_RenderMode: 4
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -4911,8 +4911,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -545742575
-  m_SortingLayer: 2
+  m_SortingLayerID: 1602072989
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0517636f90a31d54ea8a524a140c5baf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4986,7 +4986,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.00912869, y: 0.04564321}
+  m_Offset: {x: -0.027023062, y: 0.039678454}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4996,7 +4996,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.4251685, y: 2.0459185}
+  m_Size: {x: 1.0076251, y: 2.033989}
   m_EdgeRadius: 0
 --- !u!114 &6592871070010807715
 MonoBehaviour:
@@ -5032,7 +5032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletDataReferences:
-  - {fileID: 11400000, guid: 7a12a1d35e15ccd41943cd353f9493c2, type: 2}
   - {fileID: 11400000, guid: 63a37fd331b343e43b2b1f20444bc368, type: 2}
+  - {fileID: 11400000, guid: 7a12a1d35e15ccd41943cd353f9493c2, type: 2}
   - {fileID: 11400000, guid: 18671b30676f711409f45d3de0f22508, type: 2}
   bulletDataInstances: []

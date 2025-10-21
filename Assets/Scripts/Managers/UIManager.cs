@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : SingleTon<UIManager> 
 {
@@ -14,7 +15,23 @@ public class UIManager : SingleTon<UIManager>
         fpsText.text = $"FPS:{fps}";
     }
 
-    public void ActivateSkillWindow() =>
+    public void HandleSkillWindow()
+    {
         effectSelectionScreen.SetActive(!effectSelectionScreen.activeSelf);
+
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1f;
+            GameManager.instance.isGamePaused = false;
+        }
+        else
+        {
+            Time.timeScale = 0f;
+            GameManager.instance.isGamePaused = true;
+        }
+            
+
+    }
+        
 
 }

@@ -11,13 +11,17 @@ public class TimeManager : SingleTon<TimeManager>
 
     private void Update()
     {
-        foreach(var timer in timers.ToList())
+        if (!GameManager.instance.isGamePaused)
         {
-            timer.OnTick();
-            if (timer.Current <= 0)
-                timer.CleanAfterCompletion();
-           
+            foreach (var timer in timers.ToList())
+            {
+                timer.OnTick();
+                if (timer.Current <= 0)
+                    timer.CleanAfterCompletion();
+
+            }
         }
+       
     }
 
 

@@ -32,7 +32,7 @@ public class ExplosiveBullet : Bullet
     [Header("Impact Values")]
     [SerializeField] float impactRadius;
     [SerializeField] private float impactTime;
-    [SerializeField] private int impactInterval;
+    [SerializeField] private float impactInterval;
     [SerializeField] private LayerMask layersToBeEffected;
 
     public float ImpactRadius { get => impactRadius;}
@@ -94,7 +94,7 @@ public class ExplosiveBullet : Bullet
 
     public override void ApplyModeSpecification()
     {
-        timer = new Interval(updatedData.timeBetweenBurstShots, updatedData.timeBetweenBurstShots * updatedData.burstCount,"Explosive Burst Timer");
+        timer = new Interval(updatedData.timeBetweenBurstShots, updatedData.timeBetweenBurstShots * updatedData.burstCount,false,"Explosive Burst Timer");
         timer.onInterval += BurstAction;
         timer.StartTimer();
 
@@ -224,10 +224,18 @@ public class ExplosiveBullet : Bullet
     {
         Debug.Log("Collision Detected for explosion bullet");
         //collision logic for explosion will be implemented in here
-        if (collision.GetComponent<Asteroid>() != null && !collision.GetComponent<Bullet>() && !inImpact)
+        if (collision.TryGetComponent<Asteroid>(out Asteroid asteroid) && !collision.GetComponent<Bullet>() && !inImpact)
         {
             if (!rb)
                 rb = GetComponent<Rigidbody2D>();
+
+            EffectResolver effectResolver = asteroid.ActiveEffects
+                                    .OfType<EffectResolver>()
+                                    .FirstOrDefault(x => x.SourceType == typeof(ExplosiveBullet));
+
+            if (effectResolver != null)
+                return;
+
             inImpact = true;
             List<Collider2D> asteroidsInRadius = Physics2D.OverlapCircleAll(transform.position, impactRadius,layersToBeEffected).ToList();
             enemiesToBeEffected = asteroidsInRadius
@@ -236,8 +244,8 @@ public class ExplosiveBullet : Bullet
 
             for (int i = 0; i < enemiesToBeEffected.Count; i++)
             {
-                Asteroid asteroid = enemiesToBeEffected[i] as Asteroid;
-                asteroid.AddEffect(new DamageOverTime<Bullet>(this,impactTime,impactInterval,typeof(ExplosiveBullet)));
+                Asteroid asteroidToBeEffected = enemiesToBeEffected[i] as Asteroid;
+                asteroidToBeEffected.AddEffect(new DamageOverTime<Bullet>(this,impactTime,impactInterval,typeof(ExplosiveBullet)));
                 
             }
             rb.linearVelocity = Vector2.zero;
@@ -249,6 +257,6 @@ public class ExplosiveBullet : Bullet
         }
         
     }
-    
+
 }
 

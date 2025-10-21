@@ -12,6 +12,8 @@ public class GameManager : SingleTon<GameManager>
 
     [SerializeField] private PlayerSpawner playerSpawner;
 
+    public bool isGamePaused;
+
     private void Start()
     {
         //get level index using PlayerPrefs in here

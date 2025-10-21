@@ -29,8 +29,11 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>
 
     Coroutine damageCoroutine;
 
+    LevelController levelController;
+
     protected virtual void Start()
     {
+        levelController = GameObject.Find("LevelGeneration").GetComponent<LevelController>();
         transform.localScale /= CameraScaler.scaleFactor;
         healthIndicator = healthIndicator.GetComponentInChildren<TextMeshProUGUI>();
         healthIndicator.text = health.ToString();
@@ -65,17 +68,17 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>
 
     public void OnDamage(Bullet bullet,IEffect<IDamageable<Bullet>> effectReference)
     {
-
+        IncreaseSkillWindowActivationValue(bullet);
         if(effectReference != null && bullet is ExplosiveBullet exBullet)
         {
-            float distance = Vector2.Distance(bullet.transform.position, transform.position);
+            float distance = Vector2.Distance(bullet.transform.position, transform.position) - circleCollider.radius;
             if(distance >= exBullet.ImpactRadius)
             {
                 effectReference.Cancel();
                 exBullet.enemiesToBeEffected.Remove(this);
                 return;
             }
-                
+            Debug.Log("In Here");
         }
 
         if (damageCoroutine != null)
@@ -123,13 +126,11 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>
 
     private IEnumerator DamageIndicator()
     {
-        Color color = sr.color;
-        Color damageColor = Color.red;
-        sr.color = damageColor;
+        sr.color = Color.red;
 
         yield return new WaitForSeconds(damageIndicationTime);
 
-        sr.color = color;  
+        sr.color = Color.white;  
         damageCoroutine = null;
     }
     
@@ -140,5 +141,17 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>
         return transform.position.y < bottomY - circleCollider.radius / 2;
 
     }
+
+    protected void IncreaseSkillWindowActivationValue(Bullet bullet)
+    {
+        if(bullet is ExplosiveBullet exBullet)
+        {
+            levelController.progressAmount += 0.25f * levelController.finalDecreaseVal
+                / (exBullet.enemiesToBeEffected.Count != 0 ? exBullet.enemiesToBeEffected.Count : 1);
+            return;
+        }
+        levelController.progressAmount += 0.25f * levelController.finalDecreaseVal;//can be changed
+    }
+         
 
 }

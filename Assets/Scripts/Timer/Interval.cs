@@ -12,12 +12,19 @@ public class Interval : Timer
     public event Action onInterval;
 
     bool startedAtZero;
+    bool runOnFirstTick;
 
-    public Interval(float intervalTick, float startPoint,string source) : base(startPoint, source)
+    public Interval(float intervalTick, float startPoint, bool runOnFirstTick, string source) : base(startPoint, source)
     {
         this.startPoint = startPoint;
         this.intervalTick = intervalTick;
-        valueAfterInterval = startPoint - intervalTick;
+        this.runOnFirstTick = runOnFirstTick;
+
+        if (runOnFirstTick)
+            valueAfterInterval = startPoint;
+        else
+            valueAfterInterval = startPoint - intervalTick;
+
         startedAtZero = Mathf.Approximately(startPoint, 0);
     }
 
@@ -27,7 +34,7 @@ public class Interval : Timer
             return;
 
         current -= Time.deltaTime;
-        if (current <= valueAfterInterval)
+        if (current <= valueAfterInterval )
         {
             valueAfterInterval -= intervalTick;
 

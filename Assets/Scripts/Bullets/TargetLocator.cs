@@ -37,7 +37,9 @@ public class TargetLocator : MonoBehaviour
                                     .OfType<EffectResolver>()
                                     .FirstOrDefault(x => x.SourceType == typeof(ExplosiveBullet));
 
-                        if (effectResolver != null)
+                        bool isCloseEnough = Vector2.Distance(asteroid.transform.position, GetComponentInParent<Bullet>().transform.position) < 1f;
+
+                        if (effectResolver != null || !isCloseEnough)
                             return false;
                         else
                             return true;
