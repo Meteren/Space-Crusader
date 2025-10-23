@@ -39,10 +39,6 @@ public class EffectGridController : MonoBehaviour
     private void ScatterEffects()
     {
 
-        /*List<EffectResolver> discriminatedEffects = effects
-          .Where(x => bSpawner.bulletDataInstances
-          .Any(y => (x.TargetType == y.bulletType) || x is IResolveAsAbility<BulletSpawner>)).ToList();*/
-
         List<EffectResolver> discriminatedEffects = effects
         .Where(x => bSpawner.bulletDataInstances
             .Any(y =>

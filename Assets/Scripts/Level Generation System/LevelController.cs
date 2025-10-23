@@ -10,16 +10,18 @@ public class LevelController : MonoBehaviour
     [SerializeField] private Transform levelGenerationPoint;
     [SerializeField] private Transform movePoint;
     [SerializeField] private float levelPartMoveSpeed;
-    [SerializeField] private Slider skillWindowProgressBar;
+     private Slider skillWindowProgressBar;
     int currentLevelIndex => GameManager.instance.currentLevelIndex;
 
     public static int partIndex = 0;
 
     //--skill windwow progress bar handlements
 
-    public float progressAmount;
+    [HideInInspector] public float progressAmount;
 
     float decreaseValueMultiplier = 1;
+
+    float generationRange = 1f;
 
     float partIndexNormalization => Mathf.InverseLerp(0f, (float)levels[currentLevelIndex].LevelParts.Count, (float)partIndex);
 
@@ -28,6 +30,8 @@ public class LevelController : MonoBehaviour
     //--
 
     PlayerController playerReference;
+
+    Slider pierceSkillProgress;
 
     List<Transform> createdLevelParts = new();
     void Start()
@@ -43,15 +47,27 @@ public class LevelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(pierceSkillProgress == null)
+            pierceSkillProgress = GameObject.Find("PiercerProgressBar").GetComponent<Slider>();
 
         skillWindowProgressBar.value = progressAmount;
 
+        Debug.Log("Skill window progress bar value: " + skillWindowProgressBar.value);
+
         if (skillWindowProgressBar.value >= 1)
         {
-            UIManager.instance.HandleSkillWindow();
             skillWindowProgressBar.value = 0;
             progressAmount = 0;
-            decreaseValueMultiplier -= 0.2f;
+            if (pierceSkillProgress != null)
+                pierceSkillProgress.value -= 0.02f;
+
+            UIManager.instance.HandleSkillWindow();
+ 
+            decreaseValueMultiplier -= 0.2f; 
+
+            decreaseValueMultiplier -= 0.001f;
+
+            Debug.Log("DecreaseValue Mult: " + decreaseValueMultiplier);
             decreaseValueMultiplier = Mathf.Clamp(decreaseValueMultiplier,0.1f,1f);
         }
 
@@ -87,21 +103,41 @@ public class LevelController : MonoBehaviour
             {
                 Destroy(part.gameObject);
                 createdLevelParts.Remove(part);
-                if(partIndex < levels[currentLevelIndex].LevelParts.Count)
-                {
-                    Transform newLevelPart = levels[currentLevelIndex].GeneratePart(partIndex);
-                    newLevelPart.position = levelGenerationPoint.position;
-                    createdLevelParts.Add(newLevelPart);
-                    partIndex++;
-                }
-                else
-                {
-                    //will be changed later with a proper UI declaration
-                    Debug.Log("You finished the level!!!");
-                }
+                if(createdLevelParts.Count == 0)
+                    InitPartGeneration();
+            }
+
+            if(part != null)
+            {
                
+                if (Vector2.Distance(part.position, playerReference.transform.position) <= generationRange)
+                {
+                    if(createdLevelParts.Count < 2)
+                        InitPartGeneration();
+                }
+      
+             
             }
         }
+    }
+
+    private void InitPartGeneration()
+    {
+       
+        if (partIndex < levels[currentLevelIndex].LevelParts.Count)
+        {
+            Transform newLevelPart = levels[currentLevelIndex].GeneratePart(partIndex);
+            newLevelPart.position = levelGenerationPoint.position;
+            createdLevelParts.Add(newLevelPart);
+            partIndex++;
+        }
+        else
+        {
+                //will be changed later with a proper UI declaration
+            Debug.Log("No Level Part To Create!!!");
+        }
+        
+       
     }
 
 }

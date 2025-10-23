@@ -1,0 +1,748 @@
+fileFormatVersion: 2
+guid: bffb5835abd521c41a868324f49dc728
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4943149686773980215
+    second: Laser_Beam_Spritesheet_PURPLE_0
+  - first:
+      213: 133586385382051824
+    second: Laser_Beam_Spritesheet_PURPLE_1
+  - first:
+      213: -8730706600849982229
+    second: Laser_Beam_Spritesheet_PURPLE_2
+  - first:
+      213: 6265509867601671387
+    second: Laser_Beam_Spritesheet_PURPLE_3
+  - first:
+      213: 1366723588206099116
+    second: Laser_Beam_Spritesheet_PURPLE_4
+  - first:
+      213: -8639032305353941904
+    second: Laser_Beam_Spritesheet_PURPLE_5
+  - first:
+      213: 6772637638500092572
+    second: Laser_Beam_Spritesheet_PURPLE_6
+  - first:
+      213: -7326051595701498129
+    second: Laser_Beam_Spritesheet_PURPLE_7
+  - first:
+      213: -5671712559219714627
+    second: Laser_Beam_Spritesheet_PURPLE_8
+  - first:
+      213: -6745758542414805692
+    second: Laser_Beam_Spritesheet_PURPLE_9
+  - first:
+      213: 1425331898031963077
+    second: Laser_Beam_Spritesheet_PURPLE_10
+  - first:
+      213: -901367687176634725
+    second: Laser_Beam_Spritesheet_PURPLE_11
+  - first:
+      213: 7200813022332346909
+    second: Laser_Beam_Spritesheet_PURPLE_12
+  - first:
+      213: -1638679073871494031
+    second: Laser_Beam_Spritesheet_PURPLE_13
+  - first:
+      213: 7268044111528266703
+    second: Laser_Beam_Spritesheet_PURPLE_14
+  - first:
+      213: 1595220161428826575
+    second: Laser_Beam_Spritesheet_PURPLE_15
+  - first:
+      213: -8322514157269705704
+    second: Laser_Beam_Spritesheet_PURPLE_16
+  - first:
+      213: 7178404763414931796
+    second: Laser_Beam_Spritesheet_PURPLE_17
+  - first:
+      213: 5019832248833023970
+    second: Laser_Beam_Spritesheet_PURPLE_18
+  - first:
+      213: -4657636270670055695
+    second: Laser_Beam_Spritesheet_PURPLE_19
+  - first:
+      213: -5436465270350480488
+    second: Laser_Beam_Spritesheet_PURPLE_20
+  - first:
+      213: -4208372176907103369
+    second: Laser_Beam_Spritesheet_PURPLE_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73c1fbf3378999440800000000000000
+      internalID: 4943149686773980215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ff86871c189ad100800000000000000
+      internalID: 133586385382051824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: becbd229a9c46d680800000000000000
+      internalID: -8730706600849982229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd43a1b470093f650800000000000000
+      internalID: 6265509867601671387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caafb2dbcd397f210800000000000000
+      internalID: 1366723588206099116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07c114cc3edfb1880800000000000000
+      internalID: -8639032305353941904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a0d3b9c0e3dfd50800000000000000
+      internalID: 6772637638500092572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_7
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fee470883e2a45a90800000000000000
+      internalID: -7326051595701498129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db556973a770a41b0800000000000000
+      internalID: -5671712559219714627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_9
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4450fc2a8504262a0800000000000000
+      internalID: -6745758542414805692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_10
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cb7a3d3fcbc7c310800000000000000
+      internalID: 1425331898031963077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_11
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e32d93dd2bd73f0800000000000000
+      internalID: -901367687176634725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d126022da4d6ee360800000000000000
+      internalID: 7200813022332346909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 174060d701e3249e0800000000000000
+      internalID: -1638679073871494031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcb03879c974dd460800000000000000
+      internalID: 7268044111528266703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_15
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc9a184f84c532610800000000000000
+      internalID: 1595220161428826575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81c97c1f77d708c80800000000000000
+      internalID: -8322514157269705704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_17
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 459a1597911de9360800000000000000
+      internalID: 7178404763414931796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_18
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ef1eb785d60aa540800000000000000
+      internalID: 5019832248833023970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_19
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f67cb13d70cc5fb0800000000000000
+      internalID: -4657636270670055695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89bf207e3abcd84b0800000000000000
+      internalID: -5436465270350480488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_21
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77390d05dcbd895c0800000000000000
+      internalID: -4208372176907103369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aacd16e267c682c469f49522221a17e5
+      internalID: 984277512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_Beam_Spritesheet_PURPLE_23
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc372d1f470fb44b9feeb1c4b73ecfc
+      internalID: 1464287851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0d9aaeb98a1732045a944216f94e1c5f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Laser_Beam_Spritesheet_PURPLE_0: 4943149686773980215
+      Laser_Beam_Spritesheet_PURPLE_1: 133586385382051824
+      Laser_Beam_Spritesheet_PURPLE_10: 1425331898031963077
+      Laser_Beam_Spritesheet_PURPLE_11: -901367687176634725
+      Laser_Beam_Spritesheet_PURPLE_12: 7200813022332346909
+      Laser_Beam_Spritesheet_PURPLE_13: -1638679073871494031
+      Laser_Beam_Spritesheet_PURPLE_14: 7268044111528266703
+      Laser_Beam_Spritesheet_PURPLE_15: 1595220161428826575
+      Laser_Beam_Spritesheet_PURPLE_16: -8322514157269705704
+      Laser_Beam_Spritesheet_PURPLE_17: 7178404763414931796
+      Laser_Beam_Spritesheet_PURPLE_18: 5019832248833023970
+      Laser_Beam_Spritesheet_PURPLE_19: -4657636270670055695
+      Laser_Beam_Spritesheet_PURPLE_2: -8730706600849982229
+      Laser_Beam_Spritesheet_PURPLE_20: -5436465270350480488
+      Laser_Beam_Spritesheet_PURPLE_21: -4208372176907103369
+      Laser_Beam_Spritesheet_PURPLE_22: 984277512
+      Laser_Beam_Spritesheet_PURPLE_23: 1464287851
+      Laser_Beam_Spritesheet_PURPLE_3: 6265509867601671387
+      Laser_Beam_Spritesheet_PURPLE_4: 1366723588206099116
+      Laser_Beam_Spritesheet_PURPLE_5: -8639032305353941904
+      Laser_Beam_Spritesheet_PURPLE_6: 6772637638500092572
+      Laser_Beam_Spritesheet_PURPLE_7: -7326051595701498129
+      Laser_Beam_Spritesheet_PURPLE_8: -5671712559219714627
+      Laser_Beam_Spritesheet_PURPLE_9: -6745758542414805692
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

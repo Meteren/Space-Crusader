@@ -4,7 +4,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-public class Asteroid : MonoBehaviour, IDamageable<Bullet>
+public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerSkill>
 {
     [Header("Health Segment")]
     public float health;
@@ -34,7 +34,8 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>
     protected virtual void Start()
     {
         levelController = GameObject.Find("LevelGeneration").GetComponent<LevelController>();
-        transform.localScale /= CameraScaler.scaleFactor;
+
+        transform.localScale *= CameraScaler.scaledRatio;
         healthIndicator = healthIndicator.GetComponentInChildren<TextMeshProUGUI>();
         healthIndicator.text = health.ToString();
         rb = GetComponent<Rigidbody2D>();
@@ -43,8 +44,6 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>
         circleCollider = GetComponent<CircleCollider2D>();
         //rb.linearVelocity = new Vector2(0, -2);
     }
-
-
     protected virtual void Update()
     {
 
@@ -94,6 +93,23 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>
             Destroy(gameObject);
         }
 
+    }
+
+    public void OnDamage(PiercerSkill damageSource, IEffect<IDamageable<PiercerSkill>> effectResolver = null)
+    {
+
+        if (damageCoroutine != null)
+            StopCoroutine(damageCoroutine);
+
+        damageCoroutine = StartCoroutine(DamageIndicator());
+        health -= damageSource.damageAmount;
+        healthIndicator.text = health.ToString();
+        Debug.Log("On Damage");
+        if (health <= 0)
+        {
+            //play a vfx in here such as particle effect or erosion like shader effect
+            Destroy(gameObject);
+        }
     }
 
     public void AddEffect(IEffect<IDamageable<Bullet>> effect)
@@ -152,6 +168,6 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>
         }
         levelController.progressAmount += 0.25f * levelController.finalDecreaseVal;//can be changed
     }
-         
+
 
 }

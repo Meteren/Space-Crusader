@@ -27,6 +27,13 @@ public class GameManager : SingleTon<GameManager>
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode sceneMode)
     {
+        GameObject managers = GameObject.Find("Managers");
+
+        if (managers != null)
+            transform.SetParent(managers.transform);
+        else
+            transform.SetParent(null);
+
         if (scene.buildIndex != 0)
         {
             playerSpawner.Spawn();

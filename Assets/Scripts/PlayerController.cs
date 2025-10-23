@@ -135,6 +135,6 @@ public class PlayerController : MonoBehaviour
     public void Init(Vector2 position)
     {
         transform.position = position;
-        transform.localScale /= CameraScaler.scaleFactor;
+        transform.localScale /= CameraScaler.scaleFactorX;
     }
 }

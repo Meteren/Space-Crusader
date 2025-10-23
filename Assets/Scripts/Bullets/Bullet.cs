@@ -30,7 +30,7 @@ public class Bullet : MonoBehaviour
 
     protected void Start()
     {
-        transform.localScale /= CameraScaler.scaleFactor;
+        transform.localScale *= CameraScaler.scaledRatio;
     }
     private void Update()
     {
@@ -90,7 +90,6 @@ public class Bullet : MonoBehaviour
     {
 
     }
-
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
