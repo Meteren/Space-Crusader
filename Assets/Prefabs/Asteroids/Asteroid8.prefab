@@ -264,6 +264,7 @@ GameObject:
   - component: {fileID: 5059696897748784460}
   - component: {fileID: 2652953702201663307}
   - component: {fileID: 7690205774214262086}
+  - component: {fileID: -8893138548803676960}
   m_Layer: 7
   m_Name: Asteroid8
   m_TagString: Untagged
@@ -329,7 +330,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -527118177
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3dc00ffb0bbddc14193c560201a0851b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -425,3 +426,18 @@ MonoBehaviour:
   side: 1
   orbitSpeed: 2
   centerPoint: {fileID: 0}
+--- !u!114 &-8893138548803676960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5838896038688429728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 929cfc4e7cbb1f447a028548029ab5a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  executeInUpdate: 0
+  anchorType: 4
+  anchorOffset: {x: 0, y: 0, z: 0}

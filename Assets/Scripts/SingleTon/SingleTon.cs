@@ -31,7 +31,7 @@ public class SingleTon<T> : MonoBehaviour where T : Component
         }
     }
 
-    private void Awake()
+    protected void Awake()
     {
         if (!instance)
             instance = this as T;

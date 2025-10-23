@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8565631589818249107}
   - component: {fileID: 6402902860732398071}
   - component: {fileID: 6808620265715019749}
+  - component: {fileID: -1177580981933559713}
   m_Layer: 7
   m_Name: Asteroid9
   m_TagString: Untagged
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -527118177
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ba27b996bf674414f9ba7e39e7d940a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -174,6 +175,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   moveSpeed: 3
+--- !u!114 &-1177580981933559713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2220635609951768564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 929cfc4e7cbb1f447a028548029ab5a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  executeInUpdate: 0
+  anchorType: 4
+  anchorOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &5323472516358640321
 GameObject:
   m_ObjectHideFlags: 0

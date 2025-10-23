@@ -30,7 +30,7 @@ public class Bullet : MonoBehaviour
 
     protected void Start()
     {
-        transform.localScale *= CameraScaler.scaledRatio;
+        //transform.localScale *= CameraScaler.scaledRatio;
     }
     private void Update()
     {

@@ -9,6 +9,7 @@ public class Level
 
     [SerializeField] private int partElementsHpBoostAmount;
 
+
     public List<GameObject> LevelParts {  get { return levelParts; } }
 
     private int minHealthStartPoint;
@@ -26,20 +27,16 @@ public class Level
         {
             Transform child = levelPart.GetChild(i).transform;
 
-            Vector2 childScreenPoint = Camera.main.WorldToScreenPoint(child.position);
-            Vector2 partScreenPoint = Camera.main.WorldToScreenPoint(levelPart.position);
+            AnchorGameObject anchor = child.gameObject.GetComponent<AnchorGameObject>();
 
-            float xDistanceToCenter = childScreenPoint.x - partScreenPoint.x;
-            float yDistanceToCenter = childScreenPoint.y - partScreenPoint.y;
+            anchor.anchorType = AnchorGameObject.AnchorType.MiddleCenter;
+            anchor.anchorOffset.x = (child.position.x - (CameraViewportHandler.Instance.MiddleCenter.y));
+            anchor.anchorOffset.y = child.position.y - CameraViewportHandler.Instance.MiddleCenter.y;
 
-            Vector2 distance = new Vector2(xDistanceToCenter * CameraScaler.scaleFactorX,yDistanceToCenter * CameraScaler.scaleFactorY);
+            anchor.anchorOffset.x *= (CameraViewportHandler.Instance.Width / (2 * CameraViewportHandler.Instance.referenceWidthPositiveX));
 
-            float zDistance = Mathf.Abs(Camera.main.transform.position.z - child.position.z);
-
-            childScreenPoint = partScreenPoint + distance;
-
-            child.position = Camera.main.ScreenToWorldPoint(new Vector3(childScreenPoint.x,childScreenPoint.y,zDistance));
-
+            anchor.UpdateAnchor();
+    
             if(child.gameObject.TryGetComponent<Asteroid>(out Asteroid asteroid))
             {
                 int minHealth = (partIndex + 1) * partElementsHpBoostAmount;

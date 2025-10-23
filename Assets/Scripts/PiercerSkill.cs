@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
@@ -48,7 +47,7 @@ public class PiercerSkill : MonoBehaviour
                 instantiatedPierceEffect.transform.position = pController.transform.position;
                 effectAnimator = instantiatedPierceEffect.GetComponentInChildren<Animator>();
                 Transform effectTransform = instantiatedPierceEffect.GetComponentInChildren<Transform>();
-                effectTransform.localScale *= CameraScaler.scaledRatio;
+                //effectTransform.localScale *= CameraScaler.scaledRatio;
 
                 List<RaycastHit2D> mainLine = Physics2D.RaycastAll(pController.transform.position,new Vector2(0,1), Mathf.Infinity, hitDetectionLayer).ToList();
                 Debug.DrawRay(pController.transform.position, new Vector2(0, 1) * 10,Color.red,3f);

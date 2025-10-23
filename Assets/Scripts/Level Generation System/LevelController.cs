@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +11,11 @@ public class LevelController : MonoBehaviour
     [SerializeField] private Transform levelGenerationPoint;
     [SerializeField] private Transform movePoint;
     [SerializeField] private float levelPartMoveSpeed;
-     private Slider skillWindowProgressBar;
+
+    private Slider skillWindowProgressBar;
+    private TextMeshProUGUI skillWindowProgressBarText;
+
+    EffectGridController effectGridController;
     int currentLevelIndex => GameManager.instance.currentLevelIndex;
 
     public static int partIndex = 0;
@@ -36,8 +41,18 @@ public class LevelController : MonoBehaviour
     List<Transform> createdLevelParts = new();
     void Start()
     {
+        effectGridController = FindFirstObjectByType<EffectGridController>();   
         skillWindowProgressBar = GameObject.Find("SkillWindowProgressBar").GetComponent<Slider>();
+        skillWindowProgressBarText = skillWindowProgressBar.transform.Find("BottomText").GetComponent<TextMeshProUGUI>();
         Transform levelPart = levels[currentLevelIndex].GeneratePart(partIndex);
+        AnchorGameObject anchor = levelGenerationPoint.gameObject.GetComponent<AnchorGameObject>();
+
+        anchor.anchorType = AnchorGameObject.AnchorType.TopCenter;
+
+        anchor.anchorOffset.y = 4f;
+
+        anchor.UpdateAnchor();
+
         levelPart.position = levelGenerationPoint.position;
 
         createdLevelParts.Add(levelPart);
@@ -54,24 +69,34 @@ public class LevelController : MonoBehaviour
 
         Debug.Log("Skill window progress bar value: " + skillWindowProgressBar.value);
 
-        if (skillWindowProgressBar.value >= 1)
+        if(effectGridController.ActiveMaxedOutEffectCount != effectGridController.EffectCount)
         {
-            skillWindowProgressBar.value = 0;
-            progressAmount = 0;
-            if (pierceSkillProgress != null)
-                pierceSkillProgress.value -= 0.02f;
+            if (skillWindowProgressBar.value >= 1)
+            {
+                skillWindowProgressBar.value = 0;
+                progressAmount = 0;
+                if (pierceSkillProgress != null)
+                    pierceSkillProgress.value -= 0.02f;
 
-            UIManager.instance.HandleSkillWindow();
- 
-            decreaseValueMultiplier -= 0.2f; 
+                UIManager.instance.HandleSkillWindow();
 
-            decreaseValueMultiplier -= 0.001f;
+                decreaseValueMultiplier -= 0.2f;
 
-            Debug.Log("DecreaseValue Mult: " + decreaseValueMultiplier);
-            decreaseValueMultiplier = Mathf.Clamp(decreaseValueMultiplier,0.1f,1f);
+                decreaseValueMultiplier -= 0.001f;
+
+                Debug.Log("DecreaseValue Mult: " + decreaseValueMultiplier);
+                decreaseValueMultiplier = Mathf.Clamp(decreaseValueMultiplier, 0.1f, 1f);
+            }
+        }
+        else
+        {
+            Debug.Log("All skills are achieved");
+            skillWindowProgressBarText.gameObject.SetActive(true);
+            skillWindowProgressBar.value = 1f;
         }
 
-        if(!playerReference)
+
+        if (!playerReference)
             playerReference = GameObject.FindFirstObjectByType<PlayerController>();
 
         MoveLevelParts();

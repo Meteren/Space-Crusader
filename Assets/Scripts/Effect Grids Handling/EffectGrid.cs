@@ -18,6 +18,8 @@ public class EffectGrid : MonoBehaviour
 
     IEffect<Bullet> convertedEffectInHold => effectInHold is IEffect<Bullet> effect ? effect : null;
 
+    EffectGridController effectGridController;
+
     public void InitGrid()
     {
         levelCount.text = "Blank";
@@ -25,8 +27,9 @@ public class EffectGrid : MonoBehaviour
         button.enabled = false;
     }
 
-    public void InitGrid(EffectResolver effectInHold, BulletSpawner bSpawner)
+    public void InitGrid(EffectGridController effectGridController, EffectResolver effectInHold, BulletSpawner bSpawner)
     {
+        this.effectGridController = effectGridController;
         button.enabled = true;
         this.effectInHold = effectInHold;
         this.bSpawner = bSpawner;
@@ -105,6 +108,9 @@ public class EffectGrid : MonoBehaviour
             }
                         
         }
+
+        effectGridController.ActiveMaxedOutEffectCount = effectGridController.GetMaxedEffects(effectGridController.GetAllBulletEffects()).Count;
+
         UIManager.instance.HandleSkillWindow();
             
     }

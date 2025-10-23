@@ -44,13 +44,13 @@ public class CameraScaler : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log($"Camera Scale Factor X:{scaleFactorX}");
+        /*Debug.Log($"Camera Scale Factor X:{scaleFactorX}");
         Debug.Log($"Camera Scale Factor Y:{scaleFactorY}");
 
         Debug.Log($"Scale Final: {scaledRatio}");
 
         Debug.Log($"Camera top: {cameraTopWorldPos}");
-        Debug.Log($"Camera bottom: {cameraBottomWorldPos}");
+        Debug.Log($"Camera bottom: {cameraBottomWorldPos}");*/
     }
 
 }

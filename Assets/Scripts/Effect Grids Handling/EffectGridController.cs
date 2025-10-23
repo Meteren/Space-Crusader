@@ -8,6 +8,10 @@ public class EffectGridController : MonoBehaviour
     [SerializeField] private List<EffectGrid> grids;
     private List<EffectResolver> effects = new();
     private BulletSpawner bSpawner;
+
+    public int EffectCount {  get { return effects.Count; } }
+
+    public int ActiveMaxedOutEffectCount { get; set; }
     private void Start()
     {
         effects.Add(new IncreaseFireRateEffect(typeof(Bullet)));
@@ -74,26 +78,12 @@ public class EffectGridController : MonoBehaviour
         if (discriminatedEffects != null)
             Debug.Log($"Discriminated effect count: {discriminatedEffects.Count}");
 
-        List<IEffect<Bullet>> allBulletEffects = bSpawner.bulletDataInstances
-        .SelectMany(x => x.effects)
-        .ToList();
+        List<IEffect<Bullet>> allBulletEffects = GetAllBulletEffects();
 
+        
         Debug.Log($"All bullet effects:{allBulletEffects.Count}");
 
-        List<EffectResolver> effectsMaxedOut = allBulletEffects.Select((x) => 
-        {
-            int currentLevel = x.EffectLevel;
-
-            if(x is EffectResolver effectResolver)
-            {
-                if ((currentLevel >= effectResolver.MaxLevel) || effectResolver is IResolveAsAbility<BulletSpawner>)
-                    return effectResolver;
-                return null;
-            }                
-            else
-                return null;
-
-        }).Where(x => x != null).ToList();
+        List<EffectResolver> effectsMaxedOut = GetMaxedEffects(allBulletEffects);
 
         if(effectsMaxedOut != null)
                     Debug.Log($"Effects maxed out count:{effectsMaxedOut.Count}");
@@ -112,10 +102,38 @@ public class EffectGridController : MonoBehaviour
         for(int i = 0; i < grids.Count; i++)
         {
             if(i < discriminatedEffects.Count)
-                grids[i].InitGrid(discriminatedEffects[i],bSpawner);
+                grids[i].InitGrid(this,discriminatedEffects[i],bSpawner);
             else
                 grids[i].InitGrid();
         }
 
     }
+
+
+    public List<EffectResolver> GetMaxedEffects(List<IEffect<Bullet>> allBulletEffects)
+    {
+        return allBulletEffects.Select((x) =>
+        {
+            int currentLevel = x.EffectLevel;
+
+            if (x is EffectResolver effectResolver)
+            {
+                if ((currentLevel >= effectResolver.MaxLevel) || effectResolver is IResolveAsAbility<BulletSpawner>)
+                    return effectResolver;
+                return null;
+            }
+            else
+                return null;
+
+        }).Where(x => x != null).ToList();
+    }
+
+
+    public List<IEffect<Bullet>> GetAllBulletEffects()
+    {
+        return bSpawner.bulletDataInstances
+       .SelectMany(x => x.effects)
+       .ToList();
+    }
+
 }

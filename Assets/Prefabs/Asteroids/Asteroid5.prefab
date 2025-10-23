@@ -250,6 +250,7 @@ GameObject:
   - component: {fileID: 9111724780176189400}
   - component: {fileID: 5251048199477584464}
   - component: {fileID: 4651180073047332876}
+  - component: {fileID: -8426167185798068271}
   m_Layer: 7
   m_Name: Asteroid5
   m_TagString: Untagged
@@ -315,7 +316,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -527118177
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9dd3cdb6a1a905244aae12108fc23180, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -380,3 +381,18 @@ MonoBehaviour:
   healthIndicator: {fileID: 6341551889605806163}
   damageIndicationTime: 0
   isDestroyed: 0
+--- !u!114 &-8426167185798068271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7520397145391298504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 929cfc4e7cbb1f447a028548029ab5a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  executeInUpdate: 0
+  anchorType: 4
+  anchorOffset: {x: 0, y: 0, z: 0}

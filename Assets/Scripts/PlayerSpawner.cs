@@ -9,7 +9,7 @@ public class PlayerSpawner
     public void Spawn() 
     {
         PlayerController instantiatedPlayer = GameObject.Instantiate(playerPrefab).GetComponent<PlayerController>();
-        instantiatedPlayer.transform.localScale *= CameraScaler.scaledRatio;
+        //instantiatedPlayer.transform.localScale *= CameraScaler.scaledRatio;
         
 
         instantiatedPlayer.Init(spawnPoint.position);
