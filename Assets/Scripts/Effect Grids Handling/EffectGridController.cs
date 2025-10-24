@@ -98,6 +98,15 @@ public class EffectGridController : MonoBehaviour
 
         }
 
+        //discriminatedEffects.Sort((a, b) => a.CompareTo(b));
+
+        //discriminatedEffects = discriminatedEffects.OrderBy(x => UnityEngine.Random.value).ToList();
+
+        foreach(var effect in discriminatedEffects)
+        {
+            effect.CalcProbability();
+        }
+
         discriminatedEffects.Sort((a, b) => a.CompareTo(b));
        
         for(int i = 0; i < grids.Count; i++)

@@ -21,6 +21,8 @@ public abstract class EffectResolver : IComparable<EffectResolver>
 
     public EffectResolver() { }
 
+    protected int probability;
+
     public EffectResolver(Type target,List<Type> dependentEffects) 
     {
         TargetType = target;
@@ -39,18 +41,16 @@ public abstract class EffectResolver : IComparable<EffectResolver>
     public void SetTargetType(Type targetType) => TargetType = targetType;
     public void SetDependents(List<Type> dependentEffects) => this.dependentEffects = dependentEffects;
 
-    public virtual int CalcProbability()
+    public virtual void CalcProbability()
     {
-        return Random.Range(0,10);
+        probability = Random.Range(0,100);
     }
 
     public int CompareTo(EffectResolver other)
     {
-        int generatedNumber = CalcProbability();
-
-        if (generatedNumber > other.CalcProbability())
+        if (probability > other.probability)
             return 1;
-        else if (generatedNumber < other.CalcProbability())
+        else if (probability < other.probability)
             return -1;
         else return 0;
     }
