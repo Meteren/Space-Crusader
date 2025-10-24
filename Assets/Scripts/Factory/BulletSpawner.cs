@@ -7,26 +7,29 @@ public class BulletSpawner : MonoBehaviour
 {
 
     [Header("Generation Pool For Bullets")]
-    [SerializeField] private List<BulletData> bulletDataReferences; //later add a selection for specified bullet according to effect list in player
-                                                                    //can be referenced to player from here for the selection logic
+    [SerializeField] private List<BulletData> bulletDataReferences; 
     [HideInInspector]public List<BulletData> bulletDataInstances = new();
     BulletFactory bulletFactory;
 
     private PlayerController playerController;
 
+    EffectGridController effectGridController;
+
     private void Awake()
     {
+        effectGridController = FindFirstObjectByType<EffectGridController>();
         playerController = GetComponent<PlayerController>();
         bulletFactory = new BulletFactory(playerController);
         
         BulletData instantiatedData = Instantiate(bulletDataReferences[0],transform);
         bulletDataInstances.Add(instantiatedData);
         
+        
     }
 
     private void Update()
     {
-        if (TouchManager.instance.activeTouchesCount > 0 && !UIManager.instance.effectSelectionScreen.activeSelf || Input.GetMouseButtonDown(0) )
+        if (TouchManager.instance.activeTouchesCount > 0 && !effectGridController.gameObject.activeSelf || Input.GetMouseButtonDown(0) )
         {
             foreach (var data in bulletDataInstances)
             {

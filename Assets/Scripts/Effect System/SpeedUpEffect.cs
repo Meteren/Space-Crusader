@@ -21,7 +21,7 @@ public class SpeedUpEffect : EffectResolver, IEffect<Bullet>
     {
         target.updatedData.speed = target.baseData.speed + 
             new Vector2(target.baseData.speed.x > 0 ? speedAddValue * EffectLevel : 0, target.baseData.speed.y > 0 ? speedAddValue * EffectLevel : 0);
-        target.SetSpeed();
+        target.SetSpeed(); //forgot why added, seems unnecessary for now, can be deleted later
     }
 
     public void Cancel(Bullet target)

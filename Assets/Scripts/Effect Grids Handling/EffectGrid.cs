@@ -111,7 +111,7 @@ public class EffectGrid : MonoBehaviour
 
         effectGridController.ActiveMaxedOutEffectCount = effectGridController.GetMaxedEffects(effectGridController.GetAllBulletEffects()).Count;
 
-        UIManager.instance.HandleSkillWindow();
+        effectGridController.HandleSkillWindow();
             
     }
 }

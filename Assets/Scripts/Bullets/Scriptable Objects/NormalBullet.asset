@@ -18,6 +18,7 @@ MonoBehaviour:
   defaultGenTime: 0.8
   speed: {x: 0, y: 5}
   pierceCount: 1
+  damageAmount: 1
   burstCount: 0
   timeBetweenBurstShots: 0
   shotsToReflectCount: 0

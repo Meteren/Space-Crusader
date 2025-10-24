@@ -34,7 +34,7 @@ public class SingleTon<T> : MonoBehaviour where T : Component
     protected void Awake()
     {
         if (!instance)
-            instance = this as T;
+            instance = this as T;      
         else
             Destroy(gameObject);
     }

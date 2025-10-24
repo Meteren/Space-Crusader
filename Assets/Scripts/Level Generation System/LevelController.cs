@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -12,13 +13,17 @@ public class LevelController : MonoBehaviour
     [SerializeField] private Transform movePoint;
     [SerializeField] private float levelPartMoveSpeed;
 
+    public int LevelCount { get => levels.Count; }
+
     private Slider skillWindowProgressBar;
     private TextMeshProUGUI skillWindowProgressBarText;
+
+    private Slider levelProgressBar;
 
     EffectGridController effectGridController;
     int currentLevelIndex => GameManager.instance.currentLevelIndex;
 
-    public static int partIndex = 0;
+    public int partIndex = 0;
 
     //--skill windwow progress bar handlements
 
@@ -39,31 +44,73 @@ public class LevelController : MonoBehaviour
     Slider pierceSkillProgress;
 
     List<Transform> createdLevelParts = new();
+
+    //--
+    float stopAt;
+
+    float levelBarInceraseSpeed = 0.2f;
+    //--
+
+    //--End level menu
+
+    private GameObject endLevelScreen;
+
+    //--Indicator
+    private GameObject levelIndicator;
+    private Animator levelIndicatorAnimator;
+    float indicatorMoveCenterDuration;
+    float indicatorMoveRightDuration;
+    bool generationStarted;
+
     void Start()
     {
         effectGridController = FindFirstObjectByType<EffectGridController>();   
+
         skillWindowProgressBar = GameObject.Find("SkillWindowProgressBar").GetComponent<Slider>();
         skillWindowProgressBarText = skillWindowProgressBar.transform.Find("BottomText").GetComponent<TextMeshProUGUI>();
-        Transform levelPart = levels[currentLevelIndex].GeneratePart(partIndex);
+
+        levelProgressBar = GameObject.Find("LevelProgressBar").GetComponent<Slider>();
+
+        endLevelScreen = GameObject.Find("LevelEndScreen");
+        levelIndicator = GameObject.Find("LeveIndicator");
+        levelIndicator.SetActive(false);
+        endLevelScreen.SetActive(false);
+
+        levelIndicatorAnimator = levelIndicator.GetComponent<Animator>();  
+
+        RuntimeAnimatorController rtController = levelIndicatorAnimator.runtimeAnimatorController;
+
+        foreach(var clip in rtController.animationClips)
+        {
+            if (clip.name == "slideToCenter")
+                indicatorMoveCenterDuration = clip.length;
+            if (clip.name == "slideToRight")
+                indicatorMoveRightDuration = clip.length;
+        }
+
+        
         AnchorGameObject anchor = levelGenerationPoint.gameObject.GetComponent<AnchorGameObject>();
 
         anchor.anchorType = AnchorGameObject.AnchorType.TopCenter;
 
         anchor.anchorOffset.y = 4f;
 
-        anchor.UpdateAnchor();
+        anchor.UpdateAnchor();    
 
-        levelPart.position = levelGenerationPoint.position;
-
-        createdLevelParts.Add(levelPart);
-        partIndex++;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         if(pierceSkillProgress == null)
             pierceSkillProgress = GameObject.Find("PiercerProgressBar").GetComponent<Slider>();
+
+        if (GameManager.instance.initPartGenerationProcess && !generationStarted)
+        {
+            generationStarted = true;
+            WaitForPartGeneration();
+        }
 
         skillWindowProgressBar.value = progressAmount;
 
@@ -78,7 +125,7 @@ public class LevelController : MonoBehaviour
                 if (pierceSkillProgress != null)
                     pierceSkillProgress.value -= 0.02f;
 
-                UIManager.instance.HandleSkillWindow();
+                effectGridController.HandleSkillWindow();
 
                 decreaseValueMultiplier -= 0.2f;
 
@@ -99,6 +146,7 @@ public class LevelController : MonoBehaviour
         if (!playerReference)
             playerReference = GameObject.FindFirstObjectByType<PlayerController>();
 
+        IncreaseLevelBar();
         MoveLevelParts();
         TryDeleteAndCreateParts();
                     
@@ -129,7 +177,7 @@ public class LevelController : MonoBehaviour
                 Destroy(part.gameObject);
                 createdLevelParts.Remove(part);
                 if(createdLevelParts.Count == 0)
-                    InitPartGeneration();
+                    InitPartGeneration(true);
             }
 
             if(part != null)
@@ -138,7 +186,7 @@ public class LevelController : MonoBehaviour
                 if (Vector2.Distance(part.position, playerReference.transform.position) <= generationRange)
                 {
                     if(createdLevelParts.Count < 2)
-                        InitPartGeneration();
+                        InitPartGeneration(false);
                 }
       
              
@@ -146,7 +194,7 @@ public class LevelController : MonoBehaviour
         }
     }
 
-    private void InitPartGeneration()
+    private void InitPartGeneration(bool generateIfNoAsteroidsLeft)
     {
        
         if (partIndex < levels[currentLevelIndex].LevelParts.Count)
@@ -158,12 +206,65 @@ public class LevelController : MonoBehaviour
         }
         else
         {
-                //will be changed later with a proper UI declaration
-            Debug.Log("No Level Part To Create!!!");
+
+            if (generateIfNoAsteroidsLeft)
+            {
+                partIndex++;
+                Debug.Log("Level Finished");
+            }
         }
         
        
     }
+
+    private void IncreaseLevelBar()
+    {
+        float levelPartCount = (float)levels[currentLevelIndex].LevelParts.Count;
+
+        float amountBetween = 1 / levelPartCount;
+
+        stopAt = (partIndex - 1) * amountBetween;
+
+        if(levelProgressBar.value < stopAt)
+        {
+            levelProgressBar.value += Time.deltaTime * levelBarInceraseSpeed;
+        }
+
+        stopAt = Mathf.Clamp(levelProgressBar.value, 0, stopAt);
+
+        if (levelProgressBar.value == 1f)
+            endLevelScreen.SetActive(true);
+
+    }
+
+    private void WaitForPartGeneration()
+    {
+        StartCoroutine(WaitForLevelIndicatorRoutine());
+    }
+
+
+    private IEnumerator WaitForLevelIndicatorRoutine()
+    {
+        levelIndicator.SetActive(true);
+        levelIndicator.GetComponent<TextMeshProUGUI>().text = $"Level {currentLevelIndex + 1}";
+        levelIndicatorAnimator.SetBool("slideToCenter", true);
+        yield return new WaitForSeconds(indicatorMoveCenterDuration + 0.5f);
+        levelIndicatorAnimator.SetBool("slideToRight", true);
+        yield return new WaitForSeconds(indicatorMoveRightDuration);
+        levelIndicator.SetActive(false);
+        StartLevelGeneration();
+    }
+    private void StartLevelGeneration()
+    {
+        Transform levelPart = levels[currentLevelIndex].GeneratePart(partIndex);
+        levelPart.position = levelGenerationPoint.position;
+
+        createdLevelParts.Add(levelPart);
+        partIndex++;
+        GameManager.instance.initPartGenerationProcess = false;
+    }
+
+
 
 }
 

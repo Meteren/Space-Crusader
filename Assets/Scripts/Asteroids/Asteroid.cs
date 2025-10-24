@@ -84,7 +84,7 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerS
             StopCoroutine(damageCoroutine);
 
         damageCoroutine = StartCoroutine(DamageIndicator());
-        health -= bullet.DamageAmount;
+        health -= bullet.updatedData.damageAmount;
         healthIndicator.text = health.ToString();
         Debug.Log("On Damage");
         if (health <= 0)
@@ -162,7 +162,7 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerS
     {
         if(bullet is ExplosiveBullet exBullet)
         {
-            levelController.progressAmount += 0.25f * levelController.finalDecreaseVal
+            levelController.progressAmount += (0.25f * levelController.finalDecreaseVal) //???
                 / (exBullet.enemiesToBeEffected.Count != 0 ? exBullet.enemiesToBeEffected.Count : 1);
             return;
         }

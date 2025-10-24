@@ -17,10 +17,11 @@ public class EffectGridController : MonoBehaviour
         effects.Add(new IncreaseFireRateEffect(typeof(Bullet)));
         effects.Add(new IncreasePiercingEffect(typeof(Bullet)));
         effects.Add(new SpeedUpEffect(typeof(Bullet)));
+        effects.Add(new BoostDamageAmountEffect(typeof(Bullet)));
         effects.Add(new ExplosiveBulletActivationEffect(typeof(ExplosiveBullet)));
         effects.Add(new BurstCountBoostEffect(typeof(ExplosiveBullet)));
         effects.Add(new SpeedUpEffect(typeof(ExplosiveBullet)));
-        effects.Add(new TimeBetweenBurstBoosterEffect(typeof(ExplosiveBullet), new List<Type>() { typeof(BurstCountBoostEffect) }));
+        effects.Add(new TimeBetweenBurstBoosterEffect(typeof(ExplosiveBullet), new List<Type>() { typeof(BurstCountBoostEffect)}));
         effects.Add(new IncreaseFireRateEffect(typeof(ExplosiveBullet)));
         effects.Add(new ScatteredBulletActivationEffect(typeof(ScatteredBullet)));
         effects.Add(new IncreaseFireRateEffect(typeof(ScatteredBullet)));
@@ -134,6 +135,14 @@ public class EffectGridController : MonoBehaviour
         return bSpawner.bulletDataInstances
        .SelectMany(x => x.effects)
        .ToList();
+    }
+
+    public void HandleSkillWindow()
+    {
+        gameObject.SetActive(!gameObject.activeSelf);
+
+        GameManager.instance.PauseOrContinueGame();
+
     }
 
 }

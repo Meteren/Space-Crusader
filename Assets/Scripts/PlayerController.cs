@@ -103,18 +103,21 @@ public class PlayerController : MonoBehaviour
     {
         if (TouchManager.instance.activeTouchesCount > 0)
         {
-            if (TouchManager.instance.touch.phase == TouchPhase.Began)
-            {     
-                touchBegin = cam.ScreenToWorldPoint(TouchManager.instance.touch.screenPosition);
-            }
-            if(TouchManager.instance.touch.phase == TouchPhase.Moved || TouchManager.instance.touch.phase == TouchPhase.Stationary)
+            if (!float.IsInfinity(TouchManager.instance.touch.screenPosition.x) || !float.IsInfinity(TouchManager.instance.touch.screenPosition.y))
             {
-                Vector2 touchMovePos = cam.ScreenToWorldPoint(TouchManager.instance.touch.screenPosition);
-                deltaTouch = touchMovePos - touchBegin;
-                touchBegin = touchMovePos;
-                return true;
+                if (TouchManager.instance.touch.phase == TouchPhase.Began)
+                {
+                    touchBegin = Camera.main.ScreenToWorldPoint(TouchManager.instance.touch.screenPosition);
+                }
+                if (TouchManager.instance.touch.phase == TouchPhase.Moved || TouchManager.instance.touch.phase == TouchPhase.Stationary)
+                {
+                    Vector2 touchMovePos = Camera.main.ScreenToWorldPoint(TouchManager.instance.touch.screenPosition);
+                    deltaTouch = touchMovePos - touchBegin;
+                    touchBegin = touchMovePos;
+                    return true;
+                }
             }
-
+           
         }
         deltaTouch = Vector2.zero;
         return false;
