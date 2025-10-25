@@ -24,10 +24,8 @@ public class GameManager : SingleTon<GameManager>
 
 
     public bool initPartGenerationProcess;
-
     private void Start()
     {
-        currentLevelIndex = GetSavedLevel();
         DontDestroyOnLoad(gameObject);
 
         panelAnimator = panel.GetComponent<Animator>(); 
@@ -100,7 +98,12 @@ public class GameManager : SingleTon<GameManager>
         panelAnimator.SetBool("fadeIn", false);
         panelAnimator.SetBool("fadeOut", false);
         panel.SetActive(false);
-        initPartGenerationProcess = true;
+        Scene scene = SceneManager.GetActiveScene();
+
+        Debug.Log($"Scene index: {scene.buildIndex}");
+
+        if (scene.buildIndex == 1)
+            initPartGenerationProcess = true;
 
         if (isGamePaused)
             PauseOrContinueGame();
@@ -136,5 +139,7 @@ public class GameManager : SingleTon<GameManager>
     {
         return PlayerPrefs.GetInt("LevelIndex", 0);
     }
+
+
 
 }

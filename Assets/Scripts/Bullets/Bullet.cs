@@ -1,4 +1,5 @@
 
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
@@ -28,14 +29,15 @@ public class Bullet : MonoBehaviour
 
     public IObjectPool<Bullet> BulletPoolBelonged { get => bulletPoolBelonged; }
 
+    protected ParticleSpawner pSpawner;
+
+    [Header("Particle Effects")]
+    [SerializeField] protected ParticleSystem hitEffect;
+
+
     protected void Start()
     {
-        //transform.localScale *= CameraScaler.scaledRatio;
-    }
-    private void Update()
-    {
-        //Debug.Log($"Speed value:{rb.linearVelocity.y}");
-
+        pSpawner = FindFirstObjectByType<ParticleSpawner>();
     }
 
     public void Init(BulletData data, IObjectPool<Bullet> bulletPoolBelonged,PlayerController pc,Vector2 position)
@@ -84,6 +86,7 @@ public class Bullet : MonoBehaviour
         updatedData = baseData;
         if(gameObject.activeSelf)
             bulletPoolBelonged.Release(this);
+        
     }
 
     public virtual void InflictDamage()
@@ -96,6 +99,20 @@ public class Bullet : MonoBehaviour
         if(collision.TryGetComponent<IDamageable<Bullet>>(out IDamageable<Bullet> damagaeable))
         {
             damagaeable.OnDamage(this);
+            MonoBehaviour monoB = damagaeable as MonoBehaviour;
+
+            Vector2 direction = transform.position - monoB.transform.position;
+
+            float rotationAngle = Mathf.Atan2(direction.y, direction.x);
+
+            ParticleSystem spawnedParticle = pSpawner.Spawnparticle(hitEffect,collision.ClosestPoint(transform.position));
+
+            spawnedParticle.transform.rotation = Quaternion.Euler(0, 0, rotationAngle);
+
+            ParticleHandler pHandler = spawnedParticle.GetComponent<ParticleHandler>();
+
+            pHandler.InitReturnToPoolProcess();
+     
         }
 
         if(!collision.GetComponent<PlayerController>() && !collision.GetComponent<Bullet>() && !collision.GetComponent<TargetLocator>())
@@ -108,5 +125,6 @@ public class Bullet : MonoBehaviour
                 Release();
         }
     }
+
 
 }

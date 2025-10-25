@@ -28,6 +28,7 @@ public class EffectGridController : MonoBehaviour
         effects.Add(new SpeedUpEffect(typeof(ScatteredBullet)));
         effects.Add(new IncreasePiercingEffect(typeof(ScatteredBullet)));
         effects.Add(new BulletCountToScatterBoosterEffect(typeof(ScatteredBullet)));
+        effects.Add(new BoostDamageAmountEffect(typeof(ScatteredBullet)));
 
         gameObject.SetActive(false);
 
@@ -97,9 +98,7 @@ public class EffectGridController : MonoBehaviour
             .ToList();
 
         }
-
-        //discriminatedEffects.Sort((a, b) => a.CompareTo(b));
-
+  
         //discriminatedEffects = discriminatedEffects.OrderBy(x => UnityEngine.Random.value).ToList();
 
         foreach(var effect in discriminatedEffects)

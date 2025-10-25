@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -54,6 +55,7 @@ public class LevelController : MonoBehaviour
     //--End level menu
 
     private GameObject endLevelScreen;
+    private GameObject gameOverScreen;
 
     //--Indicator
     private GameObject levelIndicator;
@@ -61,6 +63,8 @@ public class LevelController : MonoBehaviour
     float indicatorMoveCenterDuration;
     float indicatorMoveRightDuration;
     bool generationStarted;
+
+    bool isLevelFinished;
 
     void Start()
     {
@@ -73,8 +77,10 @@ public class LevelController : MonoBehaviour
 
         endLevelScreen = GameObject.Find("LevelEndScreen");
         levelIndicator = GameObject.Find("LeveIndicator");
+        gameOverScreen = GameObject.Find("GameOverScreen");
         levelIndicator.SetActive(false);
         endLevelScreen.SetActive(false);
+        gameOverScreen.SetActive(false);
 
         levelIndicatorAnimator = levelIndicator.GetComponent<Animator>();  
 
@@ -99,57 +105,69 @@ public class LevelController : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
-        if(pierceSkillProgress == null)
-            pierceSkillProgress = GameObject.Find("PiercerProgressBar").GetComponent<Slider>();
-
-        if (GameManager.instance.initPartGenerationProcess && !generationStarted)
-        {
-            generationStarted = true;
-            WaitForPartGeneration();
-        }
-
-        skillWindowProgressBar.value = progressAmount;
-
-        Debug.Log("Skill window progress bar value: " + skillWindowProgressBar.value);
-
-        if(effectGridController.ActiveMaxedOutEffectCount != effectGridController.EffectCount)
-        {
-            if (skillWindowProgressBar.value >= 1)
-            {
-                skillWindowProgressBar.value = 0;
-                progressAmount = 0;
-                if (pierceSkillProgress != null)
-                    pierceSkillProgress.value -= 0.02f;
-
-                effectGridController.HandleSkillWindow();
-
-                decreaseValueMultiplier -= 0.2f;
-
-                decreaseValueMultiplier -= 0.001f;
-
-                Debug.Log("DecreaseValue Mult: " + decreaseValueMultiplier);
-                decreaseValueMultiplier = Mathf.Clamp(decreaseValueMultiplier, 0.1f, 1f);
-            }
-        }
-        else
-        {
-            Debug.Log("All skills are achieved");
-            skillWindowProgressBarText.gameObject.SetActive(true);
-            skillWindowProgressBar.value = 1f;
-        }
-
 
         if (!playerReference)
             playerReference = GameObject.FindFirstObjectByType<PlayerController>();
 
-        IncreaseLevelBar();
-        MoveLevelParts();
-        TryDeleteAndCreateParts();
-                    
+        if (playerReference)
+        {
+            if (pierceSkillProgress == null)
+                pierceSkillProgress = GameObject.Find("PiercerProgressBar").GetComponent<Slider>();
+
+            if (GameManager.instance.initPartGenerationProcess && !generationStarted)
+            {
+                generationStarted = true;
+                WaitForPartGeneration();
+            }
+
+            skillWindowProgressBar.value = progressAmount;
+
+            Debug.Log("Skill window progress bar value: " + skillWindowProgressBar.value);
+
+            if (effectGridController.ActiveMaxedOutEffectCount != effectGridController.EffectCount)
+            {
+                if (skillWindowProgressBar.value >= 1)
+                {
+                    skillWindowProgressBar.value = 0;
+                    progressAmount = 0;
+                    if (pierceSkillProgress != null)
+                        pierceSkillProgress.value -= 0.02f;
+
+                    effectGridController.HandleSkillWindow();
+
+                    decreaseValueMultiplier -= 0.2f;
+
+                    decreaseValueMultiplier -= 0.001f;
+
+                    Debug.Log("DecreaseValue Mult: " + decreaseValueMultiplier);
+                    decreaseValueMultiplier = Mathf.Clamp(decreaseValueMultiplier, 0.1f, 1f);
+                }
+            }
+            else
+            {
+                Debug.Log("All skills are achieved");
+                skillWindowProgressBarText.gameObject.SetActive(true);
+                skillWindowProgressBar.value = 1f;
+            }
+
+
+            IncreaseLevelBar();
+            MoveLevelParts();
+            TryDeleteAndCreateParts();
+        }
+
+        CheckIfGameOver();
+
+
+    }
+
+    private void CheckIfGameOver()
+    {
+        if(!playerReference)
+            gameOverScreen.SetActive(true);
+
     }
 
     private void MoveLevelParts()
@@ -232,8 +250,26 @@ public class LevelController : MonoBehaviour
 
         stopAt = Mathf.Clamp(levelProgressBar.value, 0, stopAt);
 
-        if (levelProgressBar.value == 1f)
+        if (levelProgressBar.value == 1f && !isLevelFinished)
+        {
             endLevelScreen.SetActive(true);
+            isLevelFinished = true;
+
+            if (currentLevelIndex == levels.Count - 1)
+            {
+                TextMeshProUGUI endLevelText = endLevelScreen.GetComponentInChildren<TextMeshProUGUI>();
+                endLevelText.text = "Game Over";
+                endLevelText.transform.Find("Next").GetComponent<Button>().enabled = false;
+            }
+            else
+            {
+                GameManager.instance.currentLevelIndex++;
+                GameManager.instance.SaveLevelProgress();
+               
+            }
+           
+        }
+            
 
     }
 
@@ -263,8 +299,6 @@ public class LevelController : MonoBehaviour
         partIndex++;
         GameManager.instance.initPartGenerationProcess = false;
     }
-
-
-
+ 
 }
 

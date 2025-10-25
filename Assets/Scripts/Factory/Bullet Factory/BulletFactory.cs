@@ -24,7 +24,7 @@ public class BulletFactory : IFactory<Bullet,BulletData>
                 bullet => GameObject.Destroy(bullet.gameObject),
                 true,
                 10,
-                50
+                100
                 ); 
 
         bulletPool[data] = pool;

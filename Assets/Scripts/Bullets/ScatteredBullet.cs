@@ -14,6 +14,8 @@ public class ScatteredBullet : Bullet
     public override void Release()
     {
         base.Release();
+        
+
     }
 
     public override void SetPosition()

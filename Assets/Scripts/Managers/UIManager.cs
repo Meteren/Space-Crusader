@@ -10,6 +10,7 @@ public class UIManager : SingleTon<UIManager>
     [Header("Effect Selection Screen")]
     public GameObject effectSelectionScreen;
 
+
     public void SetFpsBar(float fps)
     {
         fpsText.text = $"FPS:{fps}";

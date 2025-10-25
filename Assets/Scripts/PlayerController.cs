@@ -1,6 +1,9 @@
 
 using UnityEngine;
+using System.Collections.Generic;
 using TouchPhase = UnityEngine.InputSystem.TouchPhase;
+using System.Collections;
+using JetBrains.Annotations;
 
 public class PlayerController : MonoBehaviour
 {
@@ -34,8 +37,24 @@ public class PlayerController : MonoBehaviour
 
     public Vector2 boundarySize => boundary.bounds.size;
 
+
+    List<Heart> hearts = new();
+
+    public int health = 3;
+
+    bool cantBeDamaged;
+
+    SpriteRenderer sr;
+
     private void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
+        Transform parentHeart = GameObject.Find("Hearts").transform;
+
+        for(int i = 0; i < parentHeart.childCount; i++)
+            hearts.Add(parentHeart.GetChild(i).GetComponent<Heart>());
+
+
         boundary = GetComponent<BoxCollider2D>();
         cam = Camera.main;
         rocketParticle.Play();
@@ -140,4 +159,64 @@ public class PlayerController : MonoBehaviour
         transform.position = position;
         transform.localScale /= CameraScaler.scaleFactorX;
     }
+
+    public void OnDamage()
+    {
+        health--;
+
+        hearts[(hearts.Count - 1) - health].ReleaseHeart();
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+        StartCoroutine(WaitForNextDamageRoutine());
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponent<IDamageable<Bullet>>() != null && !cantBeDamaged)
+        {
+            Debug.Log("Player got damage");
+            cantBeDamaged = true;
+            OnDamage();
+        }
+            
+    }
+
+    private IEnumerator WaitForNextDamageRoutine()
+    {
+        for(int i = 0; i < 10; i++)
+        {
+   
+            Color shipColor = sr.color;
+
+            var main = rocketParticle.main;
+
+            Color rocketParticleColor = main.startColor.color;
+
+            yield return new WaitForSeconds(0.1f);
+
+            shipColor.a = 0;
+            rocketParticleColor.a = 0;
+
+            sr.color = shipColor;
+            main.startColor = rocketParticleColor;
+
+
+            yield return new WaitForSeconds(0.1f);
+
+            shipColor.a = 1;
+            rocketParticleColor.a = 1;
+
+            sr.color = shipColor;
+            main.startColor = rocketParticleColor;
+
+        }
+        cantBeDamaged = false;
+        
+    }
+
 }
