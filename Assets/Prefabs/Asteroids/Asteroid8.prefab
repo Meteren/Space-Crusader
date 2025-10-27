@@ -422,6 +422,7 @@ MonoBehaviour:
   healthIndicator: {fileID: 4054642875608638109}
   damageIndicationTime: 0.2
   isDestroyed: 0
+  explosionEffect: {fileID: 8734486918785700749, guid: d25ae65007cdb3c4d8a71ba5adfd3d61, type: 3}
   radius: 1
   side: 1
   orbitSpeed: 2

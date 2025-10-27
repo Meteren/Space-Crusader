@@ -1,0 +1,6857 @@
+fileFormatVersion: 2
+guid: a2894ae55cb5e8844965fe8a40a31e7e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3468216428386083726
+    second: scifi-explosion-one_0
+  - first:
+      213: 1786025879817312707
+    second: scifi-explosion-one_1
+  - first:
+      213: 2235452307274374733
+    second: scifi-explosion-one_2
+  - first:
+      213: -2560828933201248487
+    second: scifi-explosion-one_3
+  - first:
+      213: -3475216956466188897
+    second: scifi-explosion-one_4
+  - first:
+      213: -8130946530701322353
+    second: scifi-explosion-one_5
+  - first:
+      213: 6528370889383400987
+    second: scifi-explosion-one_6
+  - first:
+      213: 8212091314104539025
+    second: scifi-explosion-one_7
+  - first:
+      213: 4231625864068150792
+    second: scifi-explosion-one_8
+  - first:
+      213: 6468692129061852303
+    second: scifi-explosion-one_9
+  - first:
+      213: 4546012511993743178
+    second: scifi-explosion-one_10
+  - first:
+      213: 5782581634680718762
+    second: scifi-explosion-one_11
+  - first:
+      213: -3031042431461236734
+    second: scifi-explosion-one_12
+  - first:
+      213: 1485578034943146736
+    second: scifi-explosion-one_13
+  - first:
+      213: -785774685236558807
+    second: scifi-explosion-one_14
+  - first:
+      213: -4433271225956950134
+    second: scifi-explosion-one_15
+  - first:
+      213: 7848659734732114777
+    second: scifi-explosion-one_16
+  - first:
+      213: -4540803891559126498
+    second: scifi-explosion-one_17
+  - first:
+      213: 5365839110098835640
+    second: scifi-explosion-one_18
+  - first:
+      213: 5980808013877343452
+    second: scifi-explosion-one_19
+  - first:
+      213: 2315214876003673714
+    second: scifi-explosion-one_20
+  - first:
+      213: -2504364308471072047
+    second: scifi-explosion-one_21
+  - first:
+      213: 9215666591051084558
+    second: scifi-explosion-one_22
+  - first:
+      213: 7970762303012941173
+    second: scifi-explosion-one_23
+  - first:
+      213: -2281063701999565470
+    second: scifi-explosion-one_24
+  - first:
+      213: -4621714283186477295
+    second: scifi-explosion-one_25
+  - first:
+      213: 6148586274586621499
+    second: scifi-explosion-one_26
+  - first:
+      213: 1444204605257056793
+    second: scifi-explosion-one_27
+  - first:
+      213: 7640259169552751400
+    second: scifi-explosion-one_28
+  - first:
+      213: -5158440709171209493
+    second: scifi-explosion-one_29
+  - first:
+      213: 2808183852133465501
+    second: scifi-explosion-one_30
+  - first:
+      213: -7957316142471457764
+    second: scifi-explosion-one_31
+  - first:
+      213: -4478606736035305162
+    second: scifi-explosion-one_32
+  - first:
+      213: 7047783411750936021
+    second: scifi-explosion-one_33
+  - first:
+      213: -2140497523989942011
+    second: scifi-explosion-one_34
+  - first:
+      213: -2856844876501497051
+    second: scifi-explosion-one_35
+  - first:
+      213: 1428892333344492220
+    second: scifi-explosion-one_36
+  - first:
+      213: -3922732027828522366
+    second: scifi-explosion-one_37
+  - first:
+      213: -7331880437096877440
+    second: scifi-explosion-one_38
+  - first:
+      213: -8453273987581283107
+    second: scifi-explosion-one_39
+  - first:
+      213: 7703543661198944581
+    second: scifi-explosion-one_40
+  - first:
+      213: 100640632929390072
+    second: scifi-explosion-one_41
+  - first:
+      213: -1199719219926843090
+    second: scifi-explosion-one_42
+  - first:
+      213: 6946215886823437571
+    second: scifi-explosion-one_43
+  - first:
+      213: 4628368454102611749
+    second: scifi-explosion-one_44
+  - first:
+      213: -419296573143272036
+    second: scifi-explosion-one_45
+  - first:
+      213: -6070007089760408449
+    second: scifi-explosion-one_46
+  - first:
+      213: -6443528095035064014
+    second: scifi-explosion-one_47
+  - first:
+      213: 7008519342926361294
+    second: scifi-explosion-one_48
+  - first:
+      213: 9071000343015601869
+    second: scifi-explosion-one_49
+  - first:
+      213: -1984402024647775899
+    second: scifi-explosion-one_50
+  - first:
+      213: -3933200621061660398
+    second: scifi-explosion-one_51
+  - first:
+      213: 2166506262572965796
+    second: scifi-explosion-one_52
+  - first:
+      213: -7183668438747608233
+    second: scifi-explosion-one_53
+  - first:
+      213: 4994277390248696147
+    second: scifi-explosion-one_54
+  - first:
+      213: -6358066451837206333
+    second: scifi-explosion-one_55
+  - first:
+      213: 807424030360025868
+    second: scifi-explosion-one_56
+  - first:
+      213: 3329233033121018869
+    second: scifi-explosion-one_57
+  - first:
+      213: -6027976990752297888
+    second: scifi-explosion-one_58
+  - first:
+      213: -7162569574963240203
+    second: scifi-explosion-one_59
+  - first:
+      213: -7305133371726805253
+    second: scifi-explosion-one_60
+  - first:
+      213: 4436241030627519088
+    second: scifi-explosion-one_61
+  - first:
+      213: -5237950553626537510
+    second: scifi-explosion-one_62
+  - first:
+      213: -6556541798303895725
+    second: scifi-explosion-one_63
+  - first:
+      213: -8847155447392269187
+    second: scifi-explosion-one_64
+  - first:
+      213: -3267031388121994275
+    second: scifi-explosion-one_65
+  - first:
+      213: -7552485370434217870
+    second: scifi-explosion-one_66
+  - first:
+      213: 2833952954491038382
+    second: scifi-explosion-one_67
+  - first:
+      213: 7780117267606267193
+    second: scifi-explosion-one_68
+  - first:
+      213: -8647004029291617048
+    second: scifi-explosion-one_69
+  - first:
+      213: 683935845101684605
+    second: scifi-explosion-one_70
+  - first:
+      213: 2271629920536729463
+    second: scifi-explosion-one_71
+  - first:
+      213: -2713502911654922176
+    second: scifi-explosion-one_72
+  - first:
+      213: -2715442473368550119
+    second: scifi-explosion-one_73
+  - first:
+      213: 8738793686419830525
+    second: scifi-explosion-one_74
+  - first:
+      213: -830489372746681880
+    second: scifi-explosion-one_75
+  - first:
+      213: 2093189838604863805
+    second: scifi-explosion-one_76
+  - first:
+      213: 4073983320422455424
+    second: scifi-explosion-one_77
+  - first:
+      213: 2579692938937983955
+    second: scifi-explosion-one_78
+  - first:
+      213: 4578611462133551960
+    second: scifi-explosion-one_79
+  - first:
+      213: 5811109677138233051
+    second: scifi-explosion-one_80
+  - first:
+      213: -6974305025234580670
+    second: scifi-explosion-one_81
+  - first:
+      213: -5373607728875433608
+    second: scifi-explosion-one_82
+  - first:
+      213: -6559433143050077194
+    second: scifi-explosion-one_83
+  - first:
+      213: -8767559840523772188
+    second: scifi-explosion-one_84
+  - first:
+      213: -4761037949964483501
+    second: scifi-explosion-one_85
+  - first:
+      213: 7674817817141972483
+    second: scifi-explosion-one_86
+  - first:
+      213: 8002168786562769023
+    second: scifi-explosion-one_87
+  - first:
+      213: -2017198959309191643
+    second: scifi-explosion-one_88
+  - first:
+      213: 8412530496034511048
+    second: scifi-explosion-one_89
+  - first:
+      213: -6043335700886787167
+    second: scifi-explosion-one_90
+  - first:
+      213: 986855908269023533
+    second: scifi-explosion-one_91
+  - first:
+      213: -2650124683712975260
+    second: scifi-explosion-one_92
+  - first:
+      213: -9113624307180654432
+    second: scifi-explosion-one_93
+  - first:
+      213: -681209126273231197
+    second: scifi-explosion-one_94
+  - first:
+      213: -7211624625491510595
+    second: scifi-explosion-one_95
+  - first:
+      213: -5342169957109879130
+    second: scifi-explosion-one_96
+  - first:
+      213: -9080091602261067890
+    second: scifi-explosion-one_97
+  - first:
+      213: 7713215094920959975
+    second: scifi-explosion-one_98
+  - first:
+      213: 6880422610188943673
+    second: scifi-explosion-one_99
+  - first:
+      213: -5604885312425479619
+    second: scifi-explosion-one_100
+  - first:
+      213: -7904283654831324524
+    second: scifi-explosion-one_101
+  - first:
+      213: -7428380306539458846
+    second: scifi-explosion-one_102
+  - first:
+      213: -6954024667465134747
+    second: scifi-explosion-one_103
+  - first:
+      213: 5930096372538352550
+    second: scifi-explosion-one_104
+  - first:
+      213: 4387274526734113718
+    second: scifi-explosion-one_105
+  - first:
+      213: 3299077967198672110
+    second: scifi-explosion-one_106
+  - first:
+      213: 9181383684899401790
+    second: scifi-explosion-one_107
+  - first:
+      213: -7128599896115540889
+    second: scifi-explosion-one_108
+  - first:
+      213: 1449886669011993718
+    second: scifi-explosion-one_109
+  - first:
+      213: -8067228986897477699
+    second: scifi-explosion-one_110
+  - first:
+      213: -2465640778199034026
+    second: scifi-explosion-one_111
+  - first:
+      213: -1754719680388071519
+    second: scifi-explosion-one_112
+  - first:
+      213: -8534807505929140548
+    second: scifi-explosion-one_113
+  - first:
+      213: -7361486224769580559
+    second: scifi-explosion-one_114
+  - first:
+      213: 6221272227831626354
+    second: scifi-explosion-one_115
+  - first:
+      213: -661069220711943280
+    second: scifi-explosion-one_116
+  - first:
+      213: -2196653749460141175
+    second: scifi-explosion-one_117
+  - first:
+      213: -5419703583846473078
+    second: scifi-explosion-one_118
+  - first:
+      213: -1431972839498367181
+    second: scifi-explosion-one_119
+  - first:
+      213: -5594780531205839586
+    second: scifi-explosion-one_120
+  - first:
+      213: -3073302765464671878
+    second: scifi-explosion-one_121
+  - first:
+      213: 403200402267153853
+    second: scifi-explosion-one_122
+  - first:
+      213: 1731264244074873272
+    second: scifi-explosion-one_123
+  - first:
+      213: 812265359694651910
+    second: scifi-explosion-one_124
+  - first:
+      213: 5299567923330107595
+    second: scifi-explosion-one_125
+  - first:
+      213: 4931500149488024553
+    second: scifi-explosion-one_126
+  - first:
+      213: -4714115015032310990
+    second: scifi-explosion-one_127
+  - first:
+      213: -8412416378976509543
+    second: scifi-explosion-one_128
+  - first:
+      213: 1819694972561263763
+    second: scifi-explosion-one_129
+  - first:
+      213: 8715165941538218949
+    second: scifi-explosion-one_130
+  - first:
+      213: -3776859667772302861
+    second: scifi-explosion-one_131
+  - first:
+      213: 8694986268697985781
+    second: scifi-explosion-one_132
+  - first:
+      213: 5031024947453895748
+    second: scifi-explosion-one_133
+  - first:
+      213: 7362741149229830281
+    second: scifi-explosion-one_134
+  - first:
+      213: -1677633116779817113
+    second: scifi-explosion-one_135
+  - first:
+      213: -8062857983889669176
+    second: scifi-explosion-one_136
+  - first:
+      213: -8753982762550628996
+    second: scifi-explosion-one_137
+  - first:
+      213: 7271835852231731226
+    second: scifi-explosion-one_138
+  - first:
+      213: -2741894584585657026
+    second: scifi-explosion-one_139
+  - first:
+      213: 3825906556099972357
+    second: scifi-explosion-one_140
+  - first:
+      213: -8978195023532859418
+    second: scifi-explosion-one_141
+  - first:
+      213: 8078116057069760319
+    second: scifi-explosion-one_142
+  - first:
+      213: 3808956869115829995
+    second: scifi-explosion-one_143
+  - first:
+      213: 8829208260735462178
+    second: scifi-explosion-one_144
+  - first:
+      213: -4144946490420315852
+    second: scifi-explosion-one_145
+  - first:
+      213: -1100162546343831020
+    second: scifi-explosion-one_146
+  - first:
+      213: 5460302619709349507
+    second: scifi-explosion-one_147
+  - first:
+      213: -3833365547387935222
+    second: scifi-explosion-one_148
+  - first:
+      213: 2939058234922352200
+    second: scifi-explosion-one_149
+  - first:
+      213: -1724041825030781661
+    second: scifi-explosion-one_150
+  - first:
+      213: 3125214328322193916
+    second: scifi-explosion-one_151
+  - first:
+      213: 347391757308570402
+    second: scifi-explosion-one_152
+  - first:
+      213: -7307644573176352548
+    second: scifi-explosion-one_153
+  - first:
+      213: -5116598239339801600
+    second: scifi-explosion-one_154
+  - first:
+      213: 2607462745528145368
+    second: scifi-explosion-one_155
+  - first:
+      213: 3149747130506004343
+    second: scifi-explosion-one_156
+  - first:
+      213: -4597902037190705984
+    second: scifi-explosion-one_157
+  - first:
+      213: -356531515918169411
+    second: scifi-explosion-one_158
+  - first:
+      213: 861799314207031655
+    second: scifi-explosion-one_159
+  - first:
+      213: -3973129425960846116
+    second: scifi-explosion-one_160
+  - first:
+      213: 243551182255863566
+    second: scifi-explosion-one_161
+  - first:
+      213: 2451802266704718175
+    second: scifi-explosion-one_162
+  - first:
+      213: 284744358886095056
+    second: scifi-explosion-one_163
+  - first:
+      213: 6303167246639960100
+    second: scifi-explosion-one_164
+  - first:
+      213: -3644839366191283524
+    second: scifi-explosion-one_165
+  - first:
+      213: -852494028855964577
+    second: scifi-explosion-one_166
+  - first:
+      213: 2379374141340473278
+    second: scifi-explosion-one_167
+  - first:
+      213: -1863288105851830451
+    second: scifi-explosion-one_168
+  - first:
+      213: -1646937423661784241
+    second: scifi-explosion-one_169
+  - first:
+      213: 3889612813691270159
+    second: scifi-explosion-one_170
+  - first:
+      213: 5582420426626012276
+    second: scifi-explosion-one_171
+  - first:
+      213: -7199400893475061669
+    second: scifi-explosion-one_172
+  - first:
+      213: -9047708405411966843
+    second: scifi-explosion-one_173
+  - first:
+      213: -367973951289377464
+    second: scifi-explosion-one_174
+  - first:
+      213: 8365547794419681659
+    second: scifi-explosion-one_175
+  - first:
+      213: -1544713280587320282
+    second: scifi-explosion-one_176
+  - first:
+      213: -5145005205911384354
+    second: scifi-explosion-one_177
+  - first:
+      213: -6265178121448351482
+    second: scifi-explosion-one_178
+  - first:
+      213: 8511653167671242329
+    second: scifi-explosion-one_179
+  - first:
+      213: -7716804409114280445
+    second: scifi-explosion-one_180
+  - first:
+      213: -6808624217192297935
+    second: scifi-explosion-one_181
+  - first:
+      213: 1528038114828368374
+    second: scifi-explosion-one_182
+  - first:
+      213: 6355517500300920108
+    second: scifi-explosion-one_183
+  - first:
+      213: -8297464099894631953
+    second: scifi-explosion-one_184
+  - first:
+      213: -8801031427956519318
+    second: scifi-explosion-one_185
+  - first:
+      213: 262842724802011782
+    second: scifi-explosion-one_186
+  - first:
+      213: -3503456573357876542
+    second: scifi-explosion-one_187
+  - first:
+      213: 7617190359127528240
+    second: scifi-explosion-one_188
+  - first:
+      213: 8717249669830894524
+    second: scifi-explosion-one_189
+  - first:
+      213: 8858207359843353423
+    second: scifi-explosion-one_190
+  - first:
+      213: 7083779591443159373
+    second: scifi-explosion-one_191
+  - first:
+      213: -6465848667546917563
+    second: scifi-explosion-one_192
+  - first:
+      213: 3781845544653656590
+    second: scifi-explosion-one_193
+  - first:
+      213: -5587128476448725580
+    second: scifi-explosion-one_194
+  - first:
+      213: 8151816774588886702
+    second: scifi-explosion-one_195
+  - first:
+      213: 33845622258132375
+    second: scifi-explosion-one_196
+  - first:
+      213: -6183331956959337371
+    second: scifi-explosion-one_197
+  - first:
+      213: 7481738690595424428
+    second: scifi-explosion-one_198
+  - first:
+      213: 5809288493389382017
+    second: scifi-explosion-one_199
+  - first:
+      213: -8642600890828459715
+    second: scifi-explosion-one_200
+  - first:
+      213: 3183704779797005812
+    second: scifi-explosion-one_201
+  - first:
+      213: 1468795082666710612
+    second: scifi-explosion-one_202
+  - first:
+      213: 3025465151915403913
+    second: scifi-explosion-one_203
+  - first:
+      213: -8980705457705340021
+    second: scifi-explosion-one_204
+  - first:
+      213: 1204364902026328035
+    second: scifi-explosion-one_205
+  - first:
+      213: -2098301743993697691
+    second: scifi-explosion-one_206
+  - first:
+      213: -6473822077534483672
+    second: scifi-explosion-one_207
+  - first:
+      213: 6149235282283829157
+    second: scifi-explosion-one_208
+  - first:
+      213: -8897521050499313553
+    second: scifi-explosion-one_209
+  - first:
+      213: -1771856222409279682
+    second: scifi-explosion-one_210
+  - first:
+      213: -7767953021138704822
+    second: scifi-explosion-one_211
+  - first:
+      213: 1761020794079127745
+    second: scifi-explosion-one_212
+  - first:
+      213: -4312326146861886558
+    second: scifi-explosion-one_213
+  - first:
+      213: -1346627699820162387
+    second: scifi-explosion-one_214
+  - first:
+      213: 7175939308396984758
+    second: scifi-explosion-one_215
+  - first:
+      213: 5697652870854569968
+    second: scifi-explosion-one_216
+  - first:
+      213: -8463784546835925979
+    second: scifi-explosion-one_217
+  - first:
+      213: -8184728742225777395
+    second: scifi-explosion-one_218
+  - first:
+      213: -6215105390533316968
+    second: scifi-explosion-one_219
+  - first:
+      213: 237398093846390069
+    second: scifi-explosion-one_220
+  - first:
+      213: 8810020888033597770
+    second: scifi-explosion-one_221
+  - first:
+      213: -8817302577054524578
+    second: scifi-explosion-one_222
+  - first:
+      213: -7672526439765200180
+    second: scifi-explosion-one_223
+  - first:
+      213: 4483202978069337068
+    second: scifi-explosion-one_224
+  - first:
+      213: -6516666139279417462
+    second: scifi-explosion-one_225
+  - first:
+      213: -8624650478116580271
+    second: scifi-explosion-one_226
+  - first:
+      213: 1806718439117911507
+    second: scifi-explosion-one_227
+  - first:
+      213: -5348136086211924631
+    second: scifi-explosion-one_228
+  - first:
+      213: 8700336162405045897
+    second: scifi-explosion-one_229
+  - first:
+      213: 2786584241445252751
+    second: scifi-explosion-one_230
+  - first:
+      213: -32520234717628226
+    second: scifi-explosion-one_231
+  - first:
+      213: -4149847903911484416
+    second: scifi-explosion-one_232
+  - first:
+      213: -8166269550438447054
+    second: scifi-explosion-one_233
+  - first:
+      213: 3060276045881181905
+    second: scifi-explosion-one_234
+  - first:
+      213: 2329332137974467597
+    second: scifi-explosion-one_235
+  - first:
+      213: -2619804286199539934
+    second: scifi-explosion-one_236
+  - first:
+      213: -8123048583435288522
+    second: scifi-explosion-one_237
+  - first:
+      213: 3724699457004770369
+    second: scifi-explosion-one_238
+  - first:
+      213: -6749108334842246144
+    second: scifi-explosion-one_239
+  - first:
+      213: -49759188687548276
+    second: scifi-explosion-one_240
+  - first:
+      213: 4351442079744144176
+    second: scifi-explosion-one_241
+  - first:
+      213: 9086799921594477343
+    second: scifi-explosion-one_242
+  - first:
+      213: 2529590491993194834
+    second: scifi-explosion-one_243
+  - first:
+      213: 6431558984919165083
+    second: scifi-explosion-one_244
+  - first:
+      213: -4921898301842093846
+    second: scifi-explosion-one_245
+  - first:
+      213: -6717409583263619810
+    second: scifi-explosion-one_246
+  - first:
+      213: 7436741715115049824
+    second: scifi-explosion-one_247
+  - first:
+      213: -2376877930249660470
+    second: scifi-explosion-one_248
+  - first:
+      213: -138536709719415713
+    second: scifi-explosion-one_249
+  - first:
+      213: -4103600090221813298
+    second: scifi-explosion-one_250
+  - first:
+      213: -335962452332299326
+    second: scifi-explosion-one_251
+  - first:
+      213: -5316932549388858055
+    second: scifi-explosion-one_252
+  - first:
+      213: 9137457839149944196
+    second: scifi-explosion-one_253
+  - first:
+      213: 6121627259620554355
+    second: scifi-explosion-one_254
+  - first:
+      213: 3169076015606371736
+    second: scifi-explosion-one_255
+  - first:
+      213: 6874758416549772164
+    second: scifi-explosion-one_256
+  - first:
+      213: -5145122494759197791
+    second: scifi-explosion-one_257
+  - first:
+      213: -2440308421150304367
+    second: scifi-explosion-one_258
+  - first:
+      213: -6336358841021203435
+    second: scifi-explosion-one_259
+  - first:
+      213: 219715119508546522
+    second: scifi-explosion-one_260
+  - first:
+      213: -8528542999332293210
+    second: scifi-explosion-one_261
+  - first:
+      213: 5353556470397756666
+    second: scifi-explosion-one_262
+  - first:
+      213: -5228152176274870742
+    second: scifi-explosion-one_263
+  - first:
+      213: 7517984348778443066
+    second: scifi-explosion-one_264
+  - first:
+      213: 2894401134751569422
+    second: scifi-explosion-one_265
+  - first:
+      213: -5182449535431077919
+    second: scifi-explosion-one_266
+  - first:
+      213: -1775293950396922988
+    second: scifi-explosion-one_267
+  - first:
+      213: 8064594362563282414
+    second: scifi-explosion-one_268
+  - first:
+      213: 3982310614693754003
+    second: scifi-explosion-one_269
+  - first:
+      213: -7920806343543703297
+    second: scifi-explosion-one_270
+  - first:
+      213: 1966810870308592621
+    second: scifi-explosion-one_271
+  - first:
+      213: 6023655388112862657
+    second: scifi-explosion-one_272
+  - first:
+      213: -7444187210008450947
+    second: scifi-explosion-one_273
+  - first:
+      213: 633932227476489609
+    second: scifi-explosion-one_274
+  - first:
+      213: 4463006943309236970
+    second: scifi-explosion-one_275
+  - first:
+      213: 3088765675577018359
+    second: scifi-explosion-one_276
+  - first:
+      213: -4213362502566411575
+    second: scifi-explosion-one_277
+  - first:
+      213: 7204426818263407171
+    second: scifi-explosion-one_278
+  - first:
+      213: 1065547783254458437
+    second: scifi-explosion-one_279
+  - first:
+      213: 8284287139236101370
+    second: scifi-explosion-one_280
+  - first:
+      213: 253815463728362585
+    second: scifi-explosion-one_281
+  - first:
+      213: -8122493621375956373
+    second: scifi-explosion-one_282
+  - first:
+      213: 8958264215563272181
+    second: scifi-explosion-one_283
+  - first:
+      213: -8293482647530831637
+    second: scifi-explosion-one_284
+  - first:
+      213: 4244746016211428755
+    second: scifi-explosion-one_285
+  - first:
+      213: -7818892917670696805
+    second: scifi-explosion-one_286
+  - first:
+      213: 2790262988575878271
+    second: scifi-explosion-one_287
+  - first:
+      213: -5987417470273889064
+    second: scifi-explosion-one_288
+  - first:
+      213: -7607482850629694235
+    second: scifi-explosion-one_289
+  - first:
+      213: -3790078968243195163
+    second: scifi-explosion-one_290
+  - first:
+      213: 1587734419042742863
+    second: scifi-explosion-one_291
+  - first:
+      213: 9200921579048942662
+    second: scifi-explosion-one_292
+  - first:
+      213: -7737188937116027940
+    second: scifi-explosion-one_293
+  - first:
+      213: -6621194650675602236
+    second: scifi-explosion-one_294
+  - first:
+      213: 4865849038758236002
+    second: scifi-explosion-one_295
+  - first:
+      213: -204512282074397288
+    second: scifi-explosion-one_296
+  - first:
+      213: -4397831671500166768
+    second: scifi-explosion-one_297
+  - first:
+      213: -3846987381553613795
+    second: scifi-explosion-one_298
+  - first:
+      213: 1210009412150562320
+    second: scifi-explosion-one_299
+  - first:
+      213: -6153429724816336555
+    second: scifi-explosion-one_300
+  - first:
+      213: -2534615488891558444
+    second: scifi-explosion-one_301
+  - first:
+      213: 7187241289223750472
+    second: scifi-explosion-one_302
+  - first:
+      213: -2792048884212223727
+    second: scifi-explosion-one_303
+  - first:
+      213: 5756399739892383818
+    second: scifi-explosion-one_304
+  - first:
+      213: 6501502360874845582
+    second: scifi-explosion-one_305
+  - first:
+      213: 2358824964151186209
+    second: scifi-explosion-one_306
+  - first:
+      213: 4169847323612153370
+    second: scifi-explosion-one_307
+  - first:
+      213: -1427610222570592056
+    second: scifi-explosion-one_308
+  - first:
+      213: 4181815751078051862
+    second: scifi-explosion-one_309
+  - first:
+      213: 5327958081811975100
+    second: scifi-explosion-one_310
+  - first:
+      213: -353083265911410545
+    second: scifi-explosion-one_311
+  - first:
+      213: -4278148705415782751
+    second: scifi-explosion-one_312
+  - first:
+      213: -5485543664861194840
+    second: scifi-explosion-one_313
+  - first:
+      213: 2287949093608749220
+    second: scifi-explosion-one_314
+  - first:
+      213: 8866386084108963064
+    second: scifi-explosion-one_315
+  - first:
+      213: 4403291750919849768
+    second: scifi-explosion-one_316
+  - first:
+      213: -6546590456426193462
+    second: scifi-explosion-one_317
+  - first:
+      213: -274805765344525693
+    second: scifi-explosion-one_318
+  - first:
+      213: -7441805816895043191
+    second: scifi-explosion-one_319
+  - first:
+      213: -1104465187906923183
+    second: scifi-explosion-one_320
+  - first:
+      213: -4464233766284469264
+    second: scifi-explosion-one_321
+  - first:
+      213: -4378405362562837717
+    second: scifi-explosion-one_322
+  - first:
+      213: -6690215075968792824
+    second: scifi-explosion-one_323
+  - first:
+      213: -4291832388450149371
+    second: scifi-explosion-one_324
+  - first:
+      213: -3501002352628877924
+    second: scifi-explosion-one_325
+  - first:
+      213: -6608180708561701602
+    second: scifi-explosion-one_326
+  - first:
+      213: -2531703625802817733
+    second: scifi-explosion-one_327
+  - first:
+      213: 4348478187254640676
+    second: scifi-explosion-one_328
+  - first:
+      213: -5091999575332722513
+    second: scifi-explosion-one_329
+  - first:
+      213: 3428615800308740016
+    second: scifi-explosion-one_330
+  - first:
+      213: -4592116187320850049
+    second: scifi-explosion-one_331
+  - first:
+      213: -4703089629892857146
+    second: scifi-explosion-one_332
+  - first:
+      213: 63504403340564585
+    second: scifi-explosion-one_333
+  - first:
+      213: 3037615355028941890
+    second: scifi-explosion-one_334
+  - first:
+      213: -3700812743099899109
+    second: scifi-explosion-one_335
+  - first:
+      213: -4641855282950148434
+    second: scifi-explosion-one_336
+  - first:
+      213: 8270742235820057536
+    second: scifi-explosion-one_337
+  - first:
+      213: -26304041864553152
+    second: scifi-explosion-one_338
+  - first:
+      213: -8775631853376212660
+    second: scifi-explosion-one_339
+  - first:
+      213: 6826768073696684058
+    second: scifi-explosion-one_340
+  - first:
+      213: 6812507559515480813
+    second: scifi-explosion-one_341
+  - first:
+      213: 3296251128722947230
+    second: scifi-explosion-one_342
+  - first:
+      213: -3108992065401750989
+    second: scifi-explosion-one_343
+  - first:
+      213: 1431252070667693646
+    second: scifi-explosion-one_344
+  - first:
+      213: 5694384772816238776
+    second: scifi-explosion-one_345
+  - first:
+      213: 6192220728856327982
+    second: scifi-explosion-one_346
+  - first:
+      213: -6097216506607315665
+    second: scifi-explosion-one_347
+  - first:
+      213: 8553953381604538538
+    second: scifi-explosion-one_348
+  - first:
+      213: 2628064105026115465
+    second: scifi-explosion-one_349
+  - first:
+      213: -6814360845373787990
+    second: scifi-explosion-one_350
+  - first:
+      213: 2392744749505989493
+    second: scifi-explosion-one_351
+  - first:
+      213: -31747245400123834
+    second: scifi-explosion-one_352
+  - first:
+      213: 7099914383240657242
+    second: scifi-explosion-one_353
+  - first:
+      213: 4107799582672742256
+    second: scifi-explosion-one_354
+  - first:
+      213: -1383452241262347253
+    second: scifi-explosion-one_355
+  - first:
+      213: 5310759956258607
+    second: scifi-explosion-one_356
+  - first:
+      213: 7270464215942261054
+    second: scifi-explosion-one_357
+  - first:
+      213: 9023676563002355661
+    second: scifi-explosion-one_358
+  - first:
+      213: 664019959099364432
+    second: scifi-explosion-one_359
+  - first:
+      213: 29421325880676242
+    second: scifi-explosion-one_360
+  - first:
+      213: -6572273961687053723
+    second: scifi-explosion-one_361
+  - first:
+      213: 4330748891925027523
+    second: scifi-explosion-one_362
+  - first:
+      213: -904623772290890235
+    second: scifi-explosion-one_363
+  - first:
+      213: -7224716837665963875
+    second: scifi-explosion-one_364
+  - first:
+      213: 6471921869300489816
+    second: scifi-explosion-one_365
+  - first:
+      213: -3428709040703844555
+    second: scifi-explosion-one_366
+  - first:
+      213: -5985517088193862892
+    second: scifi-explosion-one_367
+  - first:
+      213: -8388772785281672562
+    second: scifi-explosion-one_368
+  - first:
+      213: 8714910388626382751
+    second: scifi-explosion-one_369
+  - first:
+      213: 8478342732139092458
+    second: scifi-explosion-one_370
+  - first:
+      213: 3057854195152381456
+    second: scifi-explosion-one_371
+  - first:
+      213: -1941268059011802841
+    second: scifi-explosion-one_372
+  - first:
+      213: -2995586040477006499
+    second: scifi-explosion-one_373
+  - first:
+      213: -1437113390245685530
+    second: scifi-explosion-one_374
+  - first:
+      213: 1354002257074865969
+    second: scifi-explosion-one_375
+  - first:
+      213: -1383691086409516916
+    second: scifi-explosion-one_376
+  - first:
+      213: -2046642212215997275
+    second: scifi-explosion-one_377
+  - first:
+      213: -2304752017048412627
+    second: scifi-explosion-one_378
+  - first:
+      213: 6850316471417295412
+    second: scifi-explosion-one_379
+  - first:
+      213: -6828404644496602667
+    second: scifi-explosion-one_380
+  - first:
+      213: -2270156370299849568
+    second: scifi-explosion-one_381
+  - first:
+      213: -5700885904957583167
+    second: scifi-explosion-one_382
+  - first:
+      213: 8073468401126210886
+    second: scifi-explosion-one_383
+  - first:
+      213: 3893655351469351612
+    second: scifi-explosion-one_384
+  - first:
+      213: 1804279123293745853
+    second: scifi-explosion-one_385
+  - first:
+      213: -6757010872534543616
+    second: scifi-explosion-one_386
+  - first:
+      213: 7281427070125546971
+    second: scifi-explosion-one_387
+  - first:
+      213: -4952389095870145617
+    second: scifi-explosion-one_388
+  - first:
+      213: 4250472086563569766
+    second: scifi-explosion-one_389
+  - first:
+      213: 506982686819366051
+    second: scifi-explosion-one_390
+  - first:
+      213: -9190009470149162249
+    second: scifi-explosion-one_391
+  - first:
+      213: 6316420073018711968
+    second: scifi-explosion-one_392
+  - first:
+      213: -9202726371096908778
+    second: scifi-explosion-one_393
+  - first:
+      213: 2545170967096784319
+    second: scifi-explosion-one_394
+  - first:
+      213: -3847547362858418788
+    second: scifi-explosion-one_395
+  - first:
+      213: 5065464828058314255
+    second: scifi-explosion-one_396
+  - first:
+      213: 2845171979128454391
+    second: scifi-explosion-one_397
+  - first:
+      213: -7947968155345377214
+    second: scifi-explosion-one_398
+  - first:
+      213: -3636723893826098307
+    second: scifi-explosion-one_399
+  - first:
+      213: -1692435258730574191
+    second: scifi-explosion-one_400
+  - first:
+      213: -6163198061953187747
+    second: scifi-explosion-one_401
+  - first:
+      213: -5932107611181458195
+    second: scifi-explosion-one_402
+  - first:
+      213: -3809267459193966025
+    second: scifi-explosion-one_403
+  - first:
+      213: -7150786653305642463
+    second: scifi-explosion-one_404
+  - first:
+      213: -6798819530195336490
+    second: scifi-explosion-one_405
+  - first:
+      213: 643273793017977013
+    second: scifi-explosion-one_406
+  - first:
+      213: 3312433759285617016
+    second: scifi-explosion-one_407
+  - first:
+      213: 2626913714148673693
+    second: scifi-explosion-one_408
+  - first:
+      213: -8969361013903667973
+    second: scifi-explosion-one_409
+  - first:
+      213: -3475344557512046495
+    second: scifi-explosion-one_410
+  - first:
+      213: -1096189590924375985
+    second: scifi-explosion-one_411
+  - first:
+      213: -7269821059399735414
+    second: scifi-explosion-one_412
+  - first:
+      213: -5741325387571618165
+    second: scifi-explosion-one_413
+  - first:
+      213: -1662360431566382365
+    second: scifi-explosion-one_414
+  - first:
+      213: 8074230504936840591
+    second: scifi-explosion-one_415
+  - first:
+      213: -6620541741502415967
+    second: scifi-explosion-one_416
+  - first:
+      213: 7407958915051726092
+    second: scifi-explosion-one_417
+  - first:
+      213: -5652936754972966570
+    second: scifi-explosion-one_418
+  - first:
+      213: 4835009285148178766
+    second: scifi-explosion-one_419
+  - first:
+      213: -2173667427545302192
+    second: scifi-explosion-one_420
+  - first:
+      213: 137381219450792290
+    second: scifi-explosion-one_421
+  - first:
+      213: -8964788755915918639
+    second: scifi-explosion-one_422
+  - first:
+      213: 4346171101517233968
+    second: scifi-explosion-one_423
+  - first:
+      213: -2228363276540274749
+    second: scifi-explosion-one_424
+  - first:
+      213: 1116599319462939247
+    second: scifi-explosion-one_425
+  - first:
+      213: -1601248923141702091
+    second: scifi-explosion-one_426
+  - first:
+      213: -4463103996903574191
+    second: scifi-explosion-one_427
+  - first:
+      213: -3017579388603630702
+    second: scifi-explosion-one_428
+  - first:
+      213: 3085161548780377121
+    second: scifi-explosion-one_429
+  - first:
+      213: -7631760262581940996
+    second: scifi-explosion-one_430
+  - first:
+      213: -4814045618959719986
+    second: scifi-explosion-one_431
+  - first:
+      213: -2730228665338899624
+    second: scifi-explosion-one_432
+  - first:
+      213: 4955749923077398936
+    second: scifi-explosion-one_433
+  - first:
+      213: -8373124636347285410
+    second: scifi-explosion-one_434
+  - first:
+      213: -8729673915511186987
+    second: scifi-explosion-one_435
+  - first:
+      213: -4875802877925198198
+    second: scifi-explosion-one_436
+  - first:
+      213: 2204153360459999755
+    second: scifi-explosion-one_437
+  - first:
+      213: 1485639472615635761
+    second: scifi-explosion-one_438
+  - first:
+      213: -3350057497033917494
+    second: scifi-explosion-one_439
+  - first:
+      213: 2643457095735989101
+    second: scifi-explosion-one_440
+  - first:
+      213: -8032804500078808885
+    second: scifi-explosion-one_441
+  - first:
+      213: -3280240894774682324
+    second: scifi-explosion-one_442
+  - first:
+      213: -1055570551105058917
+    second: scifi-explosion-one_443
+  - first:
+      213: -855949553699403373
+    second: scifi-explosion-one_444
+  - first:
+      213: -7818520082008669081
+    second: scifi-explosion-one_445
+  - first:
+      213: -1771287581133421920
+    second: scifi-explosion-one_446
+  - first:
+      213: -5626027984007187498
+    second: scifi-explosion-one_447
+  - first:
+      213: 1220936245492834112
+    second: scifi-explosion-one_448
+  - first:
+      213: -4492079557687257304
+    second: scifi-explosion-one_449
+  - first:
+      213: 2260999281228028254
+    second: scifi-explosion-one_450
+  - first:
+      213: 3106810317988117945
+    second: scifi-explosion-one_451
+  - first:
+      213: -2822185656350403792
+    second: scifi-explosion-one_452
+  - first:
+      213: -1092334779792131004
+    second: scifi-explosion-one_453
+  - first:
+      213: -772521095896684074
+    second: scifi-explosion-one_454
+  - first:
+      213: -173473527922369070
+    second: scifi-explosion-one_455
+  - first:
+      213: 4819972645074060001
+    second: scifi-explosion-one_456
+  - first:
+      213: -3586838666009594606
+    second: scifi-explosion-one_457
+  - first:
+      213: -5373918696293965007
+    second: scifi-explosion-one_458
+  - first:
+      213: 1057712111698835866
+    second: scifi-explosion-one_459
+  - first:
+      213: 6225172325209685064
+    second: scifi-explosion-one_460
+  - first:
+      213: 3547734843829298453
+    second: scifi-explosion-one_461
+  - first:
+      213: 7585936826201875382
+    second: scifi-explosion-one_462
+  - first:
+      213: -7842943723057668172
+    second: scifi-explosion-one_463
+  - first:
+      213: 807968755665498790
+    second: scifi-explosion-one_464
+  - first:
+      213: -8607608489755623684
+    second: scifi-explosion-one_465
+  - first:
+      213: 6401963739550359599
+    second: scifi-explosion-one_466
+  - first:
+      213: 627468694112513005
+    second: scifi-explosion-one_467
+  - first:
+      213: 7464941135169123734
+    second: scifi-explosion-one_468
+  - first:
+      213: -4650862479247319169
+    second: scifi-explosion-one_469
+  - first:
+      213: 6689955761709733511
+    second: scifi-explosion-one_470
+  - first:
+      213: 8321112864271801875
+    second: scifi-explosion-one_471
+  - first:
+      213: -1716051056300700931
+    second: scifi-explosion-one_472
+  - first:
+      213: -6918325135708182326
+    second: scifi-explosion-one_473
+  - first:
+      213: 5221234734025138074
+    second: scifi-explosion-one_474
+  - first:
+      213: -7626563815400499254
+    second: scifi-explosion-one_475
+  - first:
+      213: 8861705941018521298
+    second: scifi-explosion-one_476
+  - first:
+      213: -3737235056018040270
+    second: scifi-explosion-one_477
+  - first:
+      213: -1497125241136572779
+    second: scifi-explosion-one_478
+  - first:
+      213: 954411631333636996
+    second: scifi-explosion-one_479
+  - first:
+      213: 4370111883625833421
+    second: scifi-explosion-one_480
+  - first:
+      213: -1177849039691194298
+    second: scifi-explosion-one_481
+  - first:
+      213: 4328289932573969513
+    second: scifi-explosion-one_482
+  - first:
+      213: 6776634668448135509
+    second: scifi-explosion-one_483
+  - first:
+      213: -1786012026307509094
+    second: scifi-explosion-one_484
+  - first:
+      213: 5031541207137225694
+    second: scifi-explosion-one_485
+  - first:
+      213: 5496113237874366784
+    second: scifi-explosion-one_486
+  - first:
+      213: -3160139181539318921
+    second: scifi-explosion-one_487
+  - first:
+      213: -3359988734974037363
+    second: scifi-explosion-one_488
+  - first:
+      213: -8537865976228144637
+    second: scifi-explosion-one_489
+  - first:
+      213: 6254175675712708902
+    second: scifi-explosion-one_490
+  - first:
+      213: 7805368711732158600
+    second: scifi-explosion-one_491
+  - first:
+      213: -6958560201896107587
+    second: scifi-explosion-one_492
+  - first:
+      213: -6618893887811602982
+    second: scifi-explosion-one_493
+  - first:
+      213: -6916915294807781042
+    second: scifi-explosion-one_494
+  - first:
+      213: 8017664663184142975
+    second: scifi-explosion-one_495
+  - first:
+      213: -1804948644285147576
+    second: scifi-explosion-one_496
+  - first:
+      213: -3489230216840650639
+    second: scifi-explosion-one_497
+  - first:
+      213: 7090433010858061906
+    second: scifi-explosion-one_498
+  - first:
+      213: 3754134963782436532
+    second: scifi-explosion-one_499
+  - first:
+      213: 3564558534447044116
+    second: scifi-explosion-one_500
+  - first:
+      213: 6108420600747872699
+    second: scifi-explosion-one_501
+  - first:
+      213: 1350033150109911588
+    second: scifi-explosion-one_502
+  - first:
+      213: 4726653815117660101
+    second: scifi-explosion-one_503
+  - first:
+      213: -419356758166570219
+    second: scifi-explosion-one_504
+  - first:
+      213: 1347696751218647888
+    second: scifi-explosion-one_505
+  - first:
+      213: -953840267362908066
+    second: scifi-explosion-one_506
+  - first:
+      213: 6488146737454230661
+    second: scifi-explosion-one_507
+  - first:
+      213: -2502035638058962895
+    second: scifi-explosion-one_508
+  - first:
+      213: -802136126690478824
+    second: scifi-explosion-one_509
+  - first:
+      213: -6221066887871740257
+    second: scifi-explosion-one_510
+  - first:
+      213: 4694531843443064595
+    second: scifi-explosion-one_511
+  - first:
+      213: -2934864582827674336
+    second: scifi-explosion-one_512
+  - first:
+      213: -8024404739256755739
+    second: scifi-explosion-one_513
+  - first:
+      213: 3581656448075881926
+    second: scifi-explosion-one_514
+  - first:
+      213: -3514977710187978311
+    second: scifi-explosion-one_515
+  - first:
+      213: 8127216072269338108
+    second: scifi-explosion-one_516
+  - first:
+      213: 9112916945863634623
+    second: scifi-explosion-one_517
+  - first:
+      213: -7257624816408396927
+    second: scifi-explosion-one_518
+  - first:
+      213: 7646373260459635104
+    second: scifi-explosion-one_519
+  - first:
+      213: 2265273149230346080
+    second: scifi-explosion-one_520
+  - first:
+      213: 7033266661776131698
+    second: scifi-explosion-one_521
+  - first:
+      213: 6471293213503846634
+    second: scifi-explosion-one_522
+  - first:
+      213: -3232039457134536633
+    second: scifi-explosion-one_523
+  - first:
+      213: 2787174282803764720
+    second: scifi-explosion-one_524
+  - first:
+      213: 619705998389349793
+    second: scifi-explosion-one_525
+  - first:
+      213: -4466762728449103547
+    second: scifi-explosion-one_526
+  - first:
+      213: -8059934453697314822
+    second: scifi-explosion-one_527
+  - first:
+      213: 1459102958661535986
+    second: scifi-explosion-one_528
+  - first:
+      213: -6459872223696012705
+    second: scifi-explosion-one_529
+  - first:
+      213: -5449820686666823885
+    second: scifi-explosion-one_530
+  - first:
+      213: 8768525398496265346
+    second: scifi-explosion-one_531
+  - first:
+      213: -2595789104462563843
+    second: scifi-explosion-one_532
+  - first:
+      213: -3399455085431117060
+    second: scifi-explosion-one_533
+  - first:
+      213: -3549920413812133431
+    second: scifi-explosion-one_534
+  - first:
+      213: -2718051977661286399
+    second: scifi-explosion-one_535
+  - first:
+      213: 3428119436190774304
+    second: scifi-explosion-one_536
+  - first:
+      213: -650807416088806351
+    second: scifi-explosion-one_537
+  - first:
+      213: 1923950530230274054
+    second: scifi-explosion-one_538
+  - first:
+      213: -6845871339304611192
+    second: scifi-explosion-one_539
+  - first:
+      213: -8760265420106162039
+    second: scifi-explosion-one_540
+  - first:
+      213: -3851240757159677951
+    second: scifi-explosion-one_541
+  - first:
+      213: 1276050413995763174
+    second: scifi-explosion-one_542
+  - first:
+      213: 3282568107423494440
+    second: scifi-explosion-one_543
+  - first:
+      213: 5592882887237392409
+    second: scifi-explosion-one_544
+  - first:
+      213: -1087142601299152316
+    second: scifi-explosion-one_545
+  - first:
+      213: 8838229374815512359
+    second: scifi-explosion-one_546
+  - first:
+      213: -2344501874007522548
+    second: scifi-explosion-one_547
+  - first:
+      213: 6984373359082219716
+    second: scifi-explosion-one_548
+  - first:
+      213: 460212310046847583
+    second: scifi-explosion-one_549
+  - first:
+      213: -1355381988150674412
+    second: scifi-explosion-one_550
+  - first:
+      213: -5978110897505622357
+    second: scifi-explosion-one_551
+  - first:
+      213: -8617404741658670312
+    second: scifi-explosion-one_552
+  - first:
+      213: -2219213965818383857
+    second: scifi-explosion-one_553
+  - first:
+      213: -1196860644254713319
+    second: scifi-explosion-one_554
+  - first:
+      213: 981242814306485123
+    second: scifi-explosion-one_555
+  - first:
+      213: 2807242845844974479
+    second: scifi-explosion-one_556
+  - first:
+      213: -568357763401126367
+    second: scifi-explosion-one_557
+  - first:
+      213: -1394097284609235381
+    second: scifi-explosion-one_558
+  - first:
+      213: -333431043912538401
+    second: scifi-explosion-one_559
+  - first:
+      213: -9066023101908264045
+    second: scifi-explosion-one_560
+  - first:
+      213: 7835121919680542848
+    second: scifi-explosion-one_561
+  - first:
+      213: 2919189674694707063
+    second: scifi-explosion-one_562
+  - first:
+      213: -3511837470201302208
+    second: scifi-explosion-one_563
+  - first:
+      213: 348351916944771439
+    second: scifi-explosion-one_564
+  - first:
+      213: -186072684371180304
+    second: scifi-explosion-one_565
+  - first:
+      213: -88596523706966115
+    second: scifi-explosion-one_566
+  - first:
+      213: -9070615302310821079
+    second: scifi-explosion-one_567
+  - first:
+      213: -4620642250319971632
+    second: scifi-explosion-one_568
+  - first:
+      213: -6095082796846913018
+    second: scifi-explosion-one_569
+  - first:
+      213: -4739568167465636329
+    second: scifi-explosion-one_570
+  - first:
+      213: -3304957513732872892
+    second: scifi-explosion-one_571
+  - first:
+      213: -2151049489069044852
+    second: scifi-explosion-one_572
+  - first:
+      213: 3691763527511445153
+    second: scifi-explosion-one_573
+  - first:
+      213: 8058518301015195935
+    second: scifi-explosion-one_574
+  - first:
+      213: -9211125569473122324
+    second: scifi-explosion-one_575
+  - first:
+      213: 6114043342309423572
+    second: scifi-explosion-one_576
+  - first:
+      213: 5648805475354525316
+    second: scifi-explosion-one_577
+  - first:
+      213: -4862883461633534306
+    second: scifi-explosion-one_578
+  - first:
+      213: -3422577324104482907
+    second: scifi-explosion-one_579
+  - first:
+      213: -2524493583877809022
+    second: scifi-explosion-one_580
+  - first:
+      213: 4377727690012450192
+    second: scifi-explosion-one_581
+  - first:
+      213: -1716864973776102172
+    second: scifi-explosion-one_582
+  - first:
+      213: 5083329508161011657
+    second: scifi-explosion-one_583
+  - first:
+      213: -4995019462494469681
+    second: scifi-explosion-one_584
+  - first:
+      213: -7498370541924524644
+    second: scifi-explosion-one_585
+  - first:
+      213: -7790293470801325178
+    second: scifi-explosion-one_586
+  - first:
+      213: -8143656288830417261
+    second: scifi-explosion-one_587
+  - first:
+      213: -2129188380910348898
+    second: scifi-explosion-one_588
+  - first:
+      213: 8146978391397492079
+    second: scifi-explosion-one_589
+  - first:
+      213: 3881291619980170721
+    second: scifi-explosion-one_590
+  - first:
+      213: 2069128351467848963
+    second: scifi-explosion-one_591
+  - first:
+      213: 4211855680264952311
+    second: scifi-explosion-one_592
+  - first:
+      213: 7838745457324983243
+    second: scifi-explosion-one_593
+  - first:
+      213: 4658225260282494840
+    second: scifi-explosion-one_594
+  - first:
+      213: 3068375501380094785
+    second: scifi-explosion-one_595
+  - first:
+      213: 8901489864458008021
+    second: scifi-explosion-one_596
+  - first:
+      213: -2384954137877036330
+    second: scifi-explosion-one_597
+  - first:
+      213: -8692379962436005094
+    second: scifi-explosion-one_598
+  - first:
+      213: 6596868686434663143
+    second: scifi-explosion-one_599
+  - first:
+      213: -3545599989162776421
+    second: scifi-explosion-one_600
+  - first:
+      213: 3443330593338561397
+    second: scifi-explosion-one_601
+  - first:
+      213: 6888476781965219181
+    second: scifi-explosion-one_602
+  - first:
+      213: -2888597915190170974
+    second: scifi-explosion-one_603
+  - first:
+      213: -7827074673060134597
+    second: scifi-explosion-one_604
+  - first:
+      213: -2681567230887901038
+    second: scifi-explosion-one_605
+  - first:
+      213: -4951203299666521054
+    second: scifi-explosion-one_606
+  - first:
+      213: 8229181958452104255
+    second: scifi-explosion-one_607
+  - first:
+      213: 6172643234431912689
+    second: scifi-explosion-one_608
+  - first:
+      213: 736348171054537125
+    second: scifi-explosion-one_609
+  - first:
+      213: 8144534409532539478
+    second: scifi-explosion-one_610
+  - first:
+      213: 4115842831897178977
+    second: scifi-explosion-one_611
+  - first:
+      213: -5316824586469591127
+    second: scifi-explosion-one_612
+  - first:
+      213: 7247436512086519254
+    second: scifi-explosion-one_613
+  - first:
+      213: -6607064964570172090
+    second: scifi-explosion-one_614
+  - first:
+      213: 1330030104087804241
+    second: scifi-explosion-one_615
+  - first:
+      213: 7244915103194510795
+    second: scifi-explosion-one_616
+  - first:
+      213: 9140961943275396593
+    second: scifi-explosion-one_617
+  - first:
+      213: -417074415729511260
+    second: scifi-explosion-one_618
+  - first:
+      213: -406598151949665523
+    second: scifi-explosion-one_619
+  - first:
+      213: 8727069649292799119
+    second: scifi-explosion-one_620
+  - first:
+      213: -3177842794342969730
+    second: scifi-explosion-one_621
+  - first:
+      213: 5529821953581779695
+    second: scifi-explosion-one_622
+  - first:
+      213: -1486282691783755615
+    second: scifi-explosion-one_623
+  - first:
+      213: 6386727033708926962
+    second: scifi-explosion-one_624
+  - first:
+      213: 1213620151838406143
+    second: scifi-explosion-one_625
+  - first:
+      213: 1982494081754120849
+    second: scifi-explosion-one_626
+  - first:
+      213: -9186191417931055610
+    second: scifi-explosion-one_627
+  - first:
+      213: -6502579227264162450
+    second: scifi-explosion-one_628
+  - first:
+      213: -6392556252198344567
+    second: scifi-explosion-one_629
+  - first:
+      213: 7966455795700822827
+    second: scifi-explosion-one_630
+  - first:
+      213: -6928830054751596355
+    second: scifi-explosion-one_631
+  - first:
+      213: -2022656735490290760
+    second: scifi-explosion-one_632
+  - first:
+      213: 5244990853651906955
+    second: scifi-explosion-one_633
+  - first:
+      213: -5748332742042022230
+    second: scifi-explosion-one_634
+  - first:
+      213: 5612154515728087275
+    second: scifi-explosion-one_635
+  - first:
+      213: -441643038119788076
+    second: scifi-explosion-one_636
+  - first:
+      213: -3832171370469687053
+    second: scifi-explosion-one_637
+  - first:
+      213: -4711736043130185588
+    second: scifi-explosion-one_638
+  - first:
+      213: -2494568567091358851
+    second: scifi-explosion-one_639
+  - first:
+      213: 7898750147766833098
+    second: scifi-explosion-one_640
+  - first:
+      213: -7650599027338232253
+    second: scifi-explosion-one_641
+  - first:
+      213: 7259865154880176882
+    second: scifi-explosion-one_642
+  - first:
+      213: 7255725380640689018
+    second: scifi-explosion-one_643
+  - first:
+      213: 4540296152896623465
+    second: scifi-explosion-one_644
+  - first:
+      213: 8194516418644161376
+    second: scifi-explosion-one_645
+  - first:
+      213: 7882381118604464035
+    second: scifi-explosion-one_646
+  - first:
+      213: 6274505071194629411
+    second: scifi-explosion-one_647
+  - first:
+      213: 1923985562105209506
+    second: scifi-explosion-one_648
+  - first:
+      213: 3875389787348921723
+    second: scifi-explosion-one_649
+  - first:
+      213: -5298047937373715563
+    second: scifi-explosion-one_650
+  - first:
+      213: -8244135499098956137
+    second: scifi-explosion-one_651
+  - first:
+      213: -4098726435535159785
+    second: scifi-explosion-one_652
+  - first:
+      213: 1443563908341154322
+    second: scifi-explosion-one_653
+  - first:
+      213: -3488765103582036735
+    second: scifi-explosion-one_654
+  - first:
+      213: -3392515208642196948
+    second: scifi-explosion-one_655
+  - first:
+      213: -5732161643875101611
+    second: scifi-explosion-one_656
+  - first:
+      213: 1289168223558935167
+    second: scifi-explosion-one_657
+  - first:
+      213: -10178022895808830
+    second: scifi-explosion-one_658
+  - first:
+      213: -2826345307284553156
+    second: scifi-explosion-one_659
+  - first:
+      213: -1236458214699824509
+    second: scifi-explosion-one_660
+  - first:
+      213: -1290110966282427274
+    second: scifi-explosion-one_661
+  - first:
+      213: -4501847247580088733
+    second: scifi-explosion-one_662
+  - first:
+      213: 5358692709200471905
+    second: scifi-explosion-one_663
+  - first:
+      213: 8624148101589527305
+    second: scifi-explosion-one_664
+  - first:
+      213: 9126018654492073255
+    second: scifi-explosion-one_665
+  - first:
+      213: -6973917311355900733
+    second: scifi-explosion-one_666
+  - first:
+      213: 7960292763871239720
+    second: scifi-explosion-one_667
+  - first:
+      213: 2372811221091250223
+    second: scifi-explosion-one_668
+  - first:
+      213: 2262334144029461033
+    second: scifi-explosion-one_669
+  - first:
+      213: -4111000470818872744
+    second: scifi-explosion-one_670
+  - first:
+      213: -8465870531321733664
+    second: scifi-explosion-one_671
+  - first:
+      213: 9826674937794731
+    second: scifi-explosion-one_672
+  - first:
+      213: -2119039616686278419
+    second: scifi-explosion-one_673
+  - first:
+      213: 7338836047769078678
+    second: scifi-explosion-one_674
+  - first:
+      213: 2672250777031968789
+    second: scifi-explosion-one_675
+  - first:
+      213: -1764221167042898059
+    second: scifi-explosion-one_676
+  - first:
+      213: 1589213847412115283
+    second: scifi-explosion-one_677
+  - first:
+      213: -1875747197446763532
+    second: scifi-explosion-one_678
+  - first:
+      213: -799910161333593149
+    second: scifi-explosion-one_679
+  - first:
+      213: -1707360107329203411
+    second: scifi-explosion-one_680
+  - first:
+      213: 5218800161447125751
+    second: scifi-explosion-one_681
+  - first:
+      213: 1433561858860639594
+    second: scifi-explosion-one_682
+  - first:
+      213: -6581876699435589602
+    second: scifi-explosion-one_683
+  - first:
+      213: 2896427497028663275
+    second: scifi-explosion-one_684
+  - first:
+      213: 7059340535407071503
+    second: scifi-explosion-one_685
+  - first:
+      213: -8493466884968552434
+    second: scifi-explosion-one_686
+  - first:
+      213: 8054936116033450153
+    second: scifi-explosion-one_687
+  - first:
+      213: -2111094218872922080
+    second: scifi-explosion-one_688
+  - first:
+      213: -4068612136899932431
+    second: scifi-explosion-one_689
+  - first:
+      213: 1960987751894850433
+    second: scifi-explosion-one_690
+  - first:
+      213: -8551997177215796007
+    second: scifi-explosion-one_691
+  - first:
+      213: -6008429608722586807
+    second: scifi-explosion-one_692
+  - first:
+      213: -3011414207907859279
+    second: scifi-explosion-one_693
+  - first:
+      213: -5289425435153607518
+    second: scifi-explosion-one_694
+  - first:
+      213: -5869827988646505063
+    second: scifi-explosion-one_695
+  - first:
+      213: 981500374099053980
+    second: scifi-explosion-one_696
+  - first:
+      213: -309708225798905143
+    second: scifi-explosion-one_697
+  - first:
+      213: 3621338563252846920
+    second: scifi-explosion-one_698
+  - first:
+      213: 119816337584906714
+    second: scifi-explosion-one_699
+  - first:
+      213: -6733669097991251309
+    second: scifi-explosion-one_700
+  - first:
+      213: 1686913420706194070
+    second: scifi-explosion-one_701
+  - first:
+      213: -8849481244935607293
+    second: scifi-explosion-one_702
+  - first:
+      213: -8661005102692653176
+    second: scifi-explosion-one_703
+  - first:
+      213: -7081054458635066243
+    second: scifi-explosion-one_704
+  - first:
+      213: -6923041281943536014
+    second: scifi-explosion-one_705
+  - first:
+      213: 7301893516899496624
+    second: scifi-explosion-one_706
+  - first:
+      213: -4423791156238376859
+    second: scifi-explosion-one_707
+  - first:
+      213: 837517180126469707
+    second: scifi-explosion-one_708
+  - first:
+      213: -731322409050954967
+    second: scifi-explosion-one_709
+  - first:
+      213: -2927965247570206378
+    second: scifi-explosion-one_710
+  - first:
+      213: 3952236879460558479
+    second: scifi-explosion-one_711
+  - first:
+      213: 8635210220397730807
+    second: scifi-explosion-one_712
+  - first:
+      213: -1064318462269045668
+    second: scifi-explosion-one_713
+  - first:
+      213: 7057637866319244119
+    second: scifi-explosion-one_714
+  - first:
+      213: 2356139538302992650
+    second: scifi-explosion-one_715
+  - first:
+      213: 8151464750975879260
+    second: scifi-explosion-one_716
+  - first:
+      213: -5198713598114005693
+    second: scifi-explosion-one_717
+  - first:
+      213: -4426605195555495042
+    second: scifi-explosion-one_718
+  - first:
+      213: 5596153187762906292
+    second: scifi-explosion-one_719
+  - first:
+      213: -7133292646697393911
+    second: scifi-explosion-one_720
+  - first:
+      213: -8228651611307416978
+    second: scifi-explosion-one_721
+  - first:
+      213: 4231768471730959179
+    second: scifi-explosion-one_722
+  - first:
+      213: -8386713245977521487
+    second: scifi-explosion-one_723
+  - first:
+      213: 7736127630220155596
+    second: scifi-explosion-one_724
+  - first:
+      213: 4992704475064519962
+    second: scifi-explosion-one_725
+  - first:
+      213: -8198117137243488213
+    second: scifi-explosion-one_726
+  - first:
+      213: 7045956935246177502
+    second: scifi-explosion-one_727
+  - first:
+      213: 6851977892459166014
+    second: scifi-explosion-one_728
+  - first:
+      213: 6921988074805215322
+    second: scifi-explosion-one_729
+  - first:
+      213: 8128399989449527226
+    second: scifi-explosion-one_730
+  - first:
+      213: -5568216571050343352
+    second: scifi-explosion-one_731
+  - first:
+      213: 5660530937160897168
+    second: scifi-explosion-one_732
+  - first:
+      213: -6449198240187818403
+    second: scifi-explosion-one_733
+  - first:
+      213: 5615813905730008897
+    second: scifi-explosion-one_734
+  - first:
+      213: 4871210901712321727
+    second: scifi-explosion-one_735
+  - first:
+      213: -549856232611322933
+    second: scifi-explosion-one_736
+  - first:
+      213: -4750117642134053108
+    second: scifi-explosion-one_737
+  - first:
+      213: 6205707350956786695
+    second: scifi-explosion-one_738
+  - first:
+      213: 9121052052791717814
+    second: scifi-explosion-one_739
+  - first:
+      213: 537859443349581672
+    second: scifi-explosion-one_740
+  - first:
+      213: 5373874939038575196
+    second: scifi-explosion-one_741
+  - first:
+      213: -4645053106510895183
+    second: scifi-explosion-one_742
+  - first:
+      213: -369480988313049571
+    second: scifi-explosion-one_743
+  - first:
+      213: -2793658628433916964
+    second: scifi-explosion-one_744
+  - first:
+      213: 1028069686882762546
+    second: scifi-explosion-one_745
+  - first:
+      213: -3257953946328656225
+    second: scifi-explosion-one_746
+  - first:
+      213: -14099691856510375
+    second: scifi-explosion-one_747
+  - first:
+      213: 1227485373721414830
+    second: scifi-explosion-one_748
+  - first:
+      213: 6928874391248356747
+    second: scifi-explosion-one_749
+  - first:
+      213: 3513995167956275141
+    second: scifi-explosion-one_750
+  - first:
+      213: 7859127964518297125
+    second: scifi-explosion-one_751
+  - first:
+      213: 3975983949930368306
+    second: scifi-explosion-one_752
+  - first:
+      213: -4178426930656786064
+    second: scifi-explosion-one_753
+  - first:
+      213: 3640392541043021611
+    second: scifi-explosion-one_754
+  - first:
+      213: -9052781993765454664
+    second: scifi-explosion-one_755
+  - first:
+      213: -5080060908010849704
+    second: scifi-explosion-one_756
+  - first:
+      213: 331871429373705867
+    second: scifi-explosion-one_757
+  - first:
+      213: -6744436023370304265
+    second: scifi-explosion-one_758
+  - first:
+      213: -1866312518374068413
+    second: scifi-explosion-one_759
+  - first:
+      213: 2872811212133027750
+    second: scifi-explosion-one_760
+  - first:
+      213: -877933133233294651
+    second: scifi-explosion-one_761
+  - first:
+      213: -862527370066262856
+    second: scifi-explosion-one_762
+  - first:
+      213: 3053090100217778645
+    second: scifi-explosion-one_763
+  - first:
+      213: -8817098730143827121
+    second: scifi-explosion-one_764
+  - first:
+      213: 8159510765842936078
+    second: scifi-explosion-one_765
+  - first:
+      213: -5746044182183299218
+    second: scifi-explosion-one_766
+  - first:
+      213: 5942994879116683270
+    second: scifi-explosion-one_767
+  - first:
+      213: 5750859228847452720
+    second: scifi-explosion-one_768
+  - first:
+      213: -4593616137674827226
+    second: scifi-explosion-one_769
+  - first:
+      213: 8818465064069030230
+    second: scifi-explosion-one_770
+  - first:
+      213: 1830171150361353960
+    second: scifi-explosion-one_771
+  - first:
+      213: 2820483607951051381
+    second: scifi-explosion-one_772
+  - first:
+      213: 8228171251826735105
+    second: scifi-explosion-one_773
+  - first:
+      213: -930887142144216348
+    second: scifi-explosion-one_774
+  - first:
+      213: 3303950876289615671
+    second: scifi-explosion-one_775
+  - first:
+      213: 6588595269179363062
+    second: scifi-explosion-one_776
+  - first:
+      213: 77809019785621675
+    second: scifi-explosion-one_777
+  - first:
+      213: 6082471445290761437
+    second: scifi-explosion-one_778
+  - first:
+      213: -161532901717100571
+    second: scifi-explosion-one_779
+  - first:
+      213: 7450356969128918865
+    second: scifi-explosion-one_780
+  - first:
+      213: -5432767597682863505
+    second: scifi-explosion-one_781
+  - first:
+      213: 5288302108025500091
+    second: scifi-explosion-one_782
+  - first:
+      213: -8663396176560941805
+    second: scifi-explosion-one_783
+  - first:
+      213: 3629516870329851126
+    second: scifi-explosion-one_784
+  - first:
+      213: 6172845511695980950
+    second: scifi-explosion-one_785
+  - first:
+      213: 5166166828805447888
+    second: scifi-explosion-one_786
+  - first:
+      213: -4028511168800273209
+    second: scifi-explosion-one_787
+  - first:
+      213: -2529236344963138880
+    second: scifi-explosion-one_788
+  - first:
+      213: -6852541352740689091
+    second: scifi-explosion-one_789
+  - first:
+      213: -3531567037873990310
+    second: scifi-explosion-one_790
+  - first:
+      213: -4691954247181172283
+    second: scifi-explosion-one_791
+  - first:
+      213: 7481998735452198414
+    second: scifi-explosion-one_792
+  - first:
+      213: 6384392097525199761
+    second: scifi-explosion-one_793
+  - first:
+      213: -6546171420974825200
+    second: scifi-explosion-one_794
+  - first:
+      213: -6768260459603055696
+    second: scifi-explosion-one_795
+  - first:
+      213: -8871149947106065457
+    second: scifi-explosion-one_796
+  - first:
+      213: -1085294836626188782
+    second: scifi-explosion-one_797
+  - first:
+      213: 3752117498978984752
+    second: scifi-explosion-one_798
+  - first:
+      213: 7458574972903768461
+    second: scifi-explosion-one_799
+  - first:
+      213: -604020476487754196
+    second: scifi-explosion-one_800
+  - first:
+      213: -4126921914135316807
+    second: scifi-explosion-one_801
+  - first:
+      213: 7598226253379548679
+    second: scifi-explosion-one_802
+  - first:
+      213: -4581830775554999611
+    second: scifi-explosion-one_803
+  - first:
+      213: 4613407533621971107
+    second: scifi-explosion-one_804
+  - first:
+      213: -2576546178536909441
+    second: scifi-explosion-one_805
+  - first:
+      213: 1893375159171938684
+    second: scifi-explosion-one_806
+  - first:
+      213: -7827006189106802962
+    second: scifi-explosion-one_807
+  - first:
+      213: -4225169776064935190
+    second: scifi-explosion-one_808
+  - first:
+      213: 1650461045192118297
+    second: scifi-explosion-one_809
+  - first:
+      213: 3808658581503099085
+    second: scifi-explosion-one_810
+  - first:
+      213: -3993302918270761477
+    second: scifi-explosion-one_811
+  - first:
+      213: 5388181048529039239
+    second: scifi-explosion-one_812
+  - first:
+      213: -3158606723585846387
+    second: scifi-explosion-one_813
+  - first:
+      213: 1473853373132602500
+    second: scifi-explosion-one_814
+  - first:
+      213: 8540887177059879988
+    second: scifi-explosion-one_815
+  - first:
+      213: 7216151034677349448
+    second: scifi-explosion-one_816
+  - first:
+      213: 4812838512785023417
+    second: scifi-explosion-one_817
+  - first:
+      213: -5671123408153482348
+    second: scifi-explosion-one_818
+  - first:
+      213: -8910004438109116101
+    second: scifi-explosion-one_819
+  - first:
+      213: 5390114167712798424
+    second: scifi-explosion-one_820
+  - first:
+      213: 5127967118968359237
+    second: scifi-explosion-one_821
+  - first:
+      213: -7382566116125182273
+    second: scifi-explosion-one_822
+  - first:
+      213: 6070868873912433037
+    second: scifi-explosion-one_823
+  - first:
+      213: -6846959152103107600
+    second: scifi-explosion-one_824
+  - first:
+      213: 5585291056089695706
+    second: scifi-explosion-one_825
+  - first:
+      213: -3040013402087589452
+    second: scifi-explosion-one_826
+  - first:
+      213: 1047183824559788694
+    second: scifi-explosion-one_827
+  - first:
+      213: 2626077164116595703
+    second: scifi-explosion-one_828
+  - first:
+      213: -4085960852023975971
+    second: scifi-explosion-one_829
+  - first:
+      213: 4133746018464164742
+    second: scifi-explosion-one_830
+  - first:
+      213: -1577878089614634872
+    second: scifi-explosion-one_831
+  - first:
+      213: 6118136317550530465
+    second: scifi-explosion-one_832
+  - first:
+      213: -8483189177049956472
+    second: scifi-explosion-one_833
+  - first:
+      213: 4916131141948670882
+    second: scifi-explosion-one_834
+  - first:
+      213: -3781471258788891019
+    second: scifi-explosion-one_835
+  - first:
+      213: -2626746421893872971
+    second: scifi-explosion-one_836
+  - first:
+      213: 92833341755950316
+    second: scifi-explosion-one_837
+  - first:
+      213: 6498588260963150288
+    second: scifi-explosion-one_838
+  - first:
+      213: 8363739775488724037
+    second: scifi-explosion-one_839
+  - first:
+      213: -4835389559461366154
+    second: scifi-explosion-one_840
+  - first:
+      213: 7465382567553568345
+    second: scifi-explosion-one_841
+  - first:
+      213: -1726795874966268837
+    second: scifi-explosion-one_842
+  - first:
+      213: 4060465542052371326
+    second: scifi-explosion-one_843
+  - first:
+      213: 4721508039935499312
+    second: scifi-explosion-one_844
+  - first:
+      213: 5856095946897015441
+    second: scifi-explosion-one_845
+  - first:
+      213: -3158985768499866223
+    second: scifi-explosion-one_846
+  - first:
+      213: 6838685981716472444
+    second: scifi-explosion-one_847
+  - first:
+      213: 2027499149837908406
+    second: scifi-explosion-one_848
+  - first:
+      213: -5747646441474290376
+    second: scifi-explosion-one_849
+  - first:
+      213: 5366796384967560036
+    second: scifi-explosion-one_850
+  - first:
+      213: 818420800513420631
+    second: scifi-explosion-one_851
+  - first:
+      213: -4412502143741093256
+    second: scifi-explosion-one_852
+  - first:
+      213: -6991025645173697292
+    second: scifi-explosion-one_853
+  - first:
+      213: -6699506623577860929
+    second: scifi-explosion-one_854
+  - first:
+      213: 2875861215690965841
+    second: scifi-explosion-one_855
+  - first:
+      213: 2511716155356320398
+    second: scifi-explosion-one_856
+  - first:
+      213: -7018942928634878630
+    second: scifi-explosion-one_857
+  - first:
+      213: 1419384318434316996
+    second: scifi-explosion-one_858
+  - first:
+      213: 7768006407039836468
+    second: scifi-explosion-one_859
+  - first:
+      213: -1347432434936891051
+    second: scifi-explosion-one_860
+  - first:
+      213: -5878121017732436775
+    second: scifi-explosion-one_861
+  - first:
+      213: 5759852754323883903
+    second: scifi-explosion-one_862
+  - first:
+      213: -2972014486654241771
+    second: scifi-explosion-one_863
+  - first:
+      213: -2705769758520765077
+    second: scifi-explosion-one_864
+  - first:
+      213: 6195215084036427340
+    second: scifi-explosion-one_865
+  - first:
+      213: -2712919193004605747
+    second: scifi-explosion-one_866
+  - first:
+      213: -9147956499669935290
+    second: scifi-explosion-one_867
+  - first:
+      213: 7487461091711258464
+    second: scifi-explosion-one_868
+  - first:
+      213: 2088666328083478812
+    second: scifi-explosion-one_869
+  - first:
+      213: -2533999863217684074
+    second: scifi-explosion-one_870
+  - first:
+      213: 5203013798878485785
+    second: scifi-explosion-one_871
+  - first:
+      213: -5844002232555163287
+    second: scifi-explosion-one_872
+  - first:
+      213: 7422793794696085734
+    second: scifi-explosion-one_873
+  - first:
+      213: -8184262934585543395
+    second: scifi-explosion-one_874
+  - first:
+      213: 1849450233309565282
+    second: scifi-explosion-one_875
+  - first:
+      213: -9203192372782761305
+    second: scifi-explosion-one_876
+  - first:
+      213: 4930364496321574495
+    second: scifi-explosion-one_877
+  - first:
+      213: 2622760993436933667
+    second: scifi-explosion-one_878
+  - first:
+      213: -8150819033156553867
+    second: scifi-explosion-one_879
+  - first:
+      213: -2328319402610260803
+    second: scifi-explosion-one_880
+  - first:
+      213: -2063430593242540895
+    second: scifi-explosion-one_881
+  - first:
+      213: -683897221198777474
+    second: scifi-explosion-one_882
+  - first:
+      213: -1761781479052446091
+    second: scifi-explosion-one_883
+  - first:
+      213: -3853360659949951031
+    second: scifi-explosion-one_884
+  - first:
+      213: -7755913357907302258
+    second: scifi-explosion-one_885
+  - first:
+      213: -8930495297940161824
+    second: scifi-explosion-one_886
+  - first:
+      213: 7520541242636028406
+    second: scifi-explosion-one_887
+  - first:
+      213: 3686926644362436620
+    second: scifi-explosion-one_888
+  - first:
+      213: 5058157602910495192
+    second: scifi-explosion-one_889
+  - first:
+      213: -1805551262189835158
+    second: scifi-explosion-one_890
+  - first:
+      213: 5647115085479625377
+    second: scifi-explosion-one_891
+  - first:
+      213: 4728579308903035852
+    second: scifi-explosion-one_892
+  - first:
+      213: -8950522190973171049
+    second: scifi-explosion-one_893
+  - first:
+      213: 6026985159959883704
+    second: scifi-explosion-one_894
+  - first:
+      213: 6397135240017564195
+    second: scifi-explosion-one_895
+  - first:
+      213: 4599133255695860669
+    second: scifi-explosion-one_896
+  - first:
+      213: -1445225651828537288
+    second: scifi-explosion-one_897
+  - first:
+      213: -6582598275860208340
+    second: scifi-explosion-one_898
+  - first:
+      213: -1242216694709920626
+    second: scifi-explosion-one_899
+  - first:
+      213: 4777439627265663165
+    second: scifi-explosion-one_900
+  - first:
+      213: -7815022143540468570
+    second: scifi-explosion-one_901
+  - first:
+      213: 7176998548080647308
+    second: scifi-explosion-one_902
+  - first:
+      213: -5484947658408452595
+    second: scifi-explosion-one_903
+  - first:
+      213: -1580533034356206749
+    second: scifi-explosion-one_904
+  - first:
+      213: 7324049091196945719
+    second: scifi-explosion-one_905
+  - first:
+      213: -2392868055752198279
+    second: scifi-explosion-one_906
+  - first:
+      213: 6659541794718392563
+    second: scifi-explosion-one_907
+  - first:
+      213: 1340527719392959344
+    second: scifi-explosion-one_908
+  - first:
+      213: 7597451236231336023
+    second: scifi-explosion-one_909
+  - first:
+      213: -8475645925357841347
+    second: scifi-explosion-one_910
+  - first:
+      213: -1122691233362280862
+    second: scifi-explosion-one_911
+  - first:
+      213: 606706506580659690
+    second: scifi-explosion-one_912
+  - first:
+      213: -4537424439698001960
+    second: scifi-explosion-one_913
+  - first:
+      213: -3473587359883002163
+    second: scifi-explosion-one_914
+  - first:
+      213: -2048312210570892842
+    second: scifi-explosion-one_915
+  - first:
+      213: -5521483828545463752
+    second: scifi-explosion-one_916
+  - first:
+      213: -9004820804625957576
+    second: scifi-explosion-one_917
+  - first:
+      213: -3005637271275692989
+    second: scifi-explosion-one_918
+  - first:
+      213: 7571420664441036415
+    second: scifi-explosion-one_919
+  - first:
+      213: 6504400052981958152
+    second: scifi-explosion-one_920
+  - first:
+      213: -957578583246020137
+    second: scifi-explosion-one_921
+  - first:
+      213: -6586127145587692204
+    second: scifi-explosion-one_922
+  - first:
+      213: 7685215723002950681
+    second: scifi-explosion-one_923
+  - first:
+      213: 8875478632171366221
+    second: scifi-explosion-one_924
+  - first:
+      213: 7407973249494519514
+    second: scifi-explosion-one_925
+  - first:
+      213: 6164000795017616954
+    second: scifi-explosion-one_926
+  - first:
+      213: 7704477513002297257
+    second: scifi-explosion-one_927
+  - first:
+      213: -1633169125795479480
+    second: scifi-explosion-one_928
+  - first:
+      213: 7672779126102220507
+    second: scifi-explosion-one_929
+  - first:
+      213: 4705213753104235208
+    second: scifi-explosion-one_930
+  - first:
+      213: 8381151808863092244
+    second: scifi-explosion-one_931
+  - first:
+      213: 6951286623059758836
+    second: scifi-explosion-one_932
+  - first:
+      213: 2158667623934424650
+    second: scifi-explosion-one_933
+  - first:
+      213: -862379643084860651
+    second: scifi-explosion-one_934
+  - first:
+      213: 4740454585229209714
+    second: scifi-explosion-one_935
+  - first:
+      213: -9039313431620687891
+    second: scifi-explosion-one_936
+  - first:
+      213: -7567302459538144021
+    second: scifi-explosion-one_937
+  - first:
+      213: -343516939808985047
+    second: scifi-explosion-one_938
+  - first:
+      213: -1391946516711509076
+    second: scifi-explosion-one_939
+  - first:
+      213: 639884583556323135
+    second: scifi-explosion-one_940
+  - first:
+      213: -571697331943755809
+    second: scifi-explosion-one_941
+  - first:
+      213: -3586698370965828923
+    second: scifi-explosion-one_942
+  - first:
+      213: 2244696456628073618
+    second: scifi-explosion-one_943
+  - first:
+      213: -5994603939590960207
+    second: scifi-explosion-one_944
+  - first:
+      213: -5435056682148172550
+    second: scifi-explosion-one_945
+  - first:
+      213: 4039222735618756784
+    second: scifi-explosion-one_946
+  - first:
+      213: 122251137389999989
+    second: scifi-explosion-one_947
+  - first:
+      213: 2397932898599093654
+    second: scifi-explosion-one_948
+  - first:
+      213: -5822656026072176717
+    second: scifi-explosion-one_949
+  - first:
+      213: 3543558912264593401
+    second: scifi-explosion-one_950
+  - first:
+      213: -5802378874397363639
+    second: scifi-explosion-one_951
+  - first:
+      213: 6998527856366317326
+    second: scifi-explosion-one_952
+  - first:
+      213: 1486879720856198613
+    second: scifi-explosion-one_953
+  - first:
+      213: 6223816055127652412
+    second: scifi-explosion-one_954
+  - first:
+      213: 1829734916864566646
+    second: scifi-explosion-one_955
+  - first:
+      213: -4589549853371886673
+    second: scifi-explosion-one_956
+  - first:
+      213: -5429875750690676310
+    second: scifi-explosion-one_957
+  - first:
+      213: 6199160165779110718
+    second: scifi-explosion-one_958
+  - first:
+      213: 7742468732518133902
+    second: scifi-explosion-one_959
+  - first:
+      213: 4160079792992859276
+    second: scifi-explosion-one_960
+  - first:
+      213: -1820563147406971517
+    second: scifi-explosion-one_961
+  - first:
+      213: -5145842922382135138
+    second: scifi-explosion-one_962
+  - first:
+      213: -2772078320361680479
+    second: scifi-explosion-one_963
+  - first:
+      213: 8714253672131704139
+    second: scifi-explosion-one_964
+  - first:
+      213: -787180870514224394
+    second: scifi-explosion-one_965
+  - first:
+      213: -7481710787955033570
+    second: scifi-explosion-one_966
+  - first:
+      213: 7577767956306227023
+    second: scifi-explosion-one_967
+  - first:
+      213: 61468288366151435
+    second: scifi-explosion-one_968
+  - first:
+      213: -7624311795662840085
+    second: scifi-explosion-one_969
+  - first:
+      213: -486890965418799889
+    second: scifi-explosion-one_970
+  - first:
+      213: -6969262038102325221
+    second: scifi-explosion-one_971
+  - first:
+      213: 2551676089147994332
+    second: scifi-explosion-one_972
+  - first:
+      213: 5814250873559946368
+    second: scifi-explosion-one_973
+  - first:
+      213: -1111756558778738430
+    second: scifi-explosion-one_974
+  - first:
+      213: 858789395888532156
+    second: scifi-explosion-one_975
+  - first:
+      213: -445988924255622442
+    second: scifi-explosion-one_976
+  - first:
+      213: 1034633012917707193
+    second: scifi-explosion-one_977
+  - first:
+      213: -967701693112756934
+    second: scifi-explosion-one_978
+  - first:
+      213: -6815943838666931775
+    second: scifi-explosion-one_979
+  - first:
+      213: 6992716572104147186
+    second: scifi-explosion-one_980
+  - first:
+      213: 7453362477976431314
+    second: scifi-explosion-one_981
+  - first:
+      213: 3418950367697667977
+    second: scifi-explosion-one_982
+  - first:
+      213: 6406669429551646219
+    second: scifi-explosion-one_983
+  - first:
+      213: 7233226280256893593
+    second: scifi-explosion-one_984
+  - first:
+      213: 853762693987647720
+    second: scifi-explosion-one_985
+  - first:
+      213: -1667871232523802084
+    second: scifi-explosion-one_986
+  - first:
+      213: -3068444887716087941
+    second: scifi-explosion-one_987
+  - first:
+      213: 7568794789712592222
+    second: scifi-explosion-one_988
+  - first:
+      213: 1335496588071064005
+    second: scifi-explosion-one_989
+  - first:
+      213: -3283287513684022764
+    second: scifi-explosion-one_990
+  - first:
+      213: -7723199719425722383
+    second: scifi-explosion-one_991
+  - first:
+      213: -3123321013348432398
+    second: scifi-explosion-one_992
+  - first:
+      213: -2226989132897067584
+    second: scifi-explosion-one_993
+  - first:
+      213: -337759460645187291
+    second: scifi-explosion-one_994
+  - first:
+      213: -2408779938470606381
+    second: scifi-explosion-one_995
+  - first:
+      213: -4618632167178861080
+    second: scifi-explosion-one_996
+  - first:
+      213: 4739865913600874933
+    second: scifi-explosion-one_997
+  - first:
+      213: 883950178418496168
+    second: scifi-explosion-one_998
+  - first:
+      213: -6649755054177698063
+    second: scifi-explosion-one_999
+  - first:
+      213: 7256861562855700980
+    second: scifi-explosion-one_1000
+  - first:
+      213: 7178280290792157707
+    second: scifi-explosion-one_1001
+  - first:
+      213: -8742053983085970544
+    second: scifi-explosion-one_1002
+  - first:
+      213: 2230657836205364472
+    second: scifi-explosion-one_1003
+  - first:
+      213: 4640621222159540414
+    second: scifi-explosion-one_1004
+  - first:
+      213: 4304970991196643846
+    second: scifi-explosion-one_1005
+  - first:
+      213: -5210586148793260548
+    second: scifi-explosion-one_1006
+  - first:
+      213: 5350845712146422376
+    second: scifi-explosion-one_1007
+  - first:
+      213: -475108739933397903
+    second: scifi-explosion-one_1008
+  - first:
+      213: -3772420156631023999
+    second: scifi-explosion-one_1009
+  - first:
+      213: 3911882230299064074
+    second: scifi-explosion-one_1010
+  - first:
+      213: 4631631282063765384
+    second: scifi-explosion-one_1011
+  - first:
+      213: 2380660283273991992
+    second: scifi-explosion-one_1012
+  - first:
+      213: -2741921435679317718
+    second: scifi-explosion-one_1013
+  - first:
+      213: 5428977196387191450
+    second: scifi-explosion-one_1014
+  - first:
+      213: 3808316082048942556
+    second: scifi-explosion-one_1015
+  - first:
+      213: 7222783697504598199
+    second: scifi-explosion-one_1016
+  - first:
+      213: -7443258723085479069
+    second: scifi-explosion-one_1017
+  - first:
+      213: 6334665794467702917
+    second: scifi-explosion-one_1018
+  - first:
+      213: 464021018816225476
+    second: scifi-explosion-one_1019
+  - first:
+      213: 4025286993643532508
+    second: scifi-explosion-one_1020
+  - first:
+      213: 3586431276384926056
+    second: scifi-explosion-one_1021
+  - first:
+      213: 4485769378465645840
+    second: scifi-explosion-one_1022
+  - first:
+      213: -7576411634425298411
+    second: scifi-explosion-one_1023
+  - first:
+      213: 1986820892947734783
+    second: scifi-explosion-one_1024
+  - first:
+      213: 7094789927585450432
+    second: scifi-explosion-one_1025
+  - first:
+      213: 3411315946895225584
+    second: scifi-explosion-one_1026
+  - first:
+      213: -539041980146666814
+    second: scifi-explosion-one_1027
+  - first:
+      213: 2029234725307620142
+    second: scifi-explosion-one_1028
+  - first:
+      213: -48114855248489185
+    second: scifi-explosion-one_1029
+  - first:
+      213: -1615726143672805973
+    second: scifi-explosion-one_1030
+  - first:
+      213: 4553096484212423658
+    second: scifi-explosion-one_1031
+  - first:
+      213: 4961355126671707076
+    second: scifi-explosion-one_1032
+  - first:
+      213: 6653542766048234646
+    second: scifi-explosion-one_1033
+  - first:
+      213: 2328585183550883446
+    second: scifi-explosion-one_1034
+  - first:
+      213: 5966256643865406769
+    second: scifi-explosion-one_1035
+  - first:
+      213: 5506352179165490649
+    second: scifi-explosion-one_1036
+  - first:
+      213: 314603821907113609
+    second: scifi-explosion-one_1037
+  - first:
+      213: 459703094651203179
+    second: scifi-explosion-one_1038
+  - first:
+      213: -6910075544132963415
+    second: scifi-explosion-one_1039
+  - first:
+      213: -989488431389558151
+    second: scifi-explosion-one_1040
+  - first:
+      213: -8798200336771846312
+    second: scifi-explosion-one_1041
+  - first:
+      213: -1016747324566665381
+    second: scifi-explosion-one_1042
+  - first:
+      213: -7228800145151250963
+    second: scifi-explosion-one_1043
+  - first:
+      213: -353851340014985204
+    second: scifi-explosion-one_1044
+  - first:
+      213: 3499637687995868202
+    second: scifi-explosion-one_1045
+  - first:
+      213: -6484288473909782843
+    second: scifi-explosion-one_1046
+  - first:
+      213: -3958793333504475763
+    second: scifi-explosion-one_1047
+  - first:
+      213: -6378938473591622266
+    second: scifi-explosion-one_1048
+  - first:
+      213: 1858141576300068212
+    second: scifi-explosion-one_1049
+  - first:
+      213: -7412993691066402639
+    second: scifi-explosion-one_1050
+  - first:
+      213: -577678544467423461
+    second: scifi-explosion-one_1051
+  - first:
+      213: -4998516743737407285
+    second: scifi-explosion-one_1052
+  - first:
+      213: 161165034568133464
+    second: scifi-explosion-one_1053
+  - first:
+      213: 6807932624710119295
+    second: scifi-explosion-one_1054
+  - first:
+      213: -803535664937807320
+    second: scifi-explosion-one_1055
+  - first:
+      213: -5623576216788324597
+    second: scifi-explosion-one_1056
+  - first:
+      213: 1410821318062014573
+    second: scifi-explosion-one_1057
+  - first:
+      213: 8500828511642792696
+    second: scifi-explosion-one_1058
+  - first:
+      213: -3665167778709201792
+    second: scifi-explosion-one_1059
+  - first:
+      213: -7390181191360918126
+    second: scifi-explosion-one_1060
+  - first:
+      213: 8864857789121179993
+    second: scifi-explosion-one_1061
+  - first:
+      213: -8932140309322286844
+    second: scifi-explosion-one_1062
+  - first:
+      213: 2635389093751986229
+    second: scifi-explosion-one_1063
+  - first:
+      213: 6575942715384229829
+    second: scifi-explosion-one_1064
+  - first:
+      213: -3417779941453277784
+    second: scifi-explosion-one_1065
+  - first:
+      213: -1624917937808156881
+    second: scifi-explosion-one_1066
+  - first:
+      213: -6730795667850800772
+    second: scifi-explosion-one_1067
+  - first:
+      213: 9029042365125458795
+    second: scifi-explosion-one_1068
+  - first:
+      213: 5503907411119077156
+    second: scifi-explosion-one_1069
+  - first:
+      213: 8935042053399133086
+    second: scifi-explosion-one_1070
+  - first:
+      213: 2162231731982327398
+    second: scifi-explosion-one_1071
+  - first:
+      213: 5898498091651809570
+    second: scifi-explosion-one_1072
+  - first:
+      213: -1809272768529226954
+    second: scifi-explosion-one_1073
+  - first:
+      213: -5111954409792942823
+    second: scifi-explosion-one_1074
+  - first:
+      213: -5023641361505060870
+    second: scifi-explosion-one_1075
+  - first:
+      213: 2921027689921697394
+    second: scifi-explosion-one_1076
+  - first:
+      213: -7158415833597176081
+    second: scifi-explosion-one_1077
+  - first:
+      213: 8436513637287972542
+    second: scifi-explosion-one_1078
+  - first:
+      213: 971463512462252989
+    second: scifi-explosion-one_1079
+  - first:
+      213: -1096670547517472296
+    second: scifi-explosion-one_1080
+  - first:
+      213: 8935166360300398005
+    second: scifi-explosion-one_1081
+  - first:
+      213: 7786116498363850950
+    second: scifi-explosion-one_1082
+  - first:
+      213: -4989426202892068682
+    second: scifi-explosion-one_1083
+  - first:
+      213: 2976833464922822839
+    second: scifi-explosion-one_1084
+  - first:
+      213: -8184924900581514263
+    second: scifi-explosion-one_1085
+  - first:
+      213: 6067406665002175918
+    second: scifi-explosion-one_1086
+  - first:
+      213: -2875737884768964463
+    second: scifi-explosion-one_1087
+  - first:
+      213: 589776912604591652
+    second: scifi-explosion-one_1088
+  - first:
+      213: -7156922012551543583
+    second: scifi-explosion-one_1089
+  - first:
+      213: 5941355236114513536
+    second: scifi-explosion-one_1090
+  - first:
+      213: 4681729924133911450
+    second: scifi-explosion-one_1091
+  - first:
+      213: 4127840019492438333
+    second: scifi-explosion-one_1092
+  - first:
+      213: -6884833880258127042
+    second: scifi-explosion-one_1093
+  - first:
+      213: 1405279642393431714
+    second: scifi-explosion-one_1094
+  - first:
+      213: -515856477803412938
+    second: scifi-explosion-one_1095
+  - first:
+      213: 4384749998557099852
+    second: scifi-explosion-one_1096
+  - first:
+      213: -2677091818489492875
+    second: scifi-explosion-one_1097
+  - first:
+      213: -732006554649541973
+    second: scifi-explosion-one_1098
+  - first:
+      213: 7087121038057583690
+    second: scifi-explosion-one_1099
+  - first:
+      213: -6707731315381975934
+    second: scifi-explosion-one_1100
+  - first:
+      213: -7893388646141877045
+    second: scifi-explosion-one_1101
+  - first:
+      213: 1357694934437411818
+    second: scifi-explosion-one_1102
+  - first:
+      213: 4741374125470329060
+    second: scifi-explosion-one_1103
+  - first:
+      213: -3046122975138832426
+    second: scifi-explosion-one_1104
+  - first:
+      213: 7576334468982610365
+    second: scifi-explosion-one_1105
+  - first:
+      213: 1722873366029984204
+    second: scifi-explosion-one_1106
+  - first:
+      213: -764762353773582235
+    second: scifi-explosion-one_1107
+  - first:
+      213: -6983373548899332072
+    second: scifi-explosion-one_1108
+  - first:
+      213: -7588270400937906678
+    second: scifi-explosion-one_1109
+  - first:
+      213: -4133514801146628367
+    second: scifi-explosion-one_1110
+  - first:
+      213: 5428241346652348585
+    second: scifi-explosion-one_1111
+  - first:
+      213: 9091116662569994054
+    second: scifi-explosion-one_1112
+  - first:
+      213: -3296940766408135954
+    second: scifi-explosion-one_1113
+  - first:
+      213: 4566625723384225604
+    second: scifi-explosion-one_1114
+  - first:
+      213: -1995086732936320911
+    second: scifi-explosion-one_1115
+  - first:
+      213: 199500494180915389
+    second: scifi-explosion-one_1116
+  - first:
+      213: 524584123032704672
+    second: scifi-explosion-one_1117
+  - first:
+      213: 1870360221753141299
+    second: scifi-explosion-one_1118
+  - first:
+      213: -3728681501090796278
+    second: scifi-explosion-one_1119
+  - first:
+      213: -2370024476770524412
+    second: scifi-explosion-one_1120
+  - first:
+      213: -2411750807593511418
+    second: scifi-explosion-one_1121
+  - first:
+      213: 3634499088215739846
+    second: scifi-explosion-one_1122
+  - first:
+      213: 2115250117787606946
+    second: scifi-explosion-one_1123
+  - first:
+      213: 8090427782104984910
+    second: scifi-explosion-one_1124
+  - first:
+      213: 867724478192374679
+    second: scifi-explosion-one_1125
+  - first:
+      213: -5717710597447507062
+    second: scifi-explosion-one_1126
+  - first:
+      213: -521983468723274015
+    second: scifi-explosion-one_1127
+  - first:
+      213: -2665287142470571052
+    second: scifi-explosion-one_1128
+  - first:
+      213: -6242088646530544630
+    second: scifi-explosion-one_1129
+  - first:
+      213: 4909407527385220438
+    second: scifi-explosion-one_1130
+  - first:
+      213: -6924829696559925306
+    second: scifi-explosion-one_1131
+  - first:
+      213: -1150578383331423157
+    second: scifi-explosion-one_1132
+  - first:
+      213: -3409989147712101339
+    second: scifi-explosion-one_1133
+  - first:
+      213: 8744247626253937051
+    second: scifi-explosion-one_1134
+  - first:
+      213: -3107691918925363626
+    second: scifi-explosion-one_1135
+  - first:
+      213: -4470659382351113415
+    second: scifi-explosion-one_1136
+  - first:
+      213: -5899522908691867724
+    second: scifi-explosion-one_1137
+  - first:
+      213: -6930764176792300173
+    second: scifi-explosion-one_1138
+  - first:
+      213: 1647963427082888127
+    second: scifi-explosion-one_1139
+  - first:
+      213: -1872742439089950130
+    second: scifi-explosion-one_1140
+  - first:
+      213: -8431458946125844320
+    second: scifi-explosion-one_1141
+  - first:
+      213: -6989352700376021124
+    second: scifi-explosion-one_1142
+  - first:
+      213: -4039243735434811921
+    second: scifi-explosion-one_1143
+  - first:
+      213: 5861204035602013187
+    second: scifi-explosion-one_1144
+  - first:
+      213: 7829250231062540414
+    second: scifi-explosion-one_1145
+  - first:
+      213: -7153435730380369630
+    second: scifi-explosion-one_1146
+  - first:
+      213: -7399417120189692811
+    second: scifi-explosion-one_1147
+  - first:
+      213: 62483298274673377
+    second: scifi-explosion-one_1148
+  - first:
+      213: -4359221849583261759
+    second: scifi-explosion-one_1149
+  - first:
+      213: 2465344744736548608
+    second: scifi-explosion-one_1150
+  - first:
+      213: -5455277795811791976
+    second: scifi-explosion-one_1151
+  - first:
+      213: -361916748764287963
+    second: scifi-explosion-one_1152
+  - first:
+      213: 3782567338323032047
+    second: scifi-explosion-one_1153
+  - first:
+      213: 2253915314626179206
+    second: scifi-explosion-one_1154
+  - first:
+      213: 7125546144460011529
+    second: scifi-explosion-one_1155
+  - first:
+      213: 4785684766314309031
+    second: scifi-explosion-one_1156
+  - first:
+      213: 8873775257516453216
+    second: scifi-explosion-one_1157
+  - first:
+      213: 1702893222896085956
+    second: scifi-explosion-one_1158
+  - first:
+      213: 2529168977758181566
+    second: scifi-explosion-one_1159
+  - first:
+      213: 6899801040554115639
+    second: scifi-explosion-one_1160
+  - first:
+      213: 1207834303768551876
+    second: scifi-explosion-one_1161
+  - first:
+      213: -2877831972346540741
+    second: scifi-explosion-one_1162
+  - first:
+      213: -2510325153378610560
+    second: scifi-explosion-one_1163
+  - first:
+      213: 2893284598064606060
+    second: scifi-explosion-one_1164
+  - first:
+      213: -121433385189866591
+    second: scifi-explosion-one_1165
+  - first:
+      213: 526706270340367433
+    second: scifi-explosion-one_1166
+  - first:
+      213: 9044283881590557363
+    second: scifi-explosion-one_1167
+  - first:
+      213: -2361539530905771785
+    second: scifi-explosion-one_1168
+  - first:
+      213: 4208546966746577572
+    second: scifi-explosion-one_1169
+  - first:
+      213: -8469255072275028174
+    second: scifi-explosion-one_1170
+  - first:
+      213: -2941968307908365435
+    second: scifi-explosion-one_1171
+  - first:
+      213: -6715010408358089916
+    second: scifi-explosion-one_1172
+  - first:
+      213: 5923560884539886176
+    second: scifi-explosion-one_1173
+  - first:
+      213: 8335631888266271893
+    second: scifi-explosion-one_1174
+  - first:
+      213: -4084677678939868489
+    second: scifi-explosion-one_1175
+  - first:
+      213: 6004089040998646453
+    second: scifi-explosion-one_1176
+  - first:
+      213: -4989370931143022482
+    second: scifi-explosion-one_1177
+  - first:
+      213: 2467183871158785403
+    second: scifi-explosion-one_1178
+  - first:
+      213: -6572789687468933276
+    second: scifi-explosion-one_1179
+  - first:
+      213: -4997289110152717511
+    second: scifi-explosion-one_1180
+  - first:
+      213: -2215859072274079654
+    second: scifi-explosion-one_1181
+  - first:
+      213: 5263079630869075050
+    second: scifi-explosion-one_1182
+  - first:
+      213: 2819597578829035657
+    second: scifi-explosion-one_1183
+  - first:
+      213: 3334015559584769738
+    second: scifi-explosion-one_1184
+  - first:
+      213: 8363154427719225859
+    second: scifi-explosion-one_1185
+  - first:
+      213: 7171780079792066422
+    second: scifi-explosion-one_1186
+  - first:
+      213: -3157805493109391410
+    second: scifi-explosion-one_1187
+  - first:
+      213: -7742904251492063921
+    second: scifi-explosion-one_1188
+  - first:
+      213: -4426750040682622695
+    second: scifi-explosion-one_1189
+  - first:
+      213: -6041785009148985777
+    second: scifi-explosion-one_1190
+  - first:
+      213: -7864712613867431218
+    second: scifi-explosion-one_1191
+  - first:
+      213: 6134605392847258795
+    second: scifi-explosion-one_1192
+  - first:
+      213: -5667780199944389481
+    second: scifi-explosion-one_1193
+  - first:
+      213: 1730377657026613241
+    second: scifi-explosion-one_1194
+  - first:
+      213: -473402998941054266
+    second: scifi-explosion-one_1195
+  - first:
+      213: -465555520502239407
+    second: scifi-explosion-one_1196
+  - first:
+      213: -2391323103464969599
+    second: scifi-explosion-one_1197
+  - first:
+      213: -7886574686134484715
+    second: scifi-explosion-one_1198
+  - first:
+      213: 2175193421375448249
+    second: scifi-explosion-one_1199
+  - first:
+      213: -6644486117669060531
+    second: scifi-explosion-one_1200
+  - first:
+      213: -1746764170013777411
+    second: scifi-explosion-one_1201
+  - first:
+      213: -7580186739809943062
+    second: scifi-explosion-one_1202
+  - first:
+      213: 3529585403196942636
+    second: scifi-explosion-one_1203
+  - first:
+      213: -8796259392705450179
+    second: scifi-explosion-one_1204
+  - first:
+      213: 6114664378517224503
+    second: scifi-explosion-one_1205
+  - first:
+      213: -8578681473730920463
+    second: scifi-explosion-one_1206
+  - first:
+      213: -7905144853891637590
+    second: scifi-explosion-one_1207
+  - first:
+      213: -6955378063138187218
+    second: scifi-explosion-one_1208
+  - first:
+      213: 4182718745840829827
+    second: scifi-explosion-one_1209
+  - first:
+      213: -394050282549774222
+    second: scifi-explosion-one_1210
+  - first:
+      213: 8468488621253018142
+    second: scifi-explosion-one_1211
+  - first:
+      213: -4716183141591817566
+    second: scifi-explosion-one_1212
+  - first:
+      213: -675284795973154082
+    second: scifi-explosion-one_1213
+  - first:
+      213: 5047102357548945044
+    second: scifi-explosion-one_1214
+  - first:
+      213: -8056848335078741014
+    second: scifi-explosion-one_1215
+  - first:
+      213: 713284938081735223
+    second: scifi-explosion-one_1216
+  - first:
+      213: 8824823295073614403
+    second: scifi-explosion-one_1217
+  - first:
+      213: -3480682993151560417
+    second: scifi-explosion-one_1218
+  - first:
+      213: 306407160005586688
+    second: scifi-explosion-one_1219
+  - first:
+      213: -1226410695888122645
+    second: scifi-explosion-one_1220
+  - first:
+      213: -8152408600060104782
+    second: scifi-explosion-one_1221
+  - first:
+      213: -8495334348959060467
+    second: scifi-explosion-one_1222
+  - first:
+      213: 6617240212839516073
+    second: scifi-explosion-one_1223
+  - first:
+      213: -5760071135668437234
+    second: scifi-explosion-one_1224
+  - first:
+      213: -7984423996497083988
+    second: scifi-explosion-one_1225
+  - first:
+      213: 1146010353205579663
+    second: scifi-explosion-one_1226
+  - first:
+      213: -6173036477481330970
+    second: scifi-explosion-one_1227
+  - first:
+      213: 5487178596068759191
+    second: scifi-explosion-one_1228
+  - first:
+      213: 8704566918194738623
+    second: scifi-explosion-one_1229
+  - first:
+      213: 2919216622556928523
+    second: scifi-explosion-one_1230
+  - first:
+      213: 1837722585678075388
+    second: scifi-explosion-one_1231
+  - first:
+      213: -4112843048632269010
+    second: scifi-explosion-one_1232
+  - first:
+      213: -2778169350107285220
+    second: scifi-explosion-one_1233
+  - first:
+      213: 2935999484532091594
+    second: scifi-explosion-one_1234
+  - first:
+      213: 8257256998960795880
+    second: scifi-explosion-one_1235
+  - first:
+      213: -3830240994379990354
+    second: scifi-explosion-one_1236
+  - first:
+      213: -7237423934442915013
+    second: scifi-explosion-one_1237
+  - first:
+      213: -1674547006539339591
+    second: scifi-explosion-one_1238
+  - first:
+      213: -184265691635110811
+    second: scifi-explosion-one_1239
+  - first:
+      213: 4820161863355475057
+    second: scifi-explosion-one_1240
+  - first:
+      213: 1727919774449651394
+    second: scifi-explosion-one_1241
+  - first:
+      213: -3448350001808530146
+    second: scifi-explosion-one_1242
+  - first:
+      213: -4747038000601627003
+    second: scifi-explosion-one_1243
+  - first:
+      213: 3677703486554172461
+    second: scifi-explosion-one_1244
+  - first:
+      213: -1970295773773615792
+    second: scifi-explosion-one_1245
+  - first:
+      213: 1707899303817992551
+    second: scifi-explosion-one_1246
+  - first:
+      213: -6418015805655418197
+    second: scifi-explosion-one_1247
+  - first:
+      213: -899956919687561783
+    second: scifi-explosion-one_1248
+  - first:
+      213: 588608694853044422
+    second: scifi-explosion-one_1249
+  - first:
+      213: -2712245281902691559
+    second: scifi-explosion-one_1250
+  - first:
+      213: -3772977603174842518
+    second: scifi-explosion-one_1251
+  - first:
+      213: 4923820832417585155
+    second: scifi-explosion-one_1252
+  - first:
+      213: -4256667107877630793
+    second: scifi-explosion-one_1253
+  - first:
+      213: 1612357484304200569
+    second: scifi-explosion-one_1254
+  - first:
+      213: 5890808803939807014
+    second: scifi-explosion-one_1255
+  - first:
+      213: 3960679155867977212
+    second: scifi-explosion-one_1256
+  - first:
+      213: 5911651742228386869
+    second: scifi-explosion-one_1257
+  - first:
+      213: -1324558818460156701
+    second: scifi-explosion-one_1258
+  - first:
+      213: 282064489298646497
+    second: scifi-explosion-one_1259
+  - first:
+      213: 8838455308470091308
+    second: scifi-explosion-one_1260
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: scifi-explosion-one_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27c9fd5a88b6edfc0800000000000000
+      internalID: -3468216428386083726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c95a2e231d39c810800000000000000
+      internalID: 1786025879817312707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4e9a6f870ce50f10800000000000000
+      internalID: 2235452307274374733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91f3ff137ab167cd0800000000000000
+      internalID: -2560828933201248487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9d2b60379c85cfc0800000000000000
+      internalID: -3475216956466188897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f875addb533192f80800000000000000
+      internalID: -8130946530701322353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b16d2bf2cbe699a50800000000000000
+      internalID: 6528370889383400987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19795486a8537f170800000000000000
+      internalID: 8212091314104539025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_8
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8063322ad41c9ba30800000000000000
+      internalID: 4231625864068150792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_9
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f84d812083965c950800000000000000
+      internalID: 6468692129061852303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_10
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a474ed93b4ea61f30800000000000000
+      internalID: 4546012511993743178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_11
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa587dbfb5bdf3050800000000000000
+      internalID: 5782581634680718762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_12
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 200ed9db7f29fe5d0800000000000000
+      internalID: -3031042431461236734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_13
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fab8e21a55dd9410800000000000000
+      internalID: 1485578034943146736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_14
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9240bf4461e5815f0800000000000000
+      internalID: -785774685236558807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_15
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8f10e7fe4bd972c0800000000000000
+      internalID: -4433271225956950134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95b8e9bd17a0cec60800000000000000
+      internalID: 7848659734732114777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1a28e83be2dbf0c0800000000000000
+      internalID: -4540803891559126498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b8d65fbd3a477a40800000000000000
+      internalID: 5365839110098835640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd4f7f07339100350800000000000000
+      internalID: 5980808013877343452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27626e6c9ab412020800000000000000
+      internalID: 2315214876003673714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1da3a6d1ee5be3dd0800000000000000
+      internalID: -2504364308471072047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e03f80810ff94ef70800000000000000
+      internalID: 9215666591051084558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57d292c6516dd9e60800000000000000
+      internalID: 7970762303012941173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_24
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 265474c06a80850e0800000000000000
+      internalID: -2281063701999565470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_25
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1172259a85f5cdfb0800000000000000
+      internalID: -4621714283186477295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_26
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b36f39fd3aa245550800000000000000
+      internalID: 6148586274586621499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_27
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 912845fcf68da0410800000000000000
+      internalID: 1444204605257056793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_28
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82bdc112c37a70a60800000000000000
+      internalID: 7640259169552751400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_29
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bea9fee61898968b0800000000000000
+      internalID: -5158440709171209493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_30
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d376ac55ca8f620800000000000000
+      internalID: 2808183852133465501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_31
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c14d18ac02fe19190800000000000000
+      internalID: -7957316142471457764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 639a1f9f6eac8d1c0800000000000000
+      internalID: -4478606736035305162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_33
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd1e471ca1cec160800000000000000
+      internalID: 7047783411750936021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_34
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501f9ffb7dc6b42e0800000000000000
+      internalID: -2140497523989942011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_35
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52bcbb598b27a58d0800000000000000
+      internalID: -2856844876501497051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_36
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cba074fa10274d310800000000000000
+      internalID: 1428892333344492220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_37
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282bb341108af89c0800000000000000
+      internalID: -3922732027828522366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_38
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0827433a69def3a90800000000000000
+      internalID: -7331880437096877440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_39
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd4fa2d7810ffaa80800000000000000
+      internalID: -8453273987581283107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_40
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 549a97d052c78ea60800000000000000
+      internalID: 7703543661198944581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_41
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fd0ab75f1c856100800000000000000
+      internalID: 100640632929390072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_42
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e214d02d9bdb95fe0800000000000000
+      internalID: -1199719219926843090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_43
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3053943eb8ae56060800000000000000
+      internalID: 6946215886823437571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_44
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 527f86c36944b3040800000000000000
+      internalID: 4628368454102611749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_45
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c95b14efcfb5e2af0800000000000000
+      internalID: -419296573143272036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_46
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7c6abe46b003cba0800000000000000
+      internalID: -6070007089760408449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_47
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2318f2b365df396a0800000000000000
+      internalID: -6443528095035064014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec2749ca533434160800000000000000
+      internalID: 7008519342926361294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_49
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc634e270caa2ed70800000000000000
+      internalID: 9071000343015601869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_50
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 569ad455fdcf574e0800000000000000
+      internalID: -1984402024647775899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_51
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2112647cfd67a69c0800000000000000
+      internalID: -3933200621061660398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_52
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4af125897f9f01e10800000000000000
+      internalID: 2166506262572965796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_53
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75b834c9d9b7e4c90800000000000000
+      internalID: -7183668438747608233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_54
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 359d98b53dc3f4540800000000000000
+      internalID: 4994277390248696147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_55
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c04aef9f3c93c7a0800000000000000
+      internalID: -6358066451837206333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_56
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0b39b0b0eb843b00800000000000000
+      internalID: 807424030360025868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_57
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f3bca9fdcfc33e20800000000000000
+      internalID: 3329233033121018869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_58
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06c2bff4dd2585ca0800000000000000
+      internalID: -6027976990752297888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_59
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f2ab45abe0799c90800000000000000
+      internalID: -7162569574963240203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_60
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf64f5517e3fe9a90800000000000000
+      internalID: -7305133371726805253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_61
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07ae09096b1b09d30800000000000000
+      internalID: 4436241030627519088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_62
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad1970c29bf0f47b0800000000000000
+      internalID: -5237950553626537510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_63
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35f6815f8fb7205a0800000000000000
+      internalID: -6556541798303895725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7c858daef6983580800000000000000
+      internalID: -8847155447392269187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_65
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddbefe0134c29a2d0800000000000000
+      internalID: -3267031388121994275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_66
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2781fe3029e203790800000000000000
+      internalID: -7552485370434217870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_67
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaa6b9a7239345720800000000000000
+      internalID: 2833952954491038382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_68
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 935ed8e1f6788fb60800000000000000
+      internalID: 7780117267606267193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_69
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e4a3be26abaff780800000000000000
+      internalID: -8647004029291617048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_70
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7741780704dd7900800000000000000
+      internalID: 683935845101684605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_71
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7779dba8063768f10800000000000000
+      internalID: 2271629920536729463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_72
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 048f1d58a73b75ad0800000000000000
+      internalID: -2713502911654922176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_73
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9150cde157fc05ad0800000000000000
+      internalID: -2715442473368550119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_74
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df6fa74ce8e664970800000000000000
+      internalID: 8738793686419830525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_75
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e172bbc0528974f0800000000000000
+      internalID: -830489372746681880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_76
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d39008961118c0d10800000000000000
+      internalID: 2093189838604863805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_77
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08895aabe32b98830800000000000000
+      internalID: 4073983320422455424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_78
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d36bf66f09ecc320800000000000000
+      internalID: 2579692938937983955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_79
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8539005cdde7a8f30800000000000000
+      internalID: 4578611462133551960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd6c8a8767535a050800000000000000
+      internalID: 5811109677138233051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_81
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24bcbafe78a463f90800000000000000
+      internalID: -6974305025234580670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_82
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 871161ebd3c1d65b0800000000000000
+      internalID: -5373607728875433608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_83
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fb739c4f4638f4a0800000000000000
+      internalID: -6559433143050077194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_84
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ee999e07ce535680800000000000000
+      internalID: -8767559840523772188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_85
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3548636a5356dedb0800000000000000
+      internalID: -4761037949964483501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_86
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30e069a442e628a60800000000000000
+      internalID: 7674817817141972483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_87
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f70eac33d1a6d0f60800000000000000
+      internalID: 8002168786562769023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_88
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 526861deb387104e0800000000000000
+      internalID: -2017198959309191643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_89
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c817462aef4fb470800000000000000
+      internalID: 8412530496034511048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_90
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1abe432f232c12ca0800000000000000
+      internalID: -6043335700886787167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_91
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d21eed0583402bd00800000000000000
+      internalID: 986855908269023533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_92
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46e2bc024add83bd0800000000000000
+      internalID: -2650124683712975260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_93
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a0b12a8af6e58180800000000000000
+      internalID: -9113624307180654432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_94
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a6dabaa8ebdb86f0800000000000000
+      internalID: -681209126273231197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_95
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dba7e18ac992beb90800000000000000
+      internalID: -7211624625491510595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aea3b06abcccd5b0800000000000000
+      internalID: -5342169957109879130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_97
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e87b83fcbc80df180800000000000000
+      internalID: -9080091602261067890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_98
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e7d1f03348da0b60800000000000000
+      internalID: 7713215094920959975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_99
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 931c0e0f8eb2c7f50800000000000000
+      internalID: 6880422610188943673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_100
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d32331a11827732b0800000000000000
+      internalID: -5604885312425479619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_101
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4924ad505e75e4290800000000000000
+      internalID: -7904283654831324524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_102
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ee453ce77719e890800000000000000
+      internalID: -7428380306539458846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_103
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56dcf60b8675e7f90800000000000000
+      internalID: -6954024667465134747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_104
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a32bf85b3feb4250800000000000000
+      internalID: 5930096372538352550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_105
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bb5b12ffeab2ec30800000000000000
+      internalID: 4387274526734113718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_106
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee4d1319eeda8cd20800000000000000
+      internalID: 3299077967198672110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_107
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e30fefcf0d3da6f70800000000000000
+      internalID: 9181383684899401790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_108
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76c8526d920221d90800000000000000
+      internalID: -7128599896115540889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_109
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 674c80f5e380f1410800000000000000
+      internalID: 1449886669011993718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_110
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbfcd3a7af17b0090800000000000000
+      internalID: -8067228986897477699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_111
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6579ab796c848cdd0800000000000000
+      internalID: -2465640778199034026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aff4126fbbf5a7e0800000000000000
+      internalID: -1754719680388071519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_113
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb681ceeac54e8980800000000000000
+      internalID: -8534807505929140548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_114
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f18da9084fb6d990800000000000000
+      internalID: -7361486224769580559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_115
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a38e62126665650800000000000000
+      internalID: 6221272227831626354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_116
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0933587db0963d6f0800000000000000
+      internalID: -661069220711943280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_117
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98bf5e0ad0be381e0800000000000000
+      internalID: -2196653749460141175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_118
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a826be82e4859c4b0800000000000000
+      internalID: -5419703583846473078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_119
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33f31b51a4c902ce0800000000000000
+      internalID: -1431972839498367181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_120
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e156431dfb85b52b0800000000000000
+      internalID: -5594780531205839586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_121
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a79a049fa6f6955d0800000000000000
+      internalID: -3073302765464671878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_122
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db5ad6e21a4789500800000000000000
+      internalID: 403200402267153853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_123
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b10b6848afa60810800000000000000
+      internalID: 1731264244074873272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_124
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60264f38a0fb54b00800000000000000
+      internalID: 812265359694651910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_125
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc8452da2f8db8940800000000000000
+      internalID: 5299567923330107595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_126
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ebf40cf145307440800000000000000
+      internalID: 4931500149488024553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi-explosion-one_127
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 233f9aace59149eb0800000000000000
+      internalID: -4714115015032310990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a04a532acbb4c6a489297b269b2f08d3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      scifi-explosion-one_0: -3468216428386083726
+      scifi-explosion-one_1: 1786025879817312707
+      scifi-explosion-one_10: 4546012511993743178
+      scifi-explosion-one_100: -5604885312425479619
+      scifi-explosion-one_101: -7904283654831324524
+      scifi-explosion-one_102: -7428380306539458846
+      scifi-explosion-one_103: -6954024667465134747
+      scifi-explosion-one_104: 5930096372538352550
+      scifi-explosion-one_105: 4387274526734113718
+      scifi-explosion-one_106: 3299077967198672110
+      scifi-explosion-one_107: 9181383684899401790
+      scifi-explosion-one_108: -7128599896115540889
+      scifi-explosion-one_109: 1449886669011993718
+      scifi-explosion-one_11: 5782581634680718762
+      scifi-explosion-one_110: -8067228986897477699
+      scifi-explosion-one_111: -2465640778199034026
+      scifi-explosion-one_112: -1754719680388071519
+      scifi-explosion-one_113: -8534807505929140548
+      scifi-explosion-one_114: -7361486224769580559
+      scifi-explosion-one_115: 6221272227831626354
+      scifi-explosion-one_116: -661069220711943280
+      scifi-explosion-one_117: -2196653749460141175
+      scifi-explosion-one_118: -5419703583846473078
+      scifi-explosion-one_119: -1431972839498367181
+      scifi-explosion-one_12: -3031042431461236734
+      scifi-explosion-one_120: -5594780531205839586
+      scifi-explosion-one_121: -3073302765464671878
+      scifi-explosion-one_122: 403200402267153853
+      scifi-explosion-one_123: 1731264244074873272
+      scifi-explosion-one_124: 812265359694651910
+      scifi-explosion-one_125: 5299567923330107595
+      scifi-explosion-one_126: 4931500149488024553
+      scifi-explosion-one_127: -4714115015032310990
+      scifi-explosion-one_13: 1485578034943146736
+      scifi-explosion-one_14: -785774685236558807
+      scifi-explosion-one_15: -4433271225956950134
+      scifi-explosion-one_16: 7848659734732114777
+      scifi-explosion-one_17: -4540803891559126498
+      scifi-explosion-one_18: 5365839110098835640
+      scifi-explosion-one_19: 5980808013877343452
+      scifi-explosion-one_2: 2235452307274374733
+      scifi-explosion-one_20: 2315214876003673714
+      scifi-explosion-one_21: -2504364308471072047
+      scifi-explosion-one_22: 9215666591051084558
+      scifi-explosion-one_23: 7970762303012941173
+      scifi-explosion-one_24: -2281063701999565470
+      scifi-explosion-one_25: -4621714283186477295
+      scifi-explosion-one_26: 6148586274586621499
+      scifi-explosion-one_27: 1444204605257056793
+      scifi-explosion-one_28: 7640259169552751400
+      scifi-explosion-one_29: -5158440709171209493
+      scifi-explosion-one_3: -2560828933201248487
+      scifi-explosion-one_30: 2808183852133465501
+      scifi-explosion-one_31: -7957316142471457764
+      scifi-explosion-one_32: -4478606736035305162
+      scifi-explosion-one_33: 7047783411750936021
+      scifi-explosion-one_34: -2140497523989942011
+      scifi-explosion-one_35: -2856844876501497051
+      scifi-explosion-one_36: 1428892333344492220
+      scifi-explosion-one_37: -3922732027828522366
+      scifi-explosion-one_38: -7331880437096877440
+      scifi-explosion-one_39: -8453273987581283107
+      scifi-explosion-one_4: -3475216956466188897
+      scifi-explosion-one_40: 7703543661198944581
+      scifi-explosion-one_41: 100640632929390072
+      scifi-explosion-one_42: -1199719219926843090
+      scifi-explosion-one_43: 6946215886823437571
+      scifi-explosion-one_44: 4628368454102611749
+      scifi-explosion-one_45: -419296573143272036
+      scifi-explosion-one_46: -6070007089760408449
+      scifi-explosion-one_47: -6443528095035064014
+      scifi-explosion-one_48: 7008519342926361294
+      scifi-explosion-one_49: 9071000343015601869
+      scifi-explosion-one_5: -8130946530701322353
+      scifi-explosion-one_50: -1984402024647775899
+      scifi-explosion-one_51: -3933200621061660398
+      scifi-explosion-one_52: 2166506262572965796
+      scifi-explosion-one_53: -7183668438747608233
+      scifi-explosion-one_54: 4994277390248696147
+      scifi-explosion-one_55: -6358066451837206333
+      scifi-explosion-one_56: 807424030360025868
+      scifi-explosion-one_57: 3329233033121018869
+      scifi-explosion-one_58: -6027976990752297888
+      scifi-explosion-one_59: -7162569574963240203
+      scifi-explosion-one_6: 6528370889383400987
+      scifi-explosion-one_60: -7305133371726805253
+      scifi-explosion-one_61: 4436241030627519088
+      scifi-explosion-one_62: -5237950553626537510
+      scifi-explosion-one_63: -6556541798303895725
+      scifi-explosion-one_64: -8847155447392269187
+      scifi-explosion-one_65: -3267031388121994275
+      scifi-explosion-one_66: -7552485370434217870
+      scifi-explosion-one_67: 2833952954491038382
+      scifi-explosion-one_68: 7780117267606267193
+      scifi-explosion-one_69: -8647004029291617048
+      scifi-explosion-one_7: 8212091314104539025
+      scifi-explosion-one_70: 683935845101684605
+      scifi-explosion-one_71: 2271629920536729463
+      scifi-explosion-one_72: -2713502911654922176
+      scifi-explosion-one_73: -2715442473368550119
+      scifi-explosion-one_74: 8738793686419830525
+      scifi-explosion-one_75: -830489372746681880
+      scifi-explosion-one_76: 2093189838604863805
+      scifi-explosion-one_77: 4073983320422455424
+      scifi-explosion-one_78: 2579692938937983955
+      scifi-explosion-one_79: 4578611462133551960
+      scifi-explosion-one_8: 4231625864068150792
+      scifi-explosion-one_80: 5811109677138233051
+      scifi-explosion-one_81: -6974305025234580670
+      scifi-explosion-one_82: -5373607728875433608
+      scifi-explosion-one_83: -6559433143050077194
+      scifi-explosion-one_84: -8767559840523772188
+      scifi-explosion-one_85: -4761037949964483501
+      scifi-explosion-one_86: 7674817817141972483
+      scifi-explosion-one_87: 8002168786562769023
+      scifi-explosion-one_88: -2017198959309191643
+      scifi-explosion-one_89: 8412530496034511048
+      scifi-explosion-one_9: 6468692129061852303
+      scifi-explosion-one_90: -6043335700886787167
+      scifi-explosion-one_91: 986855908269023533
+      scifi-explosion-one_92: -2650124683712975260
+      scifi-explosion-one_93: -9113624307180654432
+      scifi-explosion-one_94: -681209126273231197
+      scifi-explosion-one_95: -7211624625491510595
+      scifi-explosion-one_96: -5342169957109879130
+      scifi-explosion-one_97: -9080091602261067890
+      scifi-explosion-one_98: 7713215094920959975
+      scifi-explosion-one_99: 6880422610188943673
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

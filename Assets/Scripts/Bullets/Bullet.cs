@@ -33,15 +33,20 @@ public class Bullet : MonoBehaviour
 
     [Header("Particle Effects")]
     [SerializeField] protected ParticleSystem hitEffect;
+    TrailRenderer trailRenderer;
 
+    protected SpriteRenderer sr;
 
     protected void Start()
     {
+        sr = GetComponent<SpriteRenderer>();    
+        trailRenderer = GetComponent<TrailRenderer>();
         pSpawner = FindFirstObjectByType<ParticleSpawner>();
     }
 
     public void Init(BulletData data, IObjectPool<Bullet> bulletPoolBelonged,PlayerController pc,Vector2 position)
     {
+
         if (!initFirstTimeValues)
         {
             dataReference = data;
@@ -61,6 +66,7 @@ public class Bullet : MonoBehaviour
         this.bulletPoolBelonged = bulletPoolBelonged;
         playerReference = pc;     
         generationPoint = position;
+
     }
 
     public virtual void ApplyModeSpecification()
@@ -83,6 +89,8 @@ public class Bullet : MonoBehaviour
 
     public virtual void Release()
     {
+        if(trailRenderer != null)
+            trailRenderer.Clear();
         updatedData = baseData;
         if(gameObject.activeSelf)
             bulletPoolBelonged.Release(this);

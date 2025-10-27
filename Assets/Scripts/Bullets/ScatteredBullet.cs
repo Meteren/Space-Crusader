@@ -38,7 +38,7 @@ public class ScatteredBullet : Bullet
 
         transform.position = startPos;
 
-        transform.rotation = Quaternion.Euler(0, 0, rotationVal);
+        transform.rotation = Quaternion.Euler(0, 0, rotationVal + 90f);
 
         normalizedDirection = (transform.position - playerReference.transform.position).normalized;
 
@@ -48,7 +48,7 @@ public class ScatteredBullet : Bullet
 
         reflectedScatteredBullet.transform.position = reflectedStartPos;
 
-        reflectedScatteredBullet.transform.rotation = Quaternion.Euler(0, 0, -rotationVal);
+        reflectedScatteredBullet.transform.rotation = Quaternion.Euler(0, 0, -rotationVal + 90f);
 
         reflectedScatteredBullet.Init(dataReference, bulletPoolBelonged, playerReference, reflectedStartPos);
 

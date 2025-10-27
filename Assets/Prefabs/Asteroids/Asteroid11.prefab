@@ -171,6 +171,7 @@ MonoBehaviour:
   healthIndicator: {fileID: 397693673886234}
   damageIndicationTime: 0.2
   isDestroyed: 0
+  explosionEffect: {fileID: 8734486918785700749, guid: d25ae65007cdb3c4d8a71ba5adfd3d61, type: 3}
   movePositions:
   - {fileID: 0}
   - {fileID: 0}

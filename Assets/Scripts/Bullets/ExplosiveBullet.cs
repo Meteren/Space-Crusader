@@ -32,7 +32,7 @@ public class ExplosiveBullet : Bullet
     [Header("Impact Values")]
     [SerializeField] float impactRadius;
     [SerializeField] private float impactTime;
-    [SerializeField] private float impactInterval;
+    [SerializeField] private float impactAmount;
     [SerializeField] private LayerMask layersToBeEffected;
 
     public float ImpactRadius { get => impactRadius;}
@@ -53,9 +53,21 @@ public class ExplosiveBullet : Bullet
     public List<IDamageable<Bullet>> enemiesToBeEffected = new();
     CountDown countDownToDestroy;
 
+    Animator animator;
+    float explosionDuration;
+    Vector2 baseScale;
+    float impactInterval => explosionDuration / impactAmount;
+
     //--
     private void Awake()
     {
+        baseScale = transform.localScale;
+        animator = GetComponent<Animator>();
+        RuntimeAnimatorController rtController = animator.runtimeAnimatorController;
+        foreach (var clip in rtController.animationClips)
+            if (clip.name == "explode")
+                explosionDuration = clip.length;
+
         targetLocator = GetComponentInChildren<TargetLocator>();
     }
 
@@ -171,6 +183,10 @@ public class ExplosiveBullet : Bullet
 
         Vector2 speedVector = new Vector2(Mathf.Cos(radian) * choosedSide * updatedData.speed.x, Mathf.Sin(radian) * updatedData.speed.y);
 
+        float rotation = Mathf.Atan2(speedVector.y, speedVector.x) * Mathf.Rad2Deg * choosedSide;
+
+        transform.rotation = Quaternion.Euler(0, 0, rotation);
+
         rb.linearVelocity = speedVector;
     }
     public override void SetPosition()
@@ -213,11 +229,14 @@ public class ExplosiveBullet : Bullet
 
     public override void Release()
     {
+        animator.SetBool("explode", false);
+        transform.localScale = baseScale;
         base.Release();
         interpolationVal = 0;
         rb.linearVelocity = Vector2.zero;
         inImpact = false;
         capturedTarget = null;
+        
     }
     
     protected override void OnTriggerEnter2D(Collider2D collision)
@@ -237,6 +256,8 @@ public class ExplosiveBullet : Bullet
                 return;
 
             inImpact = true;
+            sr.sortingOrder = Mathf.RoundToInt(transform.position.y * 100);
+            animator.SetBool("explode", true);
             List<Collider2D> asteroidsInRadius = Physics2D.OverlapCircleAll(transform.position, impactRadius,layersToBeEffected).ToList();
             enemiesToBeEffected = asteroidsInRadius
                 .Select(x => x.GetComponent<IDamageable<Bullet>>())
@@ -245,15 +266,16 @@ public class ExplosiveBullet : Bullet
             for (int i = 0; i < enemiesToBeEffected.Count; i++)
             {
                 Asteroid asteroidToBeEffected = enemiesToBeEffected[i] as Asteroid;
-                asteroidToBeEffected.AddEffect(new DamageOverTime<Bullet>(this,impactTime,impactInterval,typeof(ExplosiveBullet)));
+                asteroidToBeEffected.AddEffect(new DamageOverTime<Bullet>(this,explosionDuration,impactInterval,typeof(ExplosiveBullet)));
                 
             }
             rb.linearVelocity = Vector2.zero;
-            countDownToDestroy = new CountDown(impactTime, GetType().Name);
+            
+            countDownToDestroy = new CountDown(explosionDuration, GetType().Name);
             countDownToDestroy.onEnd += Release;
+            
             countDownToDestroy.StartTimer();
 
-            //play a particle effect
         }
         
     }

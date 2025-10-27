@@ -124,7 +124,6 @@ public class LevelController : MonoBehaviour
 
             skillWindowProgressBar.value = progressAmount;
 
-            Debug.Log("Skill window progress bar value: " + skillWindowProgressBar.value);
 
             if (effectGridController.ActiveMaxedOutEffectCount != effectGridController.EffectCount)
             {

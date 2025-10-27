@@ -422,6 +422,7 @@ MonoBehaviour:
   healthIndicator: {fileID: 805111236645716935}
   damageIndicationTime: 0.2
   isDestroyed: 0
+  explosionEffect: {fileID: 8734486918785700749, guid: d25ae65007cdb3c4d8a71ba5adfd3d61, type: 3}
 --- !u!114 &-2118745605704757078
 MonoBehaviour:
   m_ObjectHideFlags: 0

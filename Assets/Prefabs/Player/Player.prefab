@@ -5537,10 +5537,12 @@ MonoBehaviour:
   rotationExtension: 10
   offsetX: 0.2
   rocketParticle: {fileID: 1054597726043648335}
+  shipExplosionEffect: {fileID: 3812580249205056796, guid: 6499198362f8b894c8061114f85b0dc7, type: 3}
   particleDuration: 0
   particleStart: -0.02
   movePosXMin: 0
   movePosXMax: 0
+  health: 3
 --- !u!114 &3698352427753473162
 MonoBehaviour:
   m_ObjectHideFlags: 0

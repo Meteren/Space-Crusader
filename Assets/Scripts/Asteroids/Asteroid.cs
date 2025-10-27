@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
-
+using static UnityEngine.ParticleSystem;
 public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerSkill>
 {
     [Header("Health Segment")]
-    public float health;
+    [HideInInspector] public float health;
     [SerializeField] private TextMeshProUGUI healthIndicator;
     [SerializeField] private float damageIndicationTime;
 
@@ -31,8 +31,17 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerS
 
     LevelController levelController;
 
+
+    [Header("Effects")]
+    [SerializeField] protected ParticleSystem explosionEffect;
+
+    ParticleSpawner pSpawner;
+
+    float referenceScale = 0.2352913f;
+
     protected virtual void Start()
     {
+        pSpawner = FindFirstObjectByType<ParticleSpawner>();
         levelController = GameObject.Find("LevelGeneration").GetComponent<LevelController>();
 
         //transform.localScale *= CameraViewportHandler.Instance.scaleFactor;
@@ -40,9 +49,10 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerS
         healthIndicator.text = health.ToString();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+
         cam = Camera.main;
         circleCollider = GetComponent<CircleCollider2D>();
-        //rb.linearVelocity = new Vector2(0, -2);
+        Debug.Log($"{gameObject.name} Radius:{circleCollider.radius}");
     }
     protected virtual void Update()
     {
@@ -77,7 +87,6 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerS
                 exBullet.enemiesToBeEffected.Remove(this);
                 return;
             }
-            Debug.Log("In Here");
         }
 
         if (damageCoroutine != null)
@@ -87,10 +96,13 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerS
         health -= bullet.updatedData.damageAmount;
         healthIndicator.text = health.ToString();
         Debug.Log("On Damage");
+
         if (health <= 0)
         {
             //play a vfx in here such as particle effect or erosion like shader effect
+            CreateEplosionParticle();
             Destroy(gameObject);
+
         }
 
     }
@@ -108,7 +120,9 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerS
         if (health <= 0)
         {
             //play a vfx in here such as particle effect or erosion like shader effect
+            CreateEplosionParticle();
             Destroy(gameObject);
+
         }
     }
 
@@ -167,6 +181,24 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerS
             return;
         }
         levelController.progressAmount += 0.25f * levelController.finalDecreaseVal;//can be changed
+    }
+
+    private void CreateEplosionParticle()
+    {
+
+        ParticleSystem instantiatedParticle = pSpawner.ParticleFactory.Create(explosionEffect, transform.position);
+
+        ParticleHandler pHandler = instantiatedParticle.GetComponent<ParticleHandler>();
+
+        float spriteWidth = sr.size.x;
+
+        float scaleFactor = circleCollider.radius / referenceScale;
+    
+        pHandler.SetScale(scaleFactor);
+
+        instantiatedParticle.Play();
+
+        pHandler.InitReturnToPoolProcess();
     }
 
 

@@ -10,6 +10,7 @@ public class LinearMovingAsteroid : Asteroid
     protected override void Update()
     {
         base.Update();
+        MoveLogic();
 
     }
     public override void MoveLogic()

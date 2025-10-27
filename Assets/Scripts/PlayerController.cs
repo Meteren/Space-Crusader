@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Particle")]
     [SerializeField] private ParticleSystem rocketParticle;
+    [SerializeField] private GameObject shipExplosionEffect;
     [SerializeField,HideInInspector] private float particleDuration;
     [SerializeField] private float particleStart;
 
@@ -169,6 +170,7 @@ public class PlayerController : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            Instantiate(shipExplosionEffect,transform.position,Quaternion.identity);
         }
 
         StartCoroutine(WaitForNextDamageRoutine());
