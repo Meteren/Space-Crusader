@@ -9,7 +9,6 @@ public class Level
 
     [SerializeField] private int partElementsHpBoostAmount;
 
-
     public List<GameObject> LevelParts {  get { return levelParts; } }
 
     private int minHealthStartPoint;
@@ -47,6 +46,7 @@ public class Level
                 }
                 int randomValueForHealth = UnityEngine.Random.Range(minHealthStartPoint, minHealth * 3);
                 asteroid.health = randomValueForHealth;
+                asteroid.prevHealth = asteroid.health;
             }
                 
         }

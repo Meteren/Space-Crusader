@@ -49,7 +49,7 @@ public class LevelController : MonoBehaviour
     //--
     float stopAt;
 
-    float levelBarInceraseSpeed = 0.2f;
+    float levelBarIncreaseSpeed = 0.2f;
     //--
 
     //--End level menu
@@ -63,6 +63,9 @@ public class LevelController : MonoBehaviour
     float indicatorMoveCenterDuration;
     float indicatorMoveRightDuration;
     bool generationStarted;
+
+    [Header("Score Text")]
+    [SerializeField] private TextMeshProUGUI scoreText;
 
     bool isLevelFinished;
 
@@ -151,7 +154,7 @@ public class LevelController : MonoBehaviour
                 skillWindowProgressBar.value = 1f;
             }
 
-
+            UpdateScore();
             IncreaseLevelBar();
             MoveLevelParts();
             TryDeleteAndCreateParts();
@@ -244,7 +247,7 @@ public class LevelController : MonoBehaviour
 
         if(levelProgressBar.value < stopAt)
         {
-            levelProgressBar.value += Time.deltaTime * levelBarInceraseSpeed;
+            levelProgressBar.value += Time.deltaTime * levelBarIncreaseSpeed;
         }
 
         stopAt = Mathf.Clamp(levelProgressBar.value, 0, stopAt);
@@ -297,6 +300,13 @@ public class LevelController : MonoBehaviour
         createdLevelParts.Add(levelPart);
         partIndex++;
         GameManager.instance.initPartGenerationProcess = false;
+    }
+
+
+    private void UpdateScore()
+    {
+        scoreText.text = $"Score: {GameManager.instance.scoreInALevel}";
+        GameManager.instance.AdjustHighestScoreIfNeeded();
     }
  
 }

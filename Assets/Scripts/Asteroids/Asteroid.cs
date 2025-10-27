@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
-using static UnityEngine.ParticleSystem;
+
 public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerSkill>
 {
     [Header("Health Segment")]
@@ -11,7 +11,7 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerS
     [SerializeField] private TextMeshProUGUI healthIndicator;
     [SerializeField] private float damageIndicationTime;
 
-    Rigidbody2D rb;
+    public float prevHealth;
     SpriteRenderer sr;
 
     public bool isDestroyed;
@@ -47,7 +47,6 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerS
         //transform.localScale *= CameraViewportHandler.Instance.scaleFactor;
         healthIndicator = healthIndicator.GetComponentInChildren<TextMeshProUGUI>();
         healthIndicator.text = health.ToString();
-        rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
 
         cam = Camera.main;
@@ -93,13 +92,18 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerS
             StopCoroutine(damageCoroutine);
 
         damageCoroutine = StartCoroutine(DamageIndicator());
+
         health -= bullet.updatedData.damageAmount;
+
+        GameManager.instance.scoreInALevel += prevHealth - health;
+
+        prevHealth = health;
+
         healthIndicator.text = health.ToString();
         Debug.Log("On Damage");
 
         if (health <= 0)
         {
-            //play a vfx in here such as particle effect or erosion like shader effect
             CreateEplosionParticle();
             Destroy(gameObject);
 
@@ -115,11 +119,14 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerS
 
         damageCoroutine = StartCoroutine(DamageIndicator());
         health -= damageSource.damageAmount;
+
+        GameManager.instance.scoreInALevel += prevHealth - (health < 0 ? 0 : health);
+
         healthIndicator.text = health.ToString();
+
         Debug.Log("On Damage");
         if (health <= 0)
         {
-            //play a vfx in here such as particle effect or erosion like shader effect
             CreateEplosionParticle();
             Destroy(gameObject);
 

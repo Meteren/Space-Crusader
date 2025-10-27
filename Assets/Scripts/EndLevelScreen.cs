@@ -9,6 +9,7 @@ public class EndLevelScreen : MonoBehaviour
         =>
         GameManager.instance.InitSceneChange(0);
 
-    public void EnableOrDisable() => gameObject.SetActive(!gameObject.activeSelf);
+    private void OnEnable() => GameManager.instance.AdjustHighestScoreIfNeeded();
+
 
 }

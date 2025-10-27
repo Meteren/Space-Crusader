@@ -24,8 +24,13 @@ public class GameManager : SingleTon<GameManager>
 
 
     public bool initPartGenerationProcess;
+
+    public float highestScore;
+
+    public float scoreInALevel;
     private void Start()
     {
+
         DontDestroyOnLoad(gameObject);
 
         panelAnimator = panel.GetComponent<Animator>(); 
@@ -51,7 +56,7 @@ public class GameManager : SingleTon<GameManager>
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode sceneMode)
     {
-        
+        ResetScore();
         if (scene.buildIndex != 0)
         {
             playerSpawner.Spawn();
@@ -135,10 +140,33 @@ public class GameManager : SingleTon<GameManager>
         PlayerPrefs.Save();
     }
 
+    public void SaveHighestScore()
+    {
+        PlayerPrefs.SetFloat("HighestScore", highestScore);
+        PlayerPrefs.Save();
+    }
+
     public int GetSavedLevel()
     {
         return PlayerPrefs.GetInt("LevelIndex", 0);
     }
+
+    public float GetSavedScore()
+    {
+        return PlayerPrefs.GetFloat("HighestScore", 0);
+    }
+
+
+    public void AdjustHighestScoreIfNeeded()
+    {
+        if (scoreInALevel > highestScore)
+        {
+            highestScore = scoreInALevel;
+            SaveHighestScore();
+        }
+    }
+
+    public void ResetScore() => scoreInALevel = 0;
 
 
 
