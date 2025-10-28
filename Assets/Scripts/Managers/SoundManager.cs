@@ -8,7 +8,7 @@ public class SoundManager : SingleTon<SoundManager>
     [SerializeField] private AudioSource musicSource;
 
 
-    public AudioSource MusicSource { get { return sfxSource; } }
+    public AudioSource MusicSource { get { return musicSource; } }
 
     public void PlayMusic(AudioClip clip,float volume)
     {
