@@ -24,6 +24,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField,HideInInspector] private float particleDuration;
     [SerializeField] private float particleStart;
 
+    [Header("SFX")]
+    [SerializeField] private AudioClip explosionSFX;
+    [SerializeField] private AudioClip damageSFX;
+
     private BoxCollider2D boundary;
     
     private Vector2 touchBegin;
@@ -41,7 +45,7 @@ public class PlayerController : MonoBehaviour
 
     List<Heart> hearts = new();
 
-    public int health = 3;
+    [HideInInspector] public int health = 3;
 
     bool cantBeDamaged;
 
@@ -157,9 +161,16 @@ public class PlayerController : MonoBehaviour
 
         if (health <= 0)
         {
+            Instantiate(shipExplosionEffect, transform.position, Quaternion.identity);
+            SoundManager.instance.PlaySFX(explosionSFX, 1f);
             Destroy(gameObject);
-            Instantiate(shipExplosionEffect,transform.position,Quaternion.identity);
+
         }
+        else
+        {
+            SoundManager.instance.PlaySFX(damageSFX, 1f);
+        }
+
 
         StartCoroutine(WaitForNextDamageRoutine());
 

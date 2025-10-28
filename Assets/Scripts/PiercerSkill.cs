@@ -7,6 +7,7 @@ public class PiercerSkill : MonoBehaviour
 {
     [Header("Piercer Attributes")]
     [SerializeField] private float fillSpeed;
+    [SerializeField] private AudioClip soundEffect;
 
     [HideInInspector] private Slider slider;
 
@@ -40,6 +41,7 @@ public class PiercerSkill : MonoBehaviour
         {
             if(slider.value >= 1f)
             {
+                SoundManager.instance.PlaySFX(soundEffect,1f);
                 if(pController == null)
                     pController = FindFirstObjectByType<PlayerController>();
 

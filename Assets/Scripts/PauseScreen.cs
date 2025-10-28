@@ -15,7 +15,7 @@ public class PauseScreen : MonoBehaviour
         if(GameManager.instance.initPartGenerationProcess)
             GameManager.instance.initPartGenerationProcess = false;
         if(!effectGridController.gameObject.activeSelf)
-            GameManager.instance.PauseOrContinueGame();
+            GameManager.instance.PauseOrContinueGame(false);
     }
 
     public void NavigateToMainMenu()

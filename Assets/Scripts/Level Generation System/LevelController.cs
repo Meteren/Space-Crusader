@@ -14,6 +14,9 @@ public class LevelController : MonoBehaviour
     [SerializeField] private Transform movePoint;
     [SerializeField] private float levelPartMoveSpeed;
 
+    [Header("Background Music")]
+    [SerializeField] private AudioClip backgroundMusic;
+
     public int LevelCount { get => levels.Count; }
 
     private Slider skillWindowProgressBar;
@@ -287,6 +290,9 @@ public class LevelController : MonoBehaviour
         levelIndicatorAnimator.SetBool("slideToRight", true);
         yield return new WaitForSeconds(indicatorMoveRightDuration);
         levelIndicator.SetActive(false);
+
+        SoundManager.instance.PlayMusic(backgroundMusic,0.5f);
+
         StartLevelGeneration();
     }
     private void StartLevelGeneration()

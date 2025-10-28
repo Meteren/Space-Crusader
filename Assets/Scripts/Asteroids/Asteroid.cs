@@ -44,7 +44,6 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerS
         pSpawner = FindFirstObjectByType<ParticleSpawner>();
         levelController = GameObject.Find("LevelGeneration").GetComponent<LevelController>();
 
-        //transform.localScale *= CameraViewportHandler.Instance.scaleFactor;
         healthIndicator = GetComponentInChildren<TextMeshProUGUI>();
         healthIndicator.text = health.ToString();
         sr = GetComponent<SpriteRenderer>();

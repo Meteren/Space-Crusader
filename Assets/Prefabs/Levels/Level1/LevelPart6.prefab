@@ -295,6 +295,10 @@ PrefabInstance:
       value: Asteroid8
       objectReference: {fileID: 0}
     - target: {fileID: 7690205774214262086, guid: 0f747fbcd39cdc04d99f64c0b0dfb6ee, type: 3}
+      propertyPath: orbitSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690205774214262086, guid: 0f747fbcd39cdc04d99f64c0b0dfb6ee, type: 3}
       propertyPath: centerPoint
       value: 
       objectReference: {fileID: 552915056219668818}
@@ -432,7 +436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7782252331292697525, guid: d87395dda52877344bbde714af688f9e, type: 3}
       propertyPath: orbitSpeed
-      value: 2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7782252331292697525, guid: d87395dda52877344bbde714af688f9e, type: 3}
       propertyPath: centerPoint
@@ -750,11 +754,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7782252331292697525, guid: d87395dda52877344bbde714af688f9e, type: 3}
       propertyPath: radius
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7782252331292697525, guid: d87395dda52877344bbde714af688f9e, type: 3}
       propertyPath: orbitSpeed
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7782252331292697525, guid: d87395dda52877344bbde714af688f9e, type: 3}
       propertyPath: centerPoint
@@ -883,6 +887,14 @@ PrefabInstance:
     - target: {fileID: 5838896038688429728, guid: 0f747fbcd39cdc04d99f64c0b0dfb6ee, type: 3}
       propertyPath: m_Name
       value: Asteroid8 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690205774214262086, guid: 0f747fbcd39cdc04d99f64c0b0dfb6ee, type: 3}
+      propertyPath: side
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690205774214262086, guid: 0f747fbcd39cdc04d99f64c0b0dfb6ee, type: 3}
+      propertyPath: orbitSpeed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7690205774214262086, guid: 0f747fbcd39cdc04d99f64c0b0dfb6ee, type: 3}
       propertyPath: centerPoint
@@ -1204,7 +1216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7782252331292697525, guid: d87395dda52877344bbde714af688f9e, type: 3}
       propertyPath: orbitSpeed
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7782252331292697525, guid: d87395dda52877344bbde714af688f9e, type: 3}
       propertyPath: centerPoint
@@ -1459,6 +1471,10 @@ PrefabInstance:
       value: Asteroid8 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 7690205774214262086, guid: 0f747fbcd39cdc04d99f64c0b0dfb6ee, type: 3}
+      propertyPath: orbitSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690205774214262086, guid: 0f747fbcd39cdc04d99f64c0b0dfb6ee, type: 3}
       propertyPath: centerPoint
       value: 
       objectReference: {fileID: 552915056219668818}
@@ -1523,6 +1539,18 @@ PrefabInstance:
     - target: {fileID: 5838896038688429728, guid: 0f747fbcd39cdc04d99f64c0b0dfb6ee, type: 3}
       propertyPath: m_Name
       value: Asteroid8 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690205774214262086, guid: 0f747fbcd39cdc04d99f64c0b0dfb6ee, type: 3}
+      propertyPath: side
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690205774214262086, guid: 0f747fbcd39cdc04d99f64c0b0dfb6ee, type: 3}
+      propertyPath: radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690205774214262086, guid: 0f747fbcd39cdc04d99f64c0b0dfb6ee, type: 3}
+      propertyPath: orbitSpeed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7690205774214262086, guid: 0f747fbcd39cdc04d99f64c0b0dfb6ee, type: 3}
       propertyPath: centerPoint

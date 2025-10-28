@@ -149,7 +149,7 @@ public class EffectGridController : MonoBehaviour
     {
         gameObject.SetActive(!gameObject.activeSelf);
 
-        GameManager.instance.PauseOrContinueGame();
+        GameManager.instance.PauseOrContinueGame(true);
 
     }
 

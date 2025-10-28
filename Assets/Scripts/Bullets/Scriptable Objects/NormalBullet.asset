@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: NormalBullet
   m_EditorClassIdentifier: 
   prefab: {fileID: 5567295651358079545, guid: 3049ffeb7ff1321439946d31195f46e4, type: 3}
+  shootingSFX: {fileID: 8300000, guid: c17a24156d522ea44804ee3bad4d1e14, type: 3}
   bulletReadyToUse: 1
   generationTime: 0.8
   defaultGenTime: 0.8

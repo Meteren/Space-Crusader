@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: ExplosiveBullet
   m_EditorClassIdentifier: 
   prefab: {fileID: -4185930083178397746, guid: 2bef29794df49834d85d2ef831e93ff6, type: 3}
+  shootingSFX: {fileID: 8300000, guid: c82656be5506e67478788258cc5825cf, type: 3}
   bulletReadyToUse: 1
   generationTime: 4
   defaultGenTime: 4

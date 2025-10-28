@@ -3815,6 +3815,7 @@ MonoBehaviour:
   levelGenerationPoint: {fileID: 834994815}
   movePoint: {fileID: 1747088764}
   levelPartMoveSpeed: 0.8
+  backgroundMusic: {fileID: 8300000, guid: 2073a88d791bd5e4b9c891002d4afd3f, type: 3}
   partIndex: 0
   progressAmount: 0
   scoreText: {fileID: 1982173222}
@@ -3990,6 +3991,7 @@ MonoBehaviour:
   isGamePaused: 0
   panel: {fileID: 1600246468}
   waitFor: 1
+  panelAnimator: {fileID: 0}
   initPartGenerationProcess: 0
   highestScore: 0
   scoreInALevel: 0

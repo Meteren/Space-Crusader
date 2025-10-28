@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fillSpeed: 0.1
+  soundEffect: {fileID: 8300000, guid: 4fa899015fdf8364c8746fec83e6e80b, type: 3}
   hitDetectionLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -5540,6 +5541,8 @@ MonoBehaviour:
   shipExplosionEffect: {fileID: 3812580249205056796, guid: 6499198362f8b894c8061114f85b0dc7, type: 3}
   particleDuration: 0
   particleStart: -0.02
+  explosionSFX: {fileID: 8300000, guid: 2c7e5bb2d78043d4392ca275c4801b7f, type: 3}
+  damageSFX: {fileID: 8300000, guid: 09821e640b77f414ea92c4823744b176, type: 3}
   movePosXMin: 0
   movePosXMax: 0
   health: 3

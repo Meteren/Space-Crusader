@@ -29,7 +29,7 @@ public class BulletSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (TouchManager.instance.activeTouchesCount > 0 && !effectGridController.gameObject.activeSelf || Input.GetMouseButtonDown(0) )
+        if (TouchManager.instance.activeTouchesCount > 0 && !effectGridController.gameObject.activeSelf)
         {
             foreach (var data in bulletDataInstances)
             {

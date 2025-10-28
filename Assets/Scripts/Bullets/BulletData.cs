@@ -9,6 +9,8 @@ public class BulletData : ScriptableObject
     [Header("Bullet Prefab")]
     public Bullet prefab;
 
+    [Header("Shooting SFX")]
+    public AudioClip shootingSFX;
     public Type bulletType => prefab.GetType();
 
     //----
@@ -50,6 +52,7 @@ public class BulletData : ScriptableObject
         public float angleBetweenMultipleShots;
         public float fireRateMuliplyVal;
         public int damageAmount;
+        public AudioClip shootingSFX;
         
     }
     //--
@@ -67,6 +70,8 @@ public class BulletData : ScriptableObject
         dataFields.shotsToReflectCount = shotsToReflectCount;
         dataFields.fireRateMuliplyVal = fireRateMuliplyVal;
         dataFields.damageAmount = damageAmount;
+        dataFields.shootingSFX = shootingSFX;
+        
 
         return dataFields;
     }

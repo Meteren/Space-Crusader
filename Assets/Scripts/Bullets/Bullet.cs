@@ -62,6 +62,11 @@ public class Bullet : MonoBehaviour
                 effect.Apply(this);
             }
         }
+
+        if(dataReference.bulletType != typeof(ScatteredBullet))
+            SoundManager.instance.PlaySFX(baseData.shootingSFX, 1f);
+
+ 
         this.bulletPoolBelonged = bulletPoolBelonged;
         playerReference = pc;     
         generationPoint = position;

@@ -14,8 +14,6 @@ public class ScatteredBullet : Bullet
     public override void Release()
     {
         base.Release();
-        
-
     }
 
     public override void SetPosition()
@@ -56,6 +54,8 @@ public class ScatteredBullet : Bullet
 
         reflectedScatteredBullet.SetSpeed();
 
+        if (bulletIndex == 0)
+            SoundManager.instance.PlaySFX(baseData.shootingSFX, 1f);
 
         if(bulletIndex < updatedData.shotsToReflectCount - 1)
         {

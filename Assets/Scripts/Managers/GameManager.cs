@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : SingleTon<GameManager>
 {
@@ -39,8 +38,6 @@ public class GameManager : SingleTon<GameManager>
 
         SceneManager.sceneLoaded += OnSceneLoaded;
 
-        //use it for testing
-        //playerSpawner.Spawn();
 
         RuntimeAnimatorController rtController = panelAnimator.runtimeAnimatorController;
 
@@ -67,8 +64,9 @@ public class GameManager : SingleTon<GameManager>
 
     private void Update()
     {
-        
+
         CalculateAvarageFpsAndShow();
+
     }
 
     private void CalculateAvarageFpsAndShow()
@@ -95,6 +93,8 @@ public class GameManager : SingleTon<GameManager>
     {
         panel.SetActive(true);
         panelAnimator.SetBool("fadeIn", true);
+        if(!isGamePaused)
+            SoundManager.instance.StopMusicSmoothly(fadeInDuration);
         yield return new WaitForSecondsRealtime(fadeInDuration);
         ChangeSceneTo(sceneIndex);
         yield return new WaitForSecondsRealtime(waitFor);
@@ -116,17 +116,18 @@ public class GameManager : SingleTon<GameManager>
         panel.SetActive(false);
 
         if (isGamePaused)
-            PauseOrContinueGame();
+            PauseOrContinueGame(false);
 
     }
 
     private void ChangeSceneTo(int sceneIndex) => 
-        SceneManager.LoadSceneAsync(sceneIndex);
+        SceneManager.LoadScene(sceneIndex);
 
 
-    public void PauseOrContinueGame()
+    public void PauseOrContinueGame(bool isActivatedBySkillWindow)
     {
-
+        if(!isActivatedBySkillWindow)
+            AudioListener.pause = !AudioListener.pause;
         if (Time.timeScale == 0)
         {
             Time.timeScale = 1f;
