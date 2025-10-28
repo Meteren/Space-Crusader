@@ -18,13 +18,35 @@ public class SoundManager : SingleTon<SoundManager>
 
         musicSource.Play();
     }
-
     public void StopMusic() => musicSource.Stop();
+    public void PauseMusic()
+    {
+        if (musicSource.clip != null)
+            musicSource.Pause();
+    }
+
+    public void UnPauseMusic()
+    {
+        if (musicSource.clip != null)
+            musicSource.UnPause();
+    }
 
     public void StopMusicSmoothly(float duration)
         =>  StartCoroutine(StopMusicSmoothlyRoutine(duration));
 
     public void PlaySFX(AudioClip clip, float volume) => sfxSource.PlayOneShot(clip, volume);
+
+    public void PauseSFX()
+    {
+        if (sfxSource.clip != null)
+            sfxSource.Pause();
+    }
+
+    public void UnPauseSFX()
+    {
+        if(sfxSource.clip != null)
+            sfxSource.UnPause();
+    }
 
 
     private IEnumerator StopMusicSmoothlyRoutine(float duration)

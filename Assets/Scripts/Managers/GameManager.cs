@@ -64,9 +64,9 @@ public class GameManager : SingleTon<GameManager>
 
     private void Update()
     {
-
+#if UNITY_EDITOR
         CalculateAvarageFpsAndShow();
-
+#endif
     }
 
     private void CalculateAvarageFpsAndShow()
@@ -125,16 +125,26 @@ public class GameManager : SingleTon<GameManager>
 
 
     public void PauseOrContinueGame(bool isActivatedBySkillWindow)
-    {
-        if(!isActivatedBySkillWindow)
-            AudioListener.pause = !AudioListener.pause;
+    {       
+
         if (Time.timeScale == 0)
         {
+            if (!isActivatedBySkillWindow)
+            {
+                SoundManager.instance.UnPauseMusic();
+            }
+            SoundManager.instance.UnPauseSFX();
             Time.timeScale = 1f;
             isGamePaused = false;
         }
         else
         {
+            if (!isActivatedBySkillWindow)
+            {
+                SoundManager.instance.PauseMusic();
+            }
+
+            SoundManager.instance.PauseSFX();
             Time.timeScale = 0f;
             isGamePaused = true;
         }

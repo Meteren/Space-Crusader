@@ -67,6 +67,8 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
+        if (TouchManager.instance.activeTouchesCount == 0)
+            touchBegin = Vector2.zero; 
         //handle particles to stop generating every frame for performance
         particleDuration -= Time.deltaTime;
         if(particleDuration <= 0)
@@ -94,6 +96,7 @@ public class PlayerController : MonoBehaviour
         transform.position = currentPosition;
 
         float angle = Mathf.Atan2(1, capturedDeltaTouch.x * rotationExtension) * Mathf.Rad2Deg - 90.0f;
+
 
         if (!isClamped)
         {           

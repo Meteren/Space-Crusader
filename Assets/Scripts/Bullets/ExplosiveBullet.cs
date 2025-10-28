@@ -8,13 +8,8 @@ public class ExplosiveBullet : Bullet
     Interval timer;
     int choosedSide;
     float angle = 0;
-    float angleX = 0;
-    float angleY = 0;   
 
     float interpolationVal = 0;
-
-    float interPolationValX = 0;
-    float interPolationValY = 0;
 
     float constantClampedX;
     float clampedX;
@@ -41,14 +36,7 @@ public class ExplosiveBullet : Bullet
 
     //--- target locating system
 
-    Transform capturedTarget;
-    float targetLockStartAngle;
-    float targetLockEndAngle;
     Vector2 targetDirection;
-    float constantDistanceX;
-    float distanceX;
-    float constantDistanceY;
-    float distanceY;
 
     public List<IDamageable<Bullet>> enemiesToBeEffected = new();
     CountDown countDownToDestroy;
@@ -121,28 +109,6 @@ public class ExplosiveBullet : Bullet
         if (!rb)
             rb = GetComponent<Rigidbody2D>();
 
-        if(target != capturedTarget)
-        {
-
-            capturedTarget = target;
-
-            //Debug.Log($"Target setted to {capturedTarget}");
-            /*targetLockStartAngle = Mathf.Atan2(rb.linearVelocityY, rb.linearVelocityX) * Mathf.Rad2Deg;
-            targetDirection = target.position - transform.position;
-            Vector2 normalizedDir = targetDirection.normalized;
-            targetLockEndAngle = Mathf.Atan2(normalizedDir.y, normalizedDir.x) * Mathf.Rad2Deg;
-
-            if (targetLockStartAngle < 0)
-                targetLockEndAngle += 360;
-
-            if (targetLockEndAngle < 0)
-                targetLockEndAngle += 360;
-
-            constantDistanceX = Mathf.Abs(targetDirection.x);
-            distanceX = constantDistanceX;
-            constantDistanceY = Mathf.Abs(targetDirection.y);
-            distanceY = constantDistanceY;*/
-        }
         targetDirection = target.position - transform.position;
         Vector2 nDirection = targetDirection.normalized; 
 
@@ -218,7 +184,6 @@ public class ExplosiveBullet : Bullet
         interpolationVal = 0;
         rb.linearVelocity = Vector2.zero;
         inImpact = false;
-        capturedTarget = null;
         
     }
     
