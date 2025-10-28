@@ -96,13 +96,18 @@ public class GameManager : SingleTon<GameManager>
         if(!isGamePaused)
             SoundManager.instance.StopMusicSmoothly(fadeInDuration);
         yield return new WaitForSecondsRealtime(fadeInDuration);
-        ChangeSceneTo(sceneIndex);
-        yield return new WaitForSecondsRealtime(waitFor);
+
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneIndex);
+
+        while(asyncOperation.progress <0.9)
+            yield return null;
+
+        yield return new WaitWhile(() => !asyncOperation.isDone);
+
         panelAnimator.SetBool("fadeOut", true);
         yield return new WaitForSecondsRealtime(fadeOutDuration);
         panelAnimator.SetBool("fadeIn", false);
         panelAnimator.SetBool("fadeOut", false);
-
       
         Scene scene = SceneManager.GetActiveScene();
 
@@ -119,10 +124,6 @@ public class GameManager : SingleTon<GameManager>
             PauseOrContinueGame(false);
 
     }
-
-    private void ChangeSceneTo(int sceneIndex) => 
-        SceneManager.LoadScene(sceneIndex);
-
 
     public void PauseOrContinueGame(bool isActivatedBySkillWindow)
     {       
