@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
         GameManager.instance.highestScore = GameManager.instance.GetSavedScore();
         GameManager.instance.currentLevelIndex = GameManager.instance.GetSavedLevel();
         lastReachedLevelText.text = $"Last Reached Level: {GameManager.instance.currentLevelIndex + 1}";
-        highestScoreReached.text = $"Highest Score Reached: {GameManager.instance.highestScore}";
+        highestScoreReached.text = $"Highest Score: {GameManager.instance.highestScore}";
     }
     public void OnPressStart()
     {
@@ -20,8 +20,5 @@ public class MainMenu : MonoBehaviour
     }
 
 
-    public void OnPressExit()
-    {
-        Application.Quit();
-    }
+    public void OnPressRestart() => GameManager.instance.RestartGame();
 }

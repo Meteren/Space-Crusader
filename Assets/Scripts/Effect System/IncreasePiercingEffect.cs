@@ -32,7 +32,6 @@ public class IncreasePiercingEffect : EffectResolver, IEffect<Bullet>
     public void Cancel()
     {
         onComplete?.Invoke(this);
-        UnityEngine.Debug.Log("Canceled");
         onComplete = null;
         EffectLevel = 0;
     }

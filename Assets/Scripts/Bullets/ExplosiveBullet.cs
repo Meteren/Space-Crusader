@@ -126,8 +126,8 @@ public class ExplosiveBullet : Bullet
 
             capturedTarget = target;
 
-            Debug.Log($"Target setted to {capturedTarget}");
-            targetLockStartAngle = Mathf.Atan2(rb.linearVelocityY, rb.linearVelocityX) * Mathf.Rad2Deg;
+            //Debug.Log($"Target setted to {capturedTarget}");
+            /*targetLockStartAngle = Mathf.Atan2(rb.linearVelocityY, rb.linearVelocityX) * Mathf.Rad2Deg;
             targetDirection = target.position - transform.position;
             Vector2 normalizedDir = targetDirection.normalized;
             targetLockEndAngle = Mathf.Atan2(normalizedDir.y, normalizedDir.x) * Mathf.Rad2Deg;
@@ -141,27 +141,10 @@ public class ExplosiveBullet : Bullet
             constantDistanceX = Mathf.Abs(targetDirection.x);
             distanceX = constantDistanceX;
             constantDistanceY = Mathf.Abs(targetDirection.y);
-            distanceY = constantDistanceY;
+            distanceY = constantDistanceY;*/
         }
         targetDirection = target.position - transform.position;
-        Vector2 nDirection = targetDirection.normalized;
-      
-        /*distanceX -= interpolationSpeed * (Time.deltaTime / orbitalMoveDuration);
-        distanceY -= interpolationSpeed * (Time.deltaTime / orbitalMoveDuration);
-        interPolationValX = Mathf.InverseLerp(constantDistanceX, 0, distanceX);
-        interPolationValY = Mathf.InverseLerp(constantDistanceY, 0, distanceY);
-
-        float fixedInterpolationX = Mathf.SmoothStep(0, 1, interPolationValX);
-        float fixedInterpolationY = Mathf.SmoothStep(0, 1, interPolationValY);
-        Debug.Log($"Interpolation vals: x:{fixedInterpolationX} - y: {fixedInterpolationY}");
-
-        angleX = Mathf.Lerp(targetLockStartAngle, targetLockEndAngle, interPolationValX);
-
-        float radianX = angleX * Mathf.Deg2Rad;
-        float radianY = angleY * Mathf.Deg2Rad;
-
-        float speedX = Mathf.Lerp(rb.linearVelocityX, targetDirection.x, fixedInterpolationX);
-        float speedY = Mathf.Lerp(rb.linearVelocityY, targetDirection.y, fixedInterpolationY);   */
+        Vector2 nDirection = targetDirection.normalized; 
 
         rb.linearVelocity = nDirection * updatedData.speed.magnitude * 0.5f;
     }
@@ -206,10 +189,10 @@ public class ExplosiveBullet : Bullet
 
     public void BurstAction()
     {
-        Debug.Log("Burst action");
         ExplosiveBullet explosiveBullet = bulletPoolBelonged.Get() as ExplosiveBullet;
         if(explosiveBullet != null)
-            explosiveBullet.Init(dataReference,bulletPoolBelonged,playerReference,playerReference.transform.position);;
+            if(playerReference != null)
+                explosiveBullet.Init(dataReference,bulletPoolBelonged,playerReference,playerReference.transform.position);;
         explosiveBullet.SetIndividualValues();
     }
 
@@ -241,7 +224,6 @@ public class ExplosiveBullet : Bullet
     
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collision Detected for explosion bullet");
         //collision logic for explosion will be implemented in here
         if (collision.TryGetComponent<Asteroid>(out Asteroid asteroid) && !collision.GetComponent<Bullet>() && !inImpact)
         {

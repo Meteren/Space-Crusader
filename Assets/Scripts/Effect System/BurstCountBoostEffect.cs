@@ -34,26 +34,18 @@ public class BurstCountBoostEffect : EffectResolver, IEffect<Bullet>, IDataProvi
 
     public void Cancel()
     {
-        UnityEngine.Debug.Log($"Provided data: {ProvidedData}");
         foreach (var effect in ProvidedData.effects.ToList())
         {
             EffectResolver resolver = effect as EffectResolver;
-            UnityEngine.Debug.Log($"Dependency effect:{resolver.EffectType}");
             if (resolver.dependentEffects != null)
             {
-                UnityEngine.Debug.Log("Dependency effects not null");
                 foreach (var dependentType in resolver.dependentEffects)
                 {
-                    UnityEngine.Debug.Log($"Dependent type:{dependentType}");
                     if (dependentType == EffectType)
                         effect.Cancel();
                 }
             }
-            else
-            {
-                
-                UnityEngine.Debug.Log("Dependency effects null");
-            }
+
 
         }
         onComplete?.Invoke(this);

@@ -22,9 +22,8 @@ public class AnchorGameObject : MonoBehaviour
     public AnchorType anchorType;
     public Vector3 anchorOffset = Vector3.zero;
 
-    IEnumerator updateAnchorRoutine; //Coroutine handle so we don't start it if it's already running
+    IEnumerator updateAnchorRoutine;
 
-    // Use this for initialization
     void Start()
     {
         //updateAnchorRoutine = UpdateAnchorAsync();

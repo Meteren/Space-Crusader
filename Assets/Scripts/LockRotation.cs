@@ -10,7 +10,6 @@ public class LockRotation : MonoBehaviour
         rectTransform = GetComponent<RectTransform>();
         startRotation = rectTransform.rotation;
     }
-    // Update is called once per frame
     private void LateUpdate()
     {
         rectTransform.rotation = startRotation;

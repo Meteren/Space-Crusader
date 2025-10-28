@@ -20,6 +20,6 @@ public class PauseScreen : MonoBehaviour
 
     public void NavigateToMainMenu()
         => GameManager.instance.InitSceneChange(0);
-    
+
 
 }

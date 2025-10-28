@@ -77,18 +77,18 @@ public class EffectGridController : MonoBehaviour
             }))
         .ToList();
 
-        if (discriminatedEffects != null)
-            Debug.Log($"Discriminated effect count: {discriminatedEffects.Count}");
+        /*if (discriminatedEffects != null)
+            Debug.Log($"Discriminated effect count: {discriminatedEffects.Count}");*/
 
         List<IEffect<Bullet>> allBulletEffects = GetAllBulletEffects();
 
         
-        Debug.Log($"All bullet effects:{allBulletEffects.Count}");
+        //Debug.Log($"All bullet effects:{allBulletEffects.Count}");
 
         List<EffectResolver> effectsMaxedOut = GetMaxedEffects(allBulletEffects);
 
-        if(effectsMaxedOut != null)
-                    Debug.Log($"Effects maxed out count:{effectsMaxedOut.Count}");
+        /*if(effectsMaxedOut != null)
+            Debug.Log($"Effects maxed out count:{effectsMaxedOut.Count}");*/
 
         if (effectsMaxedOut.Count > 0)
         {

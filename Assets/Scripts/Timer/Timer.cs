@@ -29,7 +29,7 @@ public abstract class Timer
 
     public void StartTimer() 
     {
-        Debug.Log($"{source} timer started.");
+        //Debug.Log($"{source} timer started.");
         TimeManager.instance.AddTimer(this);
         onStart?.Invoke();
     }
@@ -49,7 +49,6 @@ public abstract class Timer
 
     public virtual void CleanAfterCompletion()
     {
-        Debug.Log($"{source} timer ended.");
         onEnd?.Invoke();
         isFinished = true;
         onStart = null;

@@ -106,18 +106,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
-    {
-        /* if (!inCollisionWithBoundaries)
-             rb.linearVelocity = new Vector2(capturedDeltaTouch.x * speed, rb.linearVelocityY);
-         else
-             rb.linearVelocity = new Vector2(0, rb.linearVelocityY);
-
-         capturedDeltaTouch = Vector2.zero;*/
-
-        //capturedDeltaTouch = Vector2.zero;
-
-    }
 
     private bool TryGetDeltaTouch(out Vector2 deltaTouch)
     {
@@ -179,13 +167,15 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<IDamageable<Bullet>>() != null && !cantBeDamaged)
+        if (!cantBeDamaged)
         {
-            Debug.Log("Player got damage");
-            cantBeDamaged = true;
-            OnDamage();
+            if (collision.GetComponent<IDamageable<Bullet>>() != null)
+            {
+                cantBeDamaged = true;
+                OnDamage();
+            }
         }
-            
+              
     }
 
     private IEnumerator WaitForNextDamageRoutine()

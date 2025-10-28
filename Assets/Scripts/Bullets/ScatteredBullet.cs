@@ -29,7 +29,7 @@ public class ScatteredBullet : Bullet
         float currentAngle = baseAngle - bulletIndex * updatedData.angleBetweenMultipleShots;
 
         float rotationVal = currentAngle - 90f;
-        Debug.Log($"Rotation Val: {rotationVal}");
+       // Debug.Log($"Rotation Val: {rotationVal}");
 
         currentAngle *= Mathf.Deg2Rad;
 
@@ -59,17 +59,13 @@ public class ScatteredBullet : Bullet
 
         if(bulletIndex < updatedData.shotsToReflectCount - 1)
         {
-            Debug.Log("Next bullet initted");
             ScatteredBullet nextScatteredBullet = (ScatteredBullet)bulletPoolBelonged.Get();
 
             nextScatteredBullet.Init(dataReference, bulletPoolBelonged, playerReference, playerReference.transform.position);
             nextScatteredBullet.InitScatterStates(++bulletIndex);
 
         }
-        else
-        {
-            Debug.Log("All bullets are scattered.");
-        }
+      
     }
 
     public override void SetSpeed()

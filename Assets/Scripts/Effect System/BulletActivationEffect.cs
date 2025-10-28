@@ -5,7 +5,6 @@ using System.Linq;
 public abstract class BulletActivationEffect : EffectResolver, IEffect<Bullet>, IResolveAsAbility<BulletSpawner>
 {
     BulletSpawner bSpawnerReference;
-    Bullet targetReference;
     public BulletActivationEffect(Type target,List<Type> dependentEffects) : base(target, dependentEffects)
     {
     }
@@ -21,7 +20,7 @@ public abstract class BulletActivationEffect : EffectResolver, IEffect<Bullet>, 
 
     public void Apply(Bullet target)
     {
-        targetReference = target;//will be deleted prob    
+        //NOOP   
     }
 
     public void Cancel(Bullet target)
@@ -52,7 +51,7 @@ public abstract class BulletActivationEffect : EffectResolver, IEffect<Bullet>, 
     public void SendData(BulletSpawner dataToSend)
     {
         bSpawnerReference = dataToSend;
-        UnityEngine.Debug.Log(TargetType);
+        //UnityEngine.Debug.Log(TargetType);
         bSpawnerReference.AddBulletToSpawner(TargetType);
     }
 

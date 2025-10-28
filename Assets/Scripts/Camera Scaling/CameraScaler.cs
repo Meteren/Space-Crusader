@@ -28,9 +28,6 @@ public class CameraScaler : MonoBehaviour
         float currentScreenWidth = Screen.width;
         float currentScreenHeight = Screen.height;
 
-        Debug.Log($"Screen Width: {Screen.width}");
-        Debug.Log($"Screen Height:{Screen.height}");
-
         scaleFactorX = currentScreenWidth / referenceWidth;
         scaleFactorY = currentScreenHeight / referenceHeight;
 

@@ -39,7 +39,6 @@ public class Interval : Timer
             valueAfterInterval -= intervalTick;
 
             onInterval?.Invoke();
-            Debug.Log($"On Interval for {source}");
         }
     }
 

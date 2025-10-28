@@ -59,7 +59,6 @@ public class Bullet : MonoBehaviour
         {
             foreach (var effect in data.effects)
             {
-                Debug.Log(effect.GetType().Name);
                 effect.Apply(this);
             }
         }

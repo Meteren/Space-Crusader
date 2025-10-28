@@ -56,7 +56,7 @@ public class BulletSpawner : MonoBehaviour
         //Check if its null later, leave it for now
 
         dataToBeEffected.effects.Add(effect);
-        Debug.Log($"{dataToBeEffected.prefab.GetType().Name} effects count: {dataToBeEffected.effects.Count}");
+        //Debug.Log($"{dataToBeEffected.prefab.GetType().Name} effects count: {dataToBeEffected.effects.Count}");
   
     }
 

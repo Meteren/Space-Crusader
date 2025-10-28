@@ -143,8 +143,6 @@ public class CameraViewportHandler : SingleTon<CameraViewportHandler>
         bottomY = cameraY - _height / 2;
 
 
-        Debug.Log($"leftx: {leftX} \n rightx: {rightX} \n topY: {topY} \n bottomY: {bottomY}");
-
         //*** bottom
         _bl = new Vector3(leftX, bottomY, 0);
         _bc = new Vector3(cameraX, bottomY, 0);
@@ -162,7 +160,6 @@ public class CameraViewportHandler : SingleTon<CameraViewportHandler>
     private void Update()
     {
 #if UNITY_EDITOR
-        Debug.Log($"Scale Factor: {scaleFactor}");
         if (executeInUpdate)
             ComputeResolution();
 

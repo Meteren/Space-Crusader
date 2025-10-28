@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1457599325136747994, guid: 03e029e97e9d0924eaafe0922420a686, type: 3}
   bulletReadyToUse: 1
-  generationTime: 0.8
-  defaultGenTime: 0.8
+  generationTime: 1.2
+  defaultGenTime: 1.2
   speed: {x: 3, y: 3}
   pierceCount: 1
   damageAmount: 1

@@ -32,7 +32,6 @@ public class TimeBetweenBurstBoosterEffect : EffectResolver, IEffect<Bullet>
 
     public void Cancel()
     {
-        UnityEngine.Debug.Log("Entered cancel");
         onComplete?.Invoke(this);
         onComplete = null;
         EffectLevel = 0;

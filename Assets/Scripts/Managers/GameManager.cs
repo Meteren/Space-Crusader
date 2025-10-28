@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : SingleTon<GameManager>
 {
@@ -18,7 +19,7 @@ public class GameManager : SingleTon<GameManager>
     [Header("Fade-In and Out Segment")]
     [SerializeField] private GameObject panel;
     [SerializeField] private float waitFor;
-    private Animator panelAnimator;
+    [HideInInspector] public Animator panelAnimator;
     float fadeInDuration;
     float fadeOutDuration;
 
@@ -60,6 +61,7 @@ public class GameManager : SingleTon<GameManager>
         if (scene.buildIndex != 0)
         {
             playerSpawner.Spawn();
+
         }
     }
 
@@ -93,22 +95,25 @@ public class GameManager : SingleTon<GameManager>
     {
         panel.SetActive(true);
         panelAnimator.SetBool("fadeIn", true);
-        Debug.Log($"Fade-in duration: {fadeInDuration}");
         yield return new WaitForSecondsRealtime(fadeInDuration);
         ChangeSceneTo(sceneIndex);
         yield return new WaitForSecondsRealtime(waitFor);
         panelAnimator.SetBool("fadeOut", true);
-        Debug.Log($"Fade-out duration: {fadeInDuration}");
         yield return new WaitForSecondsRealtime(fadeOutDuration);
         panelAnimator.SetBool("fadeIn", false);
         panelAnimator.SetBool("fadeOut", false);
-        panel.SetActive(false);
+
+      
         Scene scene = SceneManager.GetActiveScene();
 
-        Debug.Log($"Scene index: {scene.buildIndex}");
-
         if (scene.buildIndex == 1)
+        {
             initPartGenerationProcess = true;
+            panelAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
+        }else
+            panelAnimator.updateMode = AnimatorUpdateMode.Normal;
+
+        panel.SetActive(false);
 
         if (isGamePaused)
             PauseOrContinueGame();
@@ -168,6 +173,13 @@ public class GameManager : SingleTon<GameManager>
 
     public void ResetScore() => scoreInALevel = 0;
 
+    public void RestartGame()
+    {
+        currentLevelIndex = 0;
+        SaveLevelProgress();
+        InitSceneChange(1);
+
+    }
 
 
 }

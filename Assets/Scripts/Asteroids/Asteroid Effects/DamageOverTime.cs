@@ -23,7 +23,7 @@ public class DamageOverTime<TSource> : EffectResolver, IEffect<IDamageable<TSour
 
     public void Apply(IDamageable<TSource> target)
     {
-        UnityEngine.Debug.Log("Applying damage over time effect");
+
         targetReference = target;
         timer = new Interval(intervalTick,timerStart,true,GetType().Name);
 
@@ -44,7 +44,6 @@ public class DamageOverTime<TSource> : EffectResolver, IEffect<IDamageable<TSour
     {
         onComplete?.Invoke(this);
 
-        //suspicious, check later if something goes wrong
         if(timer != null)
         {
             timer.StopTimer();
@@ -62,7 +61,6 @@ public class DamageOverTime<TSource> : EffectResolver, IEffect<IDamageable<TSour
 
     private void OnInterval()
     {
-        UnityEngine.Debug.Log("Inflict damage");
         targetReference.OnDamage(sourceReference,this);
     }
 

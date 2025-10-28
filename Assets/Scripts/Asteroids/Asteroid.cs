@@ -11,7 +11,7 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerS
     [SerializeField] private TextMeshProUGUI healthIndicator;
     [SerializeField] private float damageIndicationTime;
 
-    public float prevHealth;
+    [HideInInspector]public float prevHealth;
     SpriteRenderer sr;
 
     public bool isDestroyed;
@@ -45,13 +45,13 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerS
         levelController = GameObject.Find("LevelGeneration").GetComponent<LevelController>();
 
         //transform.localScale *= CameraViewportHandler.Instance.scaleFactor;
-        healthIndicator = healthIndicator.GetComponentInChildren<TextMeshProUGUI>();
+        healthIndicator = GetComponentInChildren<TextMeshProUGUI>();
         healthIndicator.text = health.ToString();
         sr = GetComponent<SpriteRenderer>();
 
         cam = Camera.main;
         circleCollider = GetComponent<CircleCollider2D>();
-        Debug.Log($"{gameObject.name} Radius:{circleCollider.radius}");
+
     }
     protected virtual void Update()
     {
@@ -100,7 +100,7 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerS
         prevHealth = health;
 
         healthIndicator.text = health.ToString();
-        Debug.Log("On Damage");
+        //Debug.Log("On Damage");
 
         if (health <= 0)
         {
@@ -124,7 +124,6 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerS
 
         healthIndicator.text = health.ToString();
 
-        Debug.Log("On Damage");
         if (health <= 0)
         {
             CreateEplosionParticle();
@@ -184,9 +183,17 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerS
         if(bullet is ExplosiveBullet exBullet)
         {
             levelController.progressAmount += (0.25f * levelController.finalDecreaseVal) //???
-                / (exBullet.enemiesToBeEffected.Count != 0 ? exBullet.enemiesToBeEffected.Count : 1);
+                / (exBullet.enemiesToBeEffected.Count != 0 ? exBullet.enemiesToBeEffected.Count + 3 : 1);
             return;
         }
+
+        if(bullet is ScatteredBullet sBullet)
+        {
+            levelController.progressAmount += (0.25f * levelController.finalDecreaseVal) //???
+               / (sBullet.updatedData.shotsToReflectCount == 1 ? sBullet.updatedData.shotsToReflectCount : sBullet.updatedData.shotsToReflectCount / 2);
+            return;
+        }
+
         levelController.progressAmount += 0.25f * levelController.finalDecreaseVal;//can be changed
     }
 

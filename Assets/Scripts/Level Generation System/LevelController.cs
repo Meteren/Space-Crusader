@@ -143,13 +143,12 @@ public class LevelController : MonoBehaviour
 
                     decreaseValueMultiplier -= 0.001f;
 
-                    Debug.Log("DecreaseValue Mult: " + decreaseValueMultiplier);
                     decreaseValueMultiplier = Mathf.Clamp(decreaseValueMultiplier, 0.1f, 1f);
                 }
             }
             else
             {
-                Debug.Log("All skills are achieved");
+
                 skillWindowProgressBarText.gameObject.SetActive(true);
                 skillWindowProgressBar.value = 1f;
             }
@@ -176,7 +175,6 @@ public class LevelController : MonoBehaviour
     {
         foreach(var part in createdLevelParts)
         {
-            Debug.Log($"Moving the part: {part.name}");
             part.position = Vector2.MoveTowards(part.position, movePoint.position, Time.deltaTime * levelPartMoveSpeed);
         }
     }
@@ -230,7 +228,6 @@ public class LevelController : MonoBehaviour
             if (generateIfNoAsteroidsLeft)
             {
                 partIndex++;
-                Debug.Log("Level Finished");
             }
         }
         
@@ -304,10 +301,9 @@ public class LevelController : MonoBehaviour
 
 
     private void UpdateScore()
-    {
+        =>
         scoreText.text = $"Score: {GameManager.instance.scoreInALevel}";
-        GameManager.instance.AdjustHighestScoreIfNeeded();
-    }
+
  
 }
 

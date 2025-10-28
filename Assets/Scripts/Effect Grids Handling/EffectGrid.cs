@@ -1,4 +1,4 @@
-using System;
+
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -75,7 +75,7 @@ public class EffectGrid : MonoBehaviour
                 if (resolver != null)
                     resolver.SetTargetType(effectInHold.TargetType);
 
-                Debug.Log(instantiatedEffect.GetType().Name + " " + resolver.TargetType.Name);
+                //Debug.Log(instantiatedEffect.GetType().Name + " " + resolver.TargetType.Name);
 
                 //Check if it has an ability resolver
                 if (instantiatedEffect != null)
