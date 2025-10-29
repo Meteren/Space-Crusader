@@ -27,8 +27,7 @@ public class ScatteredBullet : Bullet
         float currentAngle = baseAngle - bulletIndex * updatedData.angleBetweenMultipleShots;
 
         float rotationVal = currentAngle - 90f;
-       // Debug.Log($"Rotation Val: {rotationVal}");
-
+ 
         currentAngle *= Mathf.Deg2Rad;
 
         Vector3 startPos = playerReference.transform.position + new Vector3(Mathf.Cos(currentAngle), Mathf.Sin(currentAngle), 0) * posOffset;

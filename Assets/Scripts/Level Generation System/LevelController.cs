@@ -133,7 +133,7 @@ public class LevelController : MonoBehaviour
 
             if (effectGridController.ActiveMaxedOutEffectCount != effectGridController.EffectCount)
             {
-                if (skillWindowProgressBar.value >= 1)
+                if (skillWindowProgressBar.value >= 1 && !effectGridController.gameObject.activeSelf)
                 {
                     skillWindowProgressBar.value = 0;
                     progressAmount = 0;

@@ -22,10 +22,8 @@ public class PauseScreen : MonoBehaviour
         {
             if (SoundManager.instance.MusicSource.isPlaying)
             {
-                Debug.Log("Here");
                 SoundManager.instance.PauseMusic();
-            }
-                
+            }      
             else
                 SoundManager.instance.UnPauseMusic();     
 
