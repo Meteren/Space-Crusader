@@ -29,20 +29,19 @@ public class Asteroid : MonoBehaviour, IDamageable<Bullet>, IDamageable<PiercerS
 
     Coroutine damageCoroutine;
 
-    LevelController levelController;
+    LevelController levelController => GameManager.instance.levelController;
 
 
     [Header("Effects")]
     [SerializeField] protected ParticleSystem explosionEffect;
 
-    ParticleSpawner pSpawner;
+    ParticleSpawner pSpawner => GameManager.instance.pSpawner;
 
     float referenceScale = 0.2352913f;
 
     protected virtual void Start()
     {
-        pSpawner = FindFirstObjectByType<ParticleSpawner>();
-        levelController = GameObject.Find("LevelGeneration").GetComponent<LevelController>();
+       
 
         healthIndicator = GetComponentInChildren<TextMeshProUGUI>();
         healthIndicator.text = health.ToString();

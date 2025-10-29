@@ -28,6 +28,10 @@ public class GameManager : SingleTon<GameManager>
     public float highestScore;
 
     public float scoreInALevel;
+
+
+    public ParticleSpawner pSpawner;
+    public LevelController levelController;
     private void Start()
     {
 
@@ -58,6 +62,8 @@ public class GameManager : SingleTon<GameManager>
         if (scene.buildIndex != 0)
         {
             playerSpawner.Spawn();
+            pSpawner = FindFirstObjectByType<ParticleSpawner>();
+            levelController = GameObject.Find("LevelGeneration").GetComponent<LevelController>();
 
         }
     }
