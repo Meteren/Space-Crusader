@@ -1,9 +1,10 @@
 
 using UnityEngine;
 using System.Collections.Generic;
-using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 using System.Collections;
-using JetBrains.Annotations;
+
+using TouchPhase = UnityEngine.InputSystem.TouchPhase;
+using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 public class PlayerController : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
     private BoxCollider2D boundary;
     
     private Vector2 touchBegin;
+    int controllingFingerId = -1;
     private Vector2 capturedDeltaTouch;
 
     private Camera cam;
@@ -69,6 +71,7 @@ public class PlayerController : MonoBehaviour
     {
         if (TouchManager.instance.activeTouchesCount == 0)
             touchBegin = Vector2.zero; 
+
         //handle particles to stop generating every frame for performance
         particleDuration -= Time.deltaTime;
         if(particleDuration <= 0)
@@ -113,28 +116,59 @@ public class PlayerController : MonoBehaviour
 
     }
 
-
     private bool TryGetDeltaTouch(out Vector2 deltaTouch)
     {
-        if (TouchManager.instance.activeTouchesCount > 0)
+        deltaTouch = Vector2.zero;
+
+        if (TouchManager.instance.activeTouchesCount == 0)
         {
-            if (!float.IsInfinity(TouchManager.instance.touch.screenPosition.x) || !float.IsInfinity(TouchManager.instance.touch.screenPosition.y))
+            controllingFingerId = -1;
+            return false;
+        }
+
+        if (controllingFingerId == -1)
+        {
+            foreach (var t in Touch.activeTouches)
             {
-                if (TouchManager.instance.touch.phase == TouchPhase.Began)
+                if (t.phase == TouchPhase.Began)
                 {
-                    touchBegin = Camera.main.ScreenToWorldPoint(TouchManager.instance.touch.screenPosition);
-                }
-                if (TouchManager.instance.touch.phase == TouchPhase.Moved || TouchManager.instance.touch.phase == TouchPhase.Stationary)
-                {
-                    Vector2 touchMovePos = Camera.main.ScreenToWorldPoint(TouchManager.instance.touch.screenPosition);
-                    deltaTouch = touchMovePos - touchBegin;
-                    touchBegin = touchMovePos;
-                    return true;
+                    controllingFingerId = t.finger.index;
+
+                    if(float.IsInfinity(t.screenPosition.x) || float.IsInfinity(t.screenPosition.y))
+                        return false;
+
+                    touchBegin = Camera.main.ScreenToWorldPoint(t.screenPosition);
+                    return false;
+
                 }
             }
-           
         }
-        deltaTouch = Vector2.zero;
+
+        if (!TouchManager.instance.TryGetTouchById(controllingFingerId, out var touch))
+        {
+            controllingFingerId = -1;
+            return false;
+        }
+
+        if (touch.phase == TouchPhase.Ended ||
+            touch.phase == TouchPhase.Canceled)
+        {
+            controllingFingerId = -1;
+            return false;
+        }
+
+        if (touch.phase == TouchPhase.Moved ||
+            touch.phase == TouchPhase.Stationary)
+        {
+            if (float.IsInfinity(touch.screenPosition.x) || float.IsInfinity(touch.screenPosition.y))
+                return false;
+
+            Vector2 touchMovePos = Camera.main.ScreenToWorldPoint(touch.screenPosition);
+            deltaTouch = touchMovePos - touchBegin;
+            touchBegin = touchMovePos;
+            return true;
+        }
+
         return false;
     }
 

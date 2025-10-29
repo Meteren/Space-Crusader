@@ -32,7 +32,24 @@ public class TouchManager : SingleTon<TouchManager>
         activeTouchesCount = activeTouches.Count;
 
         if (activeTouchesCount > 0)
+        {
             touch = Touch.activeTouches[0];
 
+        }
+
+    }
+
+    public bool TryGetTouchById(int fingerID, out Touch touch)
+    {
+        foreach(var t in Touch.activeTouches)
+        {
+            if(t.finger.index == fingerID)
+            {
+                touch = t;
+                return true;
+            }
+        }
+        touch = default;
+        return false;
     }
 }
