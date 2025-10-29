@@ -99,10 +99,12 @@ public class GameManager : SingleTon<GameManager>
 
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneIndex);
 
-        while(asyncOperation.progress <0.9)
+        while(asyncOperation.progress < 0.9)
             yield return null;
 
         yield return new WaitWhile(() => !asyncOperation.isDone);
+
+        yield return null;
 
         panelAnimator.SetBool("fadeOut", true);
         yield return new WaitForSecondsRealtime(fadeOutDuration);
